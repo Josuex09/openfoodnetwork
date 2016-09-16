@@ -16,6 +16,12 @@
         %a{href: spree.admin_path, target:'_blank'} 
           %i.ofn-i_021-tools
           = t 'label_administration'
+          
+    - if admin_user? 
+      %li
+        %a{href: "/stadistics", target:'_blank'} 
+          = t 'label_stadistics'
+        
 
     %li
       %a{href: spree.account_path}

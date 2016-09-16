@@ -1,4 +1,7 @@
 Openfoodnetwork::Application.routes.draw do
+  
+  get "stadistics/index"
+
   root :to => 'home#index'
 
   # Redirects from old URLs avoid server errors and helps search engines
@@ -23,6 +26,8 @@ Openfoodnetwork::Application.routes.draw do
   # Redirects to global website
   get "/connect", to: redirect("https://openfoodnetwork.org/#{ENV['DEFAULT_COUNTRY_CODE'].andand.downcase}/connect/")
   get "/learn", to: redirect("https://openfoodnetwork.org/#{ENV['DEFAULT_COUNTRY_CODE'].andand.downcase}/learn/")
+  
+ # get "/stadistics", to: "stadistics#index"
 
   resource :shop, controller: "shop" do
     get :products
@@ -77,7 +82,11 @@ Openfoodnetwork::Application.routes.draw do
         post :notify_producers
       end
     end
-
+#------------------------------------------------------------
+    #resources :stadistics do
+     # get :index
+    #end
+#------------------------------------------------------------
     resources :enterprises do
       collection do
         get :for_order_cycle
@@ -141,7 +150,7 @@ Openfoodnetwork::Application.routes.draw do
     resource :cache_settings
 
     resource :account, only: [:show], controller: 'account'
-
+    
     resources :column_preferences, only: [], format: :json do
       put :bulk_update, on: :collection
     end
@@ -177,6 +186,8 @@ end
 
 # Overriding Devise routes to use our own controller
 Spree::Core::Engine.routes.draw do
+  get "stadistics/index"
+
   devise_for :spree_user,
              :class_name => 'Spree::User',
              :controllers => { :sessions => 'spree/user_sessions',
@@ -206,7 +217,8 @@ Spree::Core::Engine.routes.prepend do
   match '/admin/reports/xero_invoices' => 'admin/reports#xero_invoices', :as => "xero_invoices_admin_reports",  :via  => [:get, :post]
   match '/admin', :to => 'admin/overview#index', :as => :admin
   match '/admin/payment_methods/show_provider_preferences' => 'admin/payment_methods#show_provider_preferences', :via => :get
-
+  #
+  #match '/stadistics', :to => 'stadistics/#index'
 
   namespace :api, :defaults => { :format => 'json' } do
     resources :users do

@@ -272,6 +272,7 @@ en:
   label_logout: "Logout"
   label_signup: "Sign up"
   label_administration: "Administration"
+  label_stadistics: "Stadistics"
   label_admin: "Admin"
   label_account: "Account"
   label_more: "Show more"

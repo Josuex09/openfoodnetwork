@@ -1,5 +1,6 @@
 module Admin
   class ResourceController < Spree::Admin::ResourceController
+    
     def model_class
       "#{controller_name.classify}".constantize
     end
