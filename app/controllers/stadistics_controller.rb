@@ -1,5 +1,5 @@
 class StadisticsController < BaseController
-  layout 'darkswarm'
+  layout 'stadistics'
   def index
 
   end

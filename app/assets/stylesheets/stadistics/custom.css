@@ -282,7 +282,7 @@ body .container.body .right_col {
 .border-dark {
   border-color: #34495E !important; }
 
-  .bg-white {
+.bg-white {
   background: #fff !important;
   border: 1px solid #fff !important;
   color: #73879C; }
@@ -4130,4 +4130,20 @@ ul.notifications {
 
 /** /Dropzone.js **/
 
-
+.btn-circle.btn-lg {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  font-size: 30px;
+  line-height: 1.33;
+  border-radius: 30px;
+}
+     
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
