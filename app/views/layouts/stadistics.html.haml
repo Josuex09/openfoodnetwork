@@ -15,33 +15,19 @@
     = yield :scripts
     %script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry"}
     = split_stylesheet_link_tag "stadistics/bootstrap.css"
-    = split_stylesheet_link_tag "stadistics/custom"
-    /= split_stylesheet_link_tag "darkswarm/all"    
-    = javascript_include_tag "stadistics/jquery.js"
-    = javascript_include_tag "stadistics/bootstrap.js"
-    = javascript_include_tag "stadistics/custom.js"
+    = split_stylesheet_link_tag "stadistics/custom.css"
+    /= split_stylesheet_link_tag "darkswarm/all"
     /= javascript_include_tag "darkswarm/all"
 
     = render "layouts/bugherd_script"
     = csrf_meta_tags
 
-  %body.off-canvas{"ng-app" => "Darkswarm"}
-    / [if lte IE 8]
-      = render partial: "shared/ie_warning"
-      = javascript_include_tag "iehack"
+  %body
 
-    = inject_current_hub
-    = inject_json "user", "current_user"
-    = inject_json "railsFlash", "flash"
-    = inject_taxons
-    = inject_properties
-    = inject_current_order
-    = inject_currency_config
+    = yield
+    = javascript_include_tag "stadistics/jquery.js"
+    = javascript_include_tag "stadistics/bootstrap.js"
+    = javascript_include_tag "stadistics/custom.js"
 
-    .off-canvas-wrap{offcanvas: true}
-      .inner-wrap
+    #footer
 
-        %section{ role: "main" }
-          = yield
-
-          #footer

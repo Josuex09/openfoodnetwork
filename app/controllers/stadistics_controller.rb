@@ -1,6 +1,7 @@
 class StadisticsController < BaseController
   layout 'stadistics'
-  def index
 
+  def index
+    @cant = 23 
   end
 end
