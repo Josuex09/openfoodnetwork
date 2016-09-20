@@ -14,6 +14,7 @@
 
     = yield :scripts
     %script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry"}
+    = split_stylesheet_link_tag "stadistics/charts/font-awesome/font-awesome.css"
     = split_stylesheet_link_tag "stadistics/bootstrap.css"
     = split_stylesheet_link_tag "stadistics/custom.css"
     /= split_stylesheet_link_tag "darkswarm/all"
@@ -28,6 +29,10 @@
     = javascript_include_tag "stadistics/jquery.js"
     = javascript_include_tag "stadistics/bootstrap.js"
     = javascript_include_tag "stadistics/custom.js"
+    = yield(:javascripts)
+
+
+
 
     #footer
 

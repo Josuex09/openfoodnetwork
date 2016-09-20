@@ -1,9 +1,7 @@
-= split_stylesheet_link_tag "stadistics/charts/font-awesome/font-awesome.css"
-
 .col-md-4.col-sm-4.col-xs-12
   .x_panel.tile.fixed_height_320.overflow_hidden
     .x_title
-      %h2 Device Usage
+      %h2 Categoría de Productos más vendidos
       %ul.nav.navbar-right.panel_toolbox
         %li
           %a.collapse-link
@@ -15,14 +13,6 @@
     .x_content
       %table{:style => "width:100%"}
         %tr
-          %th{:style => "width:37%;"}
-            %p Top 5
-          %th
-            .col-lg-7.col-md-7.col-sm-7.col-xs-7
-              %p Device
-            .col-lg-5.col-md-5.col-sm-5.col-xs-5
-              %p Progress
-        %tr
           %td
             %canvas#canvas1{:height => "140", :style => "margin: 15px 10px 10px 0", :width => "140"}
           %td
@@ -31,72 +21,72 @@
                 %td
                   %p
                     %i.fa.fa-square.blue>
-                    IOS
+                    Frutas
                 %td 30%
               %tr
                 %td
                   %p
                     %i.fa.fa-square.green>
-                    Android
+                    Verduras
                 %td 10%
               %tr
                 %td
                   %p
                     %i.fa.fa-square.purple>
-                    Blackberry
+                    Legumbres
                 %td 20%
               %tr
                 %td
                   %p
                     %i.fa.fa-square.aero>
-                    Symbian
+                    Hortalizas
                 %td 15%
               %tr
                 %td
                   %p
                     %i.fa.fa-square.red>
-                    Others
+                    Otros
                 %td 30%
 
-= javascript_include_tag "stadistics/charts/Chart.js"
+- content_for :javascripts do
+  = javascript_include_tag "stadistics/charts/Chart.js"
+  :javascript
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+        new Chart(document.getElementById("canvas1"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Hortalizas",
+              "Legumbres",
+              "Otros",
+              "Verduras",
+              "Frutas"
+            ],
+            datasets: [{
+              data: [15, 20, 30, 10, 30],
+              backgroundColor: [
+                "#BDC3C7",
+                "#9B59B6",
+                "#E74C3C",
+                "#26B99A",
+                "#3498DB"
+              ],
+              hoverBackgroundColor: [
+                "#CFD4D8",
+                "#B370CF",
+                "#E95E4F",
+                "#36CAAB",
+                "#49A9EA"
+              ]
+            }]
+          },
+          options: options
+        });
+      });
 
 
-:javascript
-  $(document).ready(function(){
-    var options = {
-      legend: false,
-      responsive: false
-    };
-
-    new Chart(document.getElementById("canvas1"), {
-      type: 'doughnut',
-      tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-      data: {
-        labels: [
-          "Symbian",
-          "Blackberry",
-          "Other",
-          "Android",
-          "IOS"
-        ],
-        datasets: [{
-          data: [15, 20, 30, 10, 30],
-          backgroundColor: [
-            "#BDC3C7",
-            "#9B59B6",
-            "#E74C3C",
-            "#26B99A",
-            "#3498DB"
-          ],
-          hoverBackgroundColor: [
-            "#CFD4D8",
-            "#B370CF",
-            "#E95E4F",
-            "#36CAAB",
-            "#49A9EA"
-          ]
-        }]
-      },
-      options: options
-    });
-  });
