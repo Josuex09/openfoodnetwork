@@ -15,8 +15,10 @@
     = yield :scripts
     %script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry"}
     = split_stylesheet_link_tag "stadistics/charts/font-awesome/font-awesome.css"
-    = split_stylesheet_link_tag "stadistics/bootstrap.css"
+    = split_stylesheet_link_tag "stadistics/bootstrap/bootstrap.css"
+    = split_stylesheet_link_tag "stadistics/bootstrap/bootstrap-datetimepicker.css"
     = split_stylesheet_link_tag "stadistics/custom.css"
+
     /= split_stylesheet_link_tag "darkswarm/all"
     /= javascript_include_tag "darkswarm/all"
 

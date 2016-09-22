@@ -31,71 +31,11 @@
           = render "/stadistics/charts/column-chart"
           = render "/stadistics/charts/line-chart"
 
-          .sidebar-widget.pull-right{:role => "button"}
-            %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
-              %span +
+        .sidebar-widget.pull-right{:role => "button"}
+          %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
+            %span +
         / Modal
-        #filterModal.modal.fade.bd-example-modal-lg{:role => "dialog"}
-          .modal-dialog.modal-lg
-            / Modal content
-            .modal-content
-              .modal-header
-                %button.close{"data-dismiss" => "modal", :type => "button"} ×
-                %h4.modal-title.text-center Generación de Grafico
-                .nav-center
-                  %ul.nav.nav-tabs.center-pills
-                    %li.active{:role => "presentation"}
-                      %a{:href => "#"} Productos
-                    %li{:role => "presentation"}
-                      %a{:href => "#"} Productores
-                    %li{:role => "presentation"}
-                      %a{:href => "#"} Centros de Acopio
-              .modal-body
-                / Calendario Inicio
-                .container
-                  .row
-                    .col-md-6.col-md-offset-3
-                      .form-group
-                        #datetimepicker1.input-group.date
-                          %input.form-control{:placeholder => "Fecha inicial", :type => "text"}/
-                          %span.input-group-addon
-                            %span.fa.fa-calendar-o
-                    :javascript
-                      $(function () {
-                          $('#datetimepicker1').datetimepicker();
-                      });
-                / Calendario
-                / Calendario Fecha Final
-                .container
-                  .row
-                    .col-md-6.col-md-offset-3
-                      .form-group
-                        #datetimepicker2.input-group.date
-                          %input.form-control{:placeholder => "Fecha final", :type => "text"}/
-                          %span.input-group-addon
-                            %span.fa.fa-calendar-o
-                    :javascript
-                      $(function () {
-                          $('#datetimepicker2').datetimepicker();
-                      });
-                / Calendario Fecha Final
-                .container
-                  .row
-                    .col-sm-3.col-md-offset-3
-                      %h2 Tipo de producto
-                      %select.selectpicker.btn
-                        %option Frutas
-                        %option Vegetales
-                        %option Hortalizas
-                    .col-sm-3.col-md-offset-1
-                      %h2 Tipo de gráfico
-                      %select.selectpicker.btn
-                        %option Barras
-                        %option Circular
-                        %option Columnas
-                        %option Lineas
-              .modal-footer
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Generar gráfico
+        = render "/stadistics/filter-modal"
 
 
 

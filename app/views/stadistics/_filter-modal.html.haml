@@ -1,0 +1,78 @@
+#filterModal.modal.fade.bd-example-modal-lg{:role => "dialog"}
+  .modal-dialog.modal-lg
+    / Modal content
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title.text-center Generación de Grafico
+        .nav-center
+          %ul.nav.nav-tabs.center-pills
+            %li.active{:role => "presentation"}
+              %a{:href => "#"} Productos
+            %li{:role => "presentation"}
+              %a{:href => "#"} Productores
+            %li{:role => "presentation"}
+              %a{:href => "#"} Centros de Acopio
+      .modal-body
+        / Calendario Inicio
+        .container
+          .row
+            .col-md-8.col-md-offset-2
+              .form-group
+                %label.col-md-12.control-label.text-center.h4{:for => "dtp_input1"} Fecha inicial
+                .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "dd MM yyyy", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
+                  %input.form-control{:readonly => "readonly",  :type => "text", :value => ""}/
+                  %span.input-group-addon
+                    %span.glyphicon.glyphicon-remove
+                  %span.input-group-addon
+                    %span.glyphicon.glyphicon-calendar
+                %input#dtp_input1{:type => "hidden", :value => ""}/
+                %br/
+
+
+        .container
+          .row
+            .col-md-8.col-md-offset-2
+              .form-group
+                %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Fecha final
+                .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "dd MM yyyy", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
+                  %input.form-control{:readonly => "readonly",  :type => "text", :value => ""}/
+                  %span.input-group-addon
+                    %span.glyphicon.glyphicon-remove
+                  %span.input-group-addon
+                    %span.glyphicon.glyphicon-calendar
+                %input#dtp_input2{:type => "hidden", :value => ""}/
+                %br/
+        / Calendario Fecha Final
+
+        .container
+          .row
+            .col-sm-4.col-md-offset-2
+              %h4 Tipo de producto
+              %select.selectpicker.btn
+                %option Frutas
+                %option Vegetales
+                %option Hortalizas
+            .col-sm-4.col-md-offset-1
+              %h4 Tipo de gráfico
+              %select.selectpicker.btn
+                %option Barras
+                %option Circular
+                %option Columnas
+                %option Lineas
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Generar gráfico
+
+
+- content_for :javascripts do
+  = javascript_include_tag "stadistics/bootstrap-datetimepicker"
+  :javascript
+            $('.form_date').datetimepicker({
+              weekStart: 1,
+              todayBtn:  1,
+              autoclose: 1,
+              todayHighlight: 1,
+              startView: 2,
+              minView: 2,
+              forceParse: 0
+            });
