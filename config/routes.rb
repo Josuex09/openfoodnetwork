@@ -2,6 +2,7 @@ Openfoodnetwork::Application.routes.draw do
   
   get "stadistics/index"
   post "stadistics/index", to: "stadistics#index"
+  
 
   root :to => 'home#index'
 
