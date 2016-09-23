@@ -15,7 +15,11 @@
   %a{href: spree.account_path}
     %i.ofn-i_015-user
     = t 'label_account'
-
+    
+- if admin_user?
+  %li.li-menu
+    %a{href:"/stadistics/index"}
+      = t 'label_stadistics'
 %li
   %a{title: t('label_logout'), href:'/logout' } 
     %i.ofn-i_018-unlocked
