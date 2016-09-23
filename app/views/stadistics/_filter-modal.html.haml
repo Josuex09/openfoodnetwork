@@ -21,7 +21,7 @@
               .col-md-8.col-md-offset-2
                 .form-group
                   %label.col-md-12.control-label.text-center.h4{:for => "dtp_input1"} Fecha inicial
-                  .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "dd MM yyyy", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
+                  .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                     = text_field_tag :initial_date ,'' ,:class => "form-control", :readonly => true
                     %span.input-group-addon
                       %span.glyphicon.glyphicon-remove
@@ -37,7 +37,7 @@
               .col-md-8.col-md-offset-2
                 .form-group
                   %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Fecha final
-                  .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "dd MM yyyy", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
+                  .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                     = text_field_tag :final_date ,'' ,:class => "form-control", :readonly => true
                     -# %input.form-control{:readonly => "readonly",  :type => "text", :value => ""}/
                     %span.input-group-addon
