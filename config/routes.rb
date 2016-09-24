@@ -1,7 +1,7 @@
 Openfoodnetwork::Application.routes.draw do
   
-  get "stadistics/index"
-  post "stadistics/index", to: "stadistics#index"
+  get "stadistics/index", to: "stadistics#index"
+  post"stadistics/index", to: "stadistics#create_chart"
   
 
   root :to => 'home#index'
