@@ -8,6 +8,13 @@ class StadisticsController < BaseController
   $id = 0;
 
   def index
+    i = Spree::Enterprise.count()
+    while i > 0 do
+      puts Spree:Enterprise.find(i).is_hub
+      i -=1
+    end
+      
+    
     @graphics = $graphics
   end
 
