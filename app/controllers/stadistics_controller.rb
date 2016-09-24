@@ -2,16 +2,15 @@
 class StadisticsController < BaseController
   layout 'stadistics'
   
-  $graphics = [];  
+  $graphics_bar = [] 
   
   def index
     @product_type = params[:product_type]
     @chart_type = params[:chart_type]
     @initial_date = params[:initial_date]
     @final_date = params[:final_date]
-    
-    if(!@chart_type.nil?)
-      @taxons = Hash["Vegetables" => 0, "Fruit" => 0, "Oils" => 0,"Preserves and Sauces" => 0, "Dairy" => 0,"Meat and Fish" => 0];
+    if(@chart_type == "3")
+      taxons = Hash["Vegetables" => 0, "Fruit" => 0, "Oils" => 0,"Preserves and Sauces" => 0, "Dairy" => 0,"Meat and Fish" => 0];
       
       #Este codigo, da las categorias de los productos que se vendieron
       lineitems = Spree::LineItem.all;
@@ -22,15 +21,13 @@ class StadisticsController < BaseController
         product = Spree::Product.find(product_id);
         taxon_id = product.taxon_ids[0];
         taxon = Spree::Taxon.find(taxon_id);
-        @taxons[taxon.name] +=1;   
+        taxons[taxon.name] +=1;   
       end 
-      
+        $graphics_bar.push(taxons);
     end
+    
+    @bar = $graphics_bar;
  
   end
     
-  def create_chart
-      
-  end
-   
 end
