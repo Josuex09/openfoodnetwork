@@ -25,51 +25,49 @@
       .right_col{:role => "main"}
 
         .row
-          - @bar.each do |actual|
-            /Se llaman los graficos que se quieren generar
-            .col-md-4.col-sm-4.col-xs-12
-              .x_panel.tile.fixed_height_320.overflow_hidden
-                .x_title
-                  %h2 Total de usuarios nuevos por año
-                  %ul.nav.navbar-right.panel_toolbox
-                    %li
-                      %a.collapse-link
-                        %i.fa.fa-chevron-up
-                    %li
-                      %a.close-link
-                        %i.fa.fa-close
-                  .clearfix
-                .x_content
-                  #graph_line{:style => "width:100%; height:190px;"}
-            
-            - content_for :javascripts do
-              :javascript
-                $(document).ready(function() {
-                  Morris.Line({
-                    element: 'graph_line',
-                    xkey: 'year',
-                    ykeys: ['value'],
-                    labels: ['Usuarios'],
-                    hideHover: 'auto',
-                    lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-                    data: [
-                      {year: "#{actual['Meat and Fish']}", value: 320},
-                      {year: '2013', value: 210},
-                      {year: '2014', value: 150},
-                      {year: '2015', value: 350},
-                      {year: '2016', value: 410}
-                    ],
-                    resize: true
-                  });
+          /Se llaman los graficos que se quieren generar
+          .col-md-4.col-sm-4.col-xs-12
+            .x_panel.tile.fixed_height_320.overflow_hidden
+              .x_title
+                %h2 Productores nuevos por mes
+                %ul.nav.navbar-right.panel_toolbox
+                  %li
+                    %a.collapse-link
+                      %i.fa.fa-chevron-up
+                  %li
+                    %a.close-link
+                      %i.fa.fa-close
+                .clearfix
+              .x_content
+                #graph_bar{:style => "width:100%; height:240px;"}
+          
+          
+          - content_for :javascripts do
+            = javascript_include_tag "stadistics/charts/morris.js"
+            = javascript_include_tag "stadistics/charts/raphael.js"
+            :javascript
+              $(document).ready(function() {
+                Morris.Bar({
+                  element: 'graph_bar',
+                  data: jQuery.parseJSON( '#{@bar}'),
+                  xkey: 'type',
+                  ykeys: ['value'],
+                  labels: ['Productores'],
+                  barRatio: 0.4,
+                  barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+                  xLabelAngle: 35,
+                  hideHover: 'auto',
+                  resize: true
                 });
+              });
 
-        .sidebar-widget.pull-right{:role => "button"}
-          %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
-            %span +
-        / Modal
-        = render "/stadistics/filter-modal"
-        - content_for :javascripts do
-          = javascript_include_tag "stadistics/charts/morris.js"
-          = javascript_include_tag "stadistics/charts/raphael.js"
+      .sidebar-widget.pull-right{:role => "button"}
+        %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
+          %span +
+      / Modal
+      = render "/stadistics/filter-modal"
+      - content_for :javascripts do
+        = javascript_include_tag "stadistics/charts/morris.js"
+        = javascript_include_tag "stadistics/charts/raphael.js"
 
 
