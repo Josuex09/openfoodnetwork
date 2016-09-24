@@ -31,7 +31,7 @@
                 .x_panel.tile.fixed_height_320.overflow_hidden
                   .x_title
                     %h4 
-                      = @time
+                      = actual.title
                     %ul.nav.navbar-right.panel_toolbox
                       %li
                         %a.collapse-link
@@ -41,17 +41,17 @@
                           %i.fa.fa-close
                     .clearfix
                   .x_content
-                    #graph_bar{:style => "width:100%; height:240px;"}
+                    %div{:style => "width:100%; height:240px;",:id =>actual.id}
               
               
               - content_for :javascripts do
                 = javascript_include_tag "stadistics/charts/morris.js"
                 = javascript_include_tag "stadistics/charts/raphael.js"
                 :javascript
-                  $(document).ready(function() {  
+                  $(document).ready(function() {
                     Morris.Bar({
-                      element: 'graph_bar',
-                      data: jQuery.parseJSON('#{actual}'),
+                      element: '#{actual.id}',
+                      data: jQuery.parseJSON('#{actual.value}'),
                       xkey: 'type',
                       ykeys: ['value'],
                       labels: ['Sold'],
