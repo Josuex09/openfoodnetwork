@@ -1,7 +1,8 @@
 .col-md-4.col-sm-4.col-xs-12
   .x_panel.tile.fixed_height_320.overflow_hidden
     .x_title
-      %h2 Categoría de Productos más vendidos
+      %h4 
+        = actual.title
       %ul.nav.navbar-right.panel_toolbox
         %li
           %a.collapse-link
@@ -11,82 +12,16 @@
             %i.fa.fa-close
       .clearfix
     .x_content
-      %table{:style => "width:100%"}
-        %tr
-          %td
-            %canvas#canvas1{:height => "140", :style => "margin: 15px 10px 10px 0", :width => "140"}
-          %td
-            %table.tile_info
-              %tr
-                %td
-                  %p
-                    %i.fa.fa-square.blue>
-                    Frutas
-                %td 30%
-              %tr
-                %td
-                  %p
-                    %i.fa.fa-square.green>
-                    Verduras
-                %td 10%
-              %tr
-                %td
-                  %p
-                    %i.fa.fa-square.purple>
-                    Legumbres
-                %td 20%
-              %tr
-                %td
-                  %p
-                    %i.fa.fa-square.aero>
-                    Hortalizas
-                %td 15%
-              %tr
-                %td
-                  %p
-                    %i.fa.fa-square.red>
-                    Otros
-                %td 30%
+      /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
+      %div{:style => "width:100%; height:220px;",:id =>"#{actual.id}-donut"}
 
 - content_for :javascripts do
-  = javascript_include_tag "stadistics/charts/Chart.js"
   :javascript
-      $(document).ready(function(){
-        var options = {
-          legend: false,
-          responsive: false
-        };
-        new Chart(document.getElementById("canvas1"), {
-          type: 'doughnut',
-          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-          data: {
-            labels: [
-              "Hortalizas",
-              "Legumbres",
-              "Otros",
-              "Verduras",
-              "Frutas"
-            ],
-            datasets: [{
-              data: [15, 20, 30, 10, 30],
-              backgroundColor: [
-                "#BDC3C7",
-                "#9B59B6",
-                "#E74C3C",
-                "#26B99A",
-                "#3498DB"
-              ],
-              hoverBackgroundColor: [
-                "#CFD4D8",
-                "#B370CF",
-                "#E95E4F",
-                "#36CAAB",
-                "#49A9EA"
-              ]
-            }]
-          },
-          options: options
-        });
+    $(document).ready(function() {
+      Morris.Donut({
+        element: '#{actual.id}-donut',
+        data: jQuery.parseJSON('#{actual.value}'),
+        colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+        resize: true
       });
-
-
+    });

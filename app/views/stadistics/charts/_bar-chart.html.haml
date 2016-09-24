@@ -1,7 +1,8 @@
 .col-md-4.col-sm-4.col-xs-12
   .x_panel.tile.fixed_height_320.overflow_hidden
     .x_title
-      %h2 actual.title
+      %h4 
+        = actual.title
       %ul.nav.navbar-right.panel_toolbox
         %li
           %a.collapse-link
@@ -11,19 +12,22 @@
             %i.fa.fa-close
       .clearfix
     .x_content
-      %div{:style => "width:100%; height:190px;", :id =>"#{actual.id}-line" }
+      /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
+      %div{:style => "width:100%; height:220px;",:id =>"#{actual.id}-bar"}
 
 - content_for :javascripts do
   :javascript
     $(document).ready(function() {
-      Morris.Line({
-        element: '#{actual.id}-line',
+      Morris.Bar({
+        element: '#{actual.id}-bar',
+        data: jQuery.parseJSON('#{actual.value}'),
         xkey: 'label',
         ykeys: ['value'],
-        labels: ['Usuarios'],
+        labels: ['Sold'],
+        barRatio: 0.4,
+        barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+        xLabelAngle: 35,
         hideHover: 'auto',
-        lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-        data: jQuery.parseJSON('#{actual.value}'),
         resize: true
       });
     });

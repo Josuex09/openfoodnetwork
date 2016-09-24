@@ -10,8 +10,8 @@ class StadisticsController < BaseController
   def index
     @graphics = $graphics
   end
-  
-    
+
+
   def create_chart   
     product_type = params[:product_type]
     chart_type = params[:chart_type]
@@ -26,7 +26,6 @@ class StadisticsController < BaseController
       $graphics.push(pgraphic)
     end
         
-    #render "index"
     redirect_to :action =>  "index"
   
   end

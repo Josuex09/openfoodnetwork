@@ -55,7 +55,7 @@
                 =select_tag :product_type ,options_for_select([["Vegetales" , "3" ], ["Frutas" , "5" ], ["Aceites" , "7" ], ["Conservantes" , "9" ], ["Lacteos", "11"], ["Carne y pescado", "13"]]), :class => 'selectpicker btn'
               .col-sm-4.col-md-offset-1
                 %h4 Tipo de gráfico
-                =select_tag :chart_type ,options_for_select([["Barras" , "0" ], ["Circular" , "1" ], ["Columnas" , "2" ],  ["Lineas" , "3" ]]), :class => 'selectpicker btn'
+                =select_tag :chart_type ,options_for_select([["Barras" , "0" ], ["Circular" , "1" ],  ["Lineas" , "2" ]]), :class => 'selectpicker btn'
             .modal-footer
             =submit_tag "Generar gráfico", :class => 'btn btn-default'
             

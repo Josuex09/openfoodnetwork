@@ -1,12 +1,12 @@
 class ProductGraphic
-  attr_accessor :value,:title,:initial_date,:final_date,:id
+  attr_accessor :value,:title,:initial_date,:final_date,:id,:chart
     @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
     @@hash = Hash[@@product_types.map.with_index.to_a];
   
   def initialize(initial_date,final_date,chart,id)
     @initial_date = initial_date
     @final_date = final_date
-    @char = chart
+    @chart = chart
     @title = ""
     @id=id
   end
@@ -43,19 +43,18 @@ class ProductGraphic
   
   def includes?(arr)
     for i in arr
-      if i.initial_date == @initial_date && i.final_date == @final_date
+      if @chart == i.chart && i.initial_date == @initial_date && i.final_date == @final_date
         return true
       end
     end
     return false
   end
- 
     
   def hash_to_json(values,arr)
     result = '['
     for i in 0..arr.length-1
-      arr[i] = arr[i][0...7];
-      result += '{ "type" : "'+arr[i]+'" , "value": '+values[i].to_s+'},';
+      #arr[i] = arr[i][0...7];
+      result += '{ "label" : "'+arr[i]+'" , "value": '+values[i].to_s+'},';
     end
     result = result[0...result.length-1];
     result += "]";

@@ -26,42 +26,14 @@
         .row
           -if @graphics != nil
             - @graphics.each do |actual|
-              /Se llaman los graficos que se quieren generar
-              .col-md-4.col-sm-4.col-xs-12
-                .x_panel.tile.fixed_height_320.overflow_hidden
-                  .x_title
-                    %h4 
-                      = actual.title
-                    %ul.nav.navbar-right.panel_toolbox
-                      %li
-                        %a.collapse-link
-                          %i.fa.fa-chevron-up
-                      %li
-                        %a.close-link
-                          %i.fa.fa-close
-                    .clearfix
-                  .x_content
-                    %div{:style => "width:100%; height:240px;",:id =>actual.id}
-              
-              
-              - content_for :javascripts do
-                = javascript_include_tag "stadistics/charts/morris.js"
-                = javascript_include_tag "stadistics/charts/raphael.js"
-                :javascript
-                  $(document).ready(function() {
-                    Morris.Bar({
-                      element: '#{actual.id}',
-                      data: jQuery.parseJSON('#{actual.value}'),
-                      xkey: 'type',
-                      ykeys: ['value'],
-                      labels: ['Sold'],
-                      barRatio: 0.4,
-                      barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-                      xLabelAngle: 35,
-                      hideHover: 'auto',
-                      resize: true
-                    });
-                  });
+              - if actual.chart == '0'
+                /Se llaman los graficos que se quieren generar
+                = render 'stadistics/charts/bar-chart', actual:actual
+              - elsif actual.chart == '1'
+                = render 'stadistics/charts/doughnut-chart', actual:actual
+              - elsif actual.chart == '2'
+                = render 'stadistics/charts/line-chart', actual:actual
+                
         .sidebar-widget.pull-right{:role => "button"}
           %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
             %span +
