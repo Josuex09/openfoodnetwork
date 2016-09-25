@@ -5,6 +5,7 @@ class StadisticsController < BaseController
   $id = 0;
 
   def index
+     #Enterprise.columns_hash.each {|k,v| puts "#{k} => #{v.type}"}
      @graphics = $graphics
   end
 
@@ -33,6 +34,20 @@ class StadisticsController < BaseController
 
   end
 
+  def create_hub_chart(params)
+    option = params[:hubs_option_type]
+    chart_type = params[:hubs_chart_type]
+    pgraphic = HubGraphic.new(chart_type,$id)
+    if option == "1"
+      pgraphic.generate_per_month
+    else
+      pgraphic.generate_per_prov
+    end
+    return pgraphic
+
+  end
+
+
   def create_chart  
     tab = params[:modal_tab];
 
@@ -40,6 +55,8 @@ class StadisticsController < BaseController
       graphic = create_product_chart(params)
     elsif tab == "2"
       graphic = create_producer_chart(params)
+    elsif tab == "3"
+      graphic = create_hub_chart(params)
     else
       redirect_to :action => "index"
     end  

@@ -67,7 +67,7 @@
               .row
                 .col-sm-4.col-md-offset-2 
                   %h4 Tipo de producto
-                  =select_tag :producer_option_type ,options_for_select([["Productores por mes" , "1" ], ["Productores por region" , "2" ]]), :class => 'selectpicker btn'
+                  =select_tag :producer_option_type ,options_for_select([["Productores nuevos por mes" , "1" ], ["Productores por region" , "2" ]]), :class => 'selectpicker btn'
                 .col-sm-4.col-md-offset-1
                   %h4 Tipo de gráfico
                   =select_tag :producer_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ]]), :class => 'selectpicker btn'
@@ -79,37 +79,9 @@
           #hubs-modal
             .container
               .row
-                .col-md-8.col-md-offset-2
-                  .form-group
-                    %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Fecha inicial
-                    .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
-                      = text_field_tag :final_date ,'' ,:class => "form-control", :readonly => true
-                      -# %input.form-control{:readonly => "readonly",  :type => "text", :value => ""}/
-                      %span.input-group-addon
-                        %span.glyphicon.glyphicon-remove
-                      %span.input-group-addon
-                        %span.glyphicon.glyphicon-calendar
-                    %input#dtp_input5{:type => "hidden", :value => ""}/
-                    %br/
-              .row
-                .col-md-8.col-md-offset-2
-                  .form-group
-                    %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Fecha final
-                    .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
-                      = text_field_tag :final_date ,'' ,:class => "form-control", :readonly => true
-                      -# %input.form-control{:readonly => "readonly",  :type => "text", :value => ""}/
-                      %span.input-group-addon
-                        %span.glyphicon.glyphicon-remove
-                      %span.input-group-addon
-                        %span.glyphicon.glyphicon-calendar
-                    %input#dtp_input6{:type => "hidden", :value => ""}/
-                    %br/
-            / Calendario Fecha Final
-            .container
-              .row
                 .col-sm-4.col-md-offset-2 
                   %h4 Tipo de producto
-                  =select_tag :hubs_product_type ,options_for_select([["San José" , "1" ], ["Alajuela" , "2" ], ["Cartago" , "3" ], ["Heredia" , "4" ], ["Guanacaste", "5"], ["Puntarenas", "6"], ["Limón", "7"]]), :class => 'selectpicker btn'
+                  =select_tag :hubs_option_type ,options_for_select([["Hubs nuevos por mes" , "1" ], ["Hubs por region" , "2" ]]), :class => 'selectpicker btn'
                 .col-sm-4.col-md-offset-1
                   %h4 Tipo de gráfico
                   =select_tag :hubs_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ]]), :class => 'selectpicker btn'
