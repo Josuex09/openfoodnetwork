@@ -5,7 +5,7 @@ class StadisticsController < BaseController
   $id = 0;
 
   def index
-     @graphics = $graphics 
+     @graphics = $graphics
   end
 
 
@@ -17,16 +17,29 @@ class StadisticsController < BaseController
     
     pgraphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
     pgraphic.generate
-    return pgraphic    
+    return pgraphic
+  end
+
+  def create_producer_chart(params)
+    option = params[:producer_option_type]
+    chart_type = params[:producer_chart_type]
+    pgraphic = ProducerGraphic.new(chart_type,$id)
+    if option == "1"
+      pgraphic.generate_per_month
+    else
+      pgraphic.generate_per_prov
+    end
+    return pgraphic
+
   end
 
   def create_chart  
     tab = params[:modal_tab];
-    
-    puts "#{tab}"
-    
+
     if tab == "1"
       graphic = create_product_chart(params)
+    elsif tab == "2"
+      graphic = create_producer_chart(params)
     else
       redirect_to :action => "index"
     end  

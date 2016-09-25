@@ -27,7 +27,7 @@ class ProductGraphic
       lineitems = Spree::LineItem.where("created_at >= :start_date AND created_at <= :end_date",{start_date: @initial_date, end_date: @final_date})
       time += @initial_date.to_s+" until "+@final_date.to_s;
     end
-    
+
     lineitems.each do |item|
       variant_id = item.variant_id;
       variant = Spree::Variant.find(variant_id);
@@ -42,11 +42,11 @@ class ProductGraphic
   end
   
   def includes?(arr)
-    for i in arr
-      if @chart == i.chart && i.initial_date == @initial_date && i.final_date == @final_date
-        return true
-      end
-    end
+    #for i in arr
+    #  if @chart == i.chart && i.initial_date == @initial_date && i.final_date == @final_date
+    #    return true
+    #  end
+    #end
     return false
   end
     
