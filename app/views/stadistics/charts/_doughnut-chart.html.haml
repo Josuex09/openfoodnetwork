@@ -8,8 +8,7 @@
           %a.collapse-link
             %i.fa.fa-chevron-up
         %li
-          %a.close-link
-            %i.fa.fa-close
+          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
       .clearfix
     .x_content
       /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo

@@ -8,8 +8,17 @@ class StadisticsController < BaseController
      @graphics = $graphics
   end
 
-  def delete_chart
-    #id_chart = pa
+  def destroy
+    id_del = params[:id_del]
+    for i in $graphics
+      if id_del.to_s == i.id.to_s
+        graphic = i
+      end
+    end
+
+    $graphics.delete(graphic)
+
+    redirect_to :action =>  "index"
   end
 
   def create_product_chart(params)
@@ -61,6 +70,8 @@ class StadisticsController < BaseController
       redirect_to :action => "index"
     end  
     $id +=1
+
+    puts "Soy el grafivo "+ graphic.to_s
     
     if(!graphic.includes?($graphics))
       $graphics.push(graphic)
