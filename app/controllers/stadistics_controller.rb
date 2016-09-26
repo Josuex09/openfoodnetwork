@@ -20,7 +20,7 @@ class StadisticsController < BaseController
     
     graphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
     graphic.generate
-    return pgraphic
+    return graphic
   end
 
   def create_producer_chart(params)
