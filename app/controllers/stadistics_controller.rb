@@ -5,7 +5,6 @@ class StadisticsController < BaseController
   $id = 0;
 
   def index
-     #Enterprise.columns_hash.each {|k,v| puts "#{k} => #{v.type}"}
      @graphics = $graphics
   end
 
@@ -27,7 +26,7 @@ class StadisticsController < BaseController
   def create_producer_chart(params)
     option = params[:producer_option_type]
     chart_type = params[:producer_chart_type]
-    graphic = ProducerGraphic.new(chart_type,$id)
+    graphic = ProducerGraphic.new(chart_type,$id,option)
     if option == "1"
       graphic.generate_per_month
     else
@@ -40,7 +39,7 @@ class StadisticsController < BaseController
   def create_hub_chart(params)
     option = params[:hubs_option_type]
     chart_type = params[:hubs_chart_type]
-    graphic = HubGraphic.new(chart_type,$id)
+    graphic = HubGraphic.new(chart_type,$id,option)
     if option == "1"
       graphic.generate_per_month
     else

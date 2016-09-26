@@ -1,6 +1,6 @@
 class ProducerGraphic
 
-  attr_accessor :value,:title,:id,:chart
+  attr_accessor :value,:title,:id,:chart,:type
   @@months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"];
   @@prov = ["San José","Alajuela","Cartago", "Heredia", "Guanacaste","Puntarenas", "Limón"]
   @@dates = ["2016-01-01","2016-01-31","2016-02-01","2016-02-28","2016-03-01","2016-03-31","2016-04-30","2016-04-30",
@@ -8,10 +8,11 @@ class ProducerGraphic
              "2016-09-01","2016-09-30","2016-10-01","2016-10-31","2016-11-01","2016-11-30","2016-12-01","2016-12-31"];
 
 
-  def initialize(chart,id)
+  def initialize(chart,id, type)
     @chart = chart
     @title = ""
     @id=id
+    @type = type
   end
 
   def generate_per_month
@@ -59,12 +60,17 @@ class ProducerGraphic
     end
 
 
-    @title = "Producers por region"
+    @title = "Productores por region"
     @value = hash_to_json(values,@@states);
 
   end
 
   def includes?(arr)
+    for i in arr
+      if @chart == i.chart && @type == i.type
+          return true
+      end
+    end
     return false
   end
 
