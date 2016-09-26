@@ -1,11 +1,11 @@
 class ProducerGraphic
 
   attr_accessor :value,:title,:id,:chart
-    @@months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"];
-    @@prov = ["San José","Alajuela","Cartago", "Heredia", "Guanacaste","Puntarenas", "Limón"]
-    @@dates = ["2016-01-01","2016-01-31","2016-02-01","2016-02-28","2016-03-01","2016-03-31","2016-04-30","2016-04-30",
-                "2016-05-01","2016-05-31","2016-06-01","2016-06-30","2016-07-01","2016-07-31","2016-08-01","2016-08-31",
-                "2016-09-01","2016-09-30","2016-10-01","2016-10-31","2016-11-01","2016-11-30","2016-12-01","2016-12-31"];
+  @@months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"];
+  @@prov = ["San José","Alajuela","Cartago", "Heredia", "Guanacaste","Puntarenas", "Limón"]
+  @@dates = ["2016-01-01","2016-01-31","2016-02-01","2016-02-28","2016-03-01","2016-03-31","2016-04-30","2016-04-30",
+             "2016-05-01","2016-05-31","2016-06-01","2016-06-30","2016-07-01","2016-07-31","2016-08-01","2016-08-31",
+             "2016-09-01","2016-09-30","2016-10-01","2016-10-31","2016-11-01","2016-11-30","2016-12-01","2016-12-31"];
 
 
   def initialize(chart,id)
@@ -25,9 +25,6 @@ class ProducerGraphic
     for i in 0..@@months.length-1
       totalproducers = Enterprise.is_primary_producer.activated.visible.where("created_at >= :start_date AND created_at
                                             <= :end_date",{start_date: @@dates[tmp], end_date:@@dates[tmp+1] }).count
-      if totalproducers == nil
-        totalproducers = 0
-      end
       values[i] += totalproducers
       tmp+=2;
     end

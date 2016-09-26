@@ -9,6 +9,9 @@ class StadisticsController < BaseController
      @graphics = $graphics
   end
 
+  def delete_chart
+    #id_chart = pa
+  end
 
   def create_product_chart(params)
     product_type = params[:product_type]
@@ -16,34 +19,34 @@ class StadisticsController < BaseController
     initial_date = params[:initial_date]
     final_date = params[:final_date]
     
-    pgraphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
-    pgraphic.generate
+    graphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
+    graphic.generate
     return pgraphic
   end
 
   def create_producer_chart(params)
     option = params[:producer_option_type]
     chart_type = params[:producer_chart_type]
-    pgraphic = ProducerGraphic.new(chart_type,$id)
+    graphic = ProducerGraphic.new(chart_type,$id)
     if option == "1"
-      pgraphic.generate_per_month
+      graphic.generate_per_month
     else
-      pgraphic.generate_per_prov
+      graphic.generate_per_prov
     end
-    return pgraphic
+    return graphic
 
   end
 
   def create_hub_chart(params)
     option = params[:hubs_option_type]
     chart_type = params[:hubs_chart_type]
-    pgraphic = HubGraphic.new(chart_type,$id)
+    graphic = HubGraphic.new(chart_type,$id)
     if option == "1"
-      pgraphic.generate_per_month
+      graphic.generate_per_month
     else
-      pgraphic.generate_per_prov
+      graphic.generate_per_prov
     end
-    return pgraphic
+    return graphic
 
   end
 
@@ -65,7 +68,7 @@ class StadisticsController < BaseController
     if(!graphic.includes?($graphics))
       $graphics.push(graphic)
     end
-        
+
     redirect_to :action =>  "index"
   
   end
