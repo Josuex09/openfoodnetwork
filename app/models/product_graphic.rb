@@ -43,7 +43,7 @@ class ProductGraphic
   
   def includes?(arr)
     for i in arr
-      if @chart == i.chart && i.initial_date == @initial_date && i.final_date == @final_date
+      if @chart == i.chart && @title == i.title
         return true
       end
     end

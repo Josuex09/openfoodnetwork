@@ -67,7 +67,7 @@ class ProducerGraphic
 
   def includes?(arr)
     for i in arr
-      if @chart == i.chart && @option == i.option && @title == i.title
+      if @chart == i.chart && @title == i.title
           return true
       end
     end

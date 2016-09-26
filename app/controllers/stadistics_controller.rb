@@ -13,11 +13,9 @@ class StadisticsController < BaseController
   end
 
   def create_product_chart(params)
-    product_type = params[:product_type]
     chart_type = params[:chart_type]
     initial_date = params[:initial_date]
     final_date = params[:final_date]
-    
     graphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
     graphic.generate
     return graphic
