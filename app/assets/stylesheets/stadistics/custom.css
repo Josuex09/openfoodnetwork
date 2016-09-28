@@ -4153,13 +4153,12 @@ ul.notifications {
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px;
-  background: #C1122B
-}
-.btn-circle.btn-xl :focus{
-  background: #C1122B
+  background: #F27052;
+  border-color: #F27052
 }
 
 .btn-info:active {
+	border-color: #F27052 !important;
 	background: #FFFFFF !important;
-	color: #C1122B !important;
+	color: #F27052 !important;
 }
