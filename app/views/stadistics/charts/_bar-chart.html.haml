@@ -12,21 +12,32 @@
       .clearfix
     .x_content
       /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
-      %div{:style => "width:100%; height:220px;",:id =>"#{actual.id}-bar"}
+      %canvas{:id =>"#{actual.id}-bar"}
 
 - content_for :javascripts do
   :javascript
-    $(document).ready(function() {
-      Morris.Bar({
-        element: '#{actual.id}-bar',
-        data: jQuery.parseJSON('#{actual.value}'),
-        xkey: 'label',
-        ykeys: ['value'],
-        labels: ['Sold'],
-        barRatio: 0.4,
-        barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-        xLabelAngle: 35,
-        hideHover: 'auto',
-        resize: true
+    Chart.defaults.global.legend = {
+        enabled: false
+      };
+    var ctx = document.getElementById("#{actual.id}-bar");
+      var mybarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: JSON.parse('#{actual.labels}'),
+          datasets: [{
+            label: '# of Votes',
+            backgroundColor: "#26B99A",
+            data: JSON.parse('#{actual.value}')
+          }]
+        },
+
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
       });
-    });

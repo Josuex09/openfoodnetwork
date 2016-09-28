@@ -1,6 +1,6 @@
 class ProducerGraphic
 
-  attr_accessor :value,:title,:id,:chart,:option
+  attr_accessor :value,:labels,:title,:id,:chart,:option
   @@months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"];
   @@prov = ["San José","Alajuela","Cartago", "Heredia", "Guanacaste","Puntarenas", "Limón"]
   @@dates = ["2016-01-01","2016-01-31","2016-02-01","2016-02-28","2016-03-01","2016-03-31","2016-04-30","2016-04-30",
@@ -31,7 +31,9 @@ class ProducerGraphic
     end
 
     @title = "Productores nuevos por mes"
-    @value = hash_to_json(values,@@months);
+    #@value = hash_to_json(values,@@months);
+    @labels = @@months.to_s
+    @value = values.to_s
   end
 
   def generate_per_prov
@@ -61,29 +63,17 @@ class ProducerGraphic
 
 
     @title = "Productores por region"
-    @value = hash_to_json(values,@@states);
-
+    @labels = @@states.to_s
+    @value = values.to_s
   end
 
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @title == i.title
-          return true
+        return true
       end
     end
     return false
   end
 
-
-  def hash_to_json(values,arr)
-    result = '['
-    for i in 0..arr.length-1
-      #arr[i] = arr[i][0...7];
-      result += '{ "label" : "'+arr[i]+'" , "value": '+values[i].to_s+'},';
-    end
-    result = result[0...result.length-1];
-    result += "]";
-    puts result
-    return result
-  end
 end

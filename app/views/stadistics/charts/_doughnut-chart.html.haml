@@ -12,15 +12,35 @@
       .clearfix
     .x_content
       /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
-      %div{:style => "width:100%; height:220px;",:id =>"#{actual.id}-donut"}
+      %canvas{:id =>"#{actual.id}-donut"}
 
 - content_for :javascripts do
   :javascript
-    $(document).ready(function() {
-      Morris.Donut({
-        element: '#{actual.id}-donut',
-        data: jQuery.parseJSON('#{actual.value}'),
-        colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-        resize: true
-      });
+    var ctx = document.getElementById("#{actual.id}-donut");
+    var data = {
+      labels: JSON.parse('#{actual.labels}'),
+      datasets: [{
+        data: JSON.parse('#{actual.value}'),
+        backgroundColor: [
+          "#455C73",
+          "#9B59B6",
+          "#BDC3C7",
+          "#26B99A",
+          "#3498DB"
+        ],
+        hoverBackgroundColor: [
+          "#34495E",
+          "#B370CF",
+          "#CFD4D8",
+          "#36CAAB",
+          "#49A9EA"
+        ]
+
+      }]
+    };
+
+    var canvasDoughnut = new Chart(ctx, {
+      type: 'doughnut',
+      tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+      data: data
     });

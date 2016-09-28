@@ -1,8 +1,8 @@
 class ProductGraphic
-  attr_accessor :value,:title,:initial_date,:final_date,:id,:chart
-    @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
-    @@hash = Hash[@@product_types.map.with_index.to_a];
-  
+  attr_accessor :value,:labels,:title,:initial_date,:final_date,:id,:chart
+  @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
+  @@hash = Hash[@@product_types.map.with_index.to_a];
+
   def initialize(initial_date,final_date,chart,id)
     @initial_date = initial_date
     @final_date = final_date
@@ -10,14 +10,14 @@ class ProductGraphic
     @title = ""
     @id=id
   end
-  
+
   def generate
     #Arreglo con valor de cada tipo
     values = [];
     for i in 0..@@product_types.length-1
       values.push(0);
     end
-    
+
     time = "Product types sold since "
     #Este codigo, da las categorias de los productos que se vendieron
     if(@final_date == "" && @initial_date == "")
@@ -35,12 +35,13 @@ class ProductGraphic
       product = Spree::Product.find(product_id);
       taxon_id = product.taxon_ids[0];
       taxon = Spree::Taxon.find(taxon_id);
-      values[@@hash[taxon.name]] +=1;   
+      values[@@hash[taxon.name]] +=1;
     end
-    @title = time; 
-    @value = hash_to_json(values,@@product_types);
+    @title = time;
+    @labels = @@product_types.to_s
+    @value = values.to_s
   end
-  
+
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @title == i.title
@@ -49,15 +50,5 @@ class ProductGraphic
     end
     return false
   end
-    
-  def hash_to_json(values,arr)
-    result = '['
-    for i in 0..arr.length-1
-      #arr[i] = arr[i][0...7];
-      result += '{ "label" : "'+arr[i]+'" , "value": '+values[i].to_s+'},';
-    end
-    result = result[0...result.length-1];
-    result += "]";
-    return result
-  end
+
 end

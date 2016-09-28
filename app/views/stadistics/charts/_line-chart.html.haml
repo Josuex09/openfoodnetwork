@@ -11,19 +11,29 @@
           = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
       .clearfix
     .x_content
-      %div{:style => "width:100%; height:220px;", :id =>"#{actual.id}-line" }
+      %canvas{:id =>"#{actual.id}-line"}
 
-- content_for :javascripts do
+
+-content_for :javascripts do
   :javascript
-    $(document).ready(function() {
-      Morris.Line({
-        element: '#{actual.id}-line',
-        xkey: 'label',
-        ykeys: ['value'],
-        labels: ['Usuarios'],
-        hideHover: 'auto',
-        lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-        data: jQuery.parseJSON('#{actual.value}'),
-        resize: true
-      });
+    Chart.defaults.global.legend = {
+      enabled: false
+    };
+    var ctx = document.getElementById('#{actual.id}-line');
+    var lineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: JSON.parse('#{actual.labels}'),
+        datasets: [{
+          label: "My First dataset",
+          backgroundColor: "rgba(38, 185, 154, 0.31)",
+          borderColor: "rgba(38, 185, 154, 0.7)",
+          pointBorderColor: "rgba(38, 185, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          data: JSON.parse('#{actual.value}')
+        }]
+      },
     });

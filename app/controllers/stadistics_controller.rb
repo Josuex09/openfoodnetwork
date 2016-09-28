@@ -59,6 +59,7 @@ class StadisticsController < BaseController
 
   def create_chart  
     tab = params[:modal_tab];
+    puts "Es el tab numero "+tab.to_s
 
     if tab == "1"
       graphic = create_product_chart(params)
@@ -70,8 +71,6 @@ class StadisticsController < BaseController
       redirect_to :action => "index"
     end  
     $id +=1
-
-    puts "Soy el grafivo "+ graphic.to_s
     
     if(!graphic.includes?($graphics))
       $graphics.push(graphic)
