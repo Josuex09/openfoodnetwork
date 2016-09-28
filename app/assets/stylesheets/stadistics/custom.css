@@ -4146,11 +4146,20 @@ ul.notifications {
   border-radius: 30px;
 }
      
-.btn-circle.btn-xl {
+.btn-circle.btn-xl{
   width: 70px;
   height: 70px;
   padding: 10px 16px;
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px;
+  background: #C1122B
+}
+.btn-circle.btn-xl :focus{
+  background: #C1122B
+}
+
+.btn-info:active {
+	background: #FFFFFF !important;
+	color: #C1122B !important;
 }
