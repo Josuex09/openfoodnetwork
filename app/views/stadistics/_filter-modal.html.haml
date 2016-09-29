@@ -15,9 +15,9 @@
               %a{:href => "#hubs-tab", "data-toggle" => "tab"} Centros de Acopio
       .modal-body
         / Calendario Inicio
-        =form_tag 'index',:remote => true do
-          .tab-content
-            #product-tab.tab-pane.active
+        .tab-content
+          #product-tab.tab-pane.active
+            =form_tag 'index',:remote => true do
               .container
                 .row
                   .col-md-8.col-md-offset-2
@@ -52,32 +52,34 @@
                     %h4 Tipo de gráfico
                     =select_tag :chart_type ,options_for_select([["Barras" , "1" ], ["Lineas" , "2" ], ["Circular" , "3" ]]), :class => 'selectpicker btn col-sm-12'
                     =hidden_field_tag :modal_tab, "1"
-              =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right'
-                    
-            #producer-tab.tab-pane
-              .container
-                .row
-                  .col-sm-4.col-md-offset-2
-                    %h4 Opción de gráfico
-                    =select_tag :producer_option_type ,options_for_select([["Productores nuevos por mes" , "1" ], ["Productores por region" , "2" ]]), :class => 'selectpicker btn'
-                  .col-sm-4.col-md-offset-1
-                    %h4 Tipo de gráfico
-                    =select_tag :producer_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
-                    =hidden_field_tag :modal_tab, "2"
-                    .modal-footer
-              =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right'
-            #hubs-tab.tab-pane
-              .container
-                .row
-                  .col-sm-4.col-md-offset-2
-                    %h4 Opción de gráfico
-                    =select_tag :hubs_option_type ,options_for_select([["Hubs nuevos por mes" , "1" ], ["Hubs por region" , "2" ]]), :class => 'selectpicker btn'
-                  .col-sm-4.col-md-offset-1
-                    %h4 Tipo de gráfico
-                    =select_tag :hubs_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
-                    =hidden_field_tag :modal_tab, "3"
               .modal-footer
-              =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right'
+              =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'product-button'
+          #producer-tab.tab-pane
+            .container
+              .row
+              =form_tag 'index',:remote => true do
+                .col-sm-4.col-md-offset-2
+                  %h4 Opción de gráfico
+                  =select_tag :producer_option_type ,options_for_select([["Productores nuevos por mes" , "1" ], ["Productores por region" , "2" ]]), :class => 'selectpicker btn'
+                .col-sm-4.col-md-offset-1
+                  %h4 Tipo de gráfico
+                  =select_tag :producer_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
+                  =hidden_field_tag :modal_tab, "2"
+                .modal-footer
+                =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'producer-button'
+          #hubs-tab.tab-pane
+            .container
+              .row
+              =form_tag 'index',:remote => true do
+                .col-sm-4.col-md-offset-2
+                  %h4 Opción de gráfico
+                  =select_tag :hubs_option_type ,options_for_select([["Hubs nuevos por mes" , "1" ], ["Hubs por region" , "2" ]]), :class => 'selectpicker btn'
+                .col-sm-4.col-md-offset-1
+                  %h4 Tipo de gráfico
+                  =select_tag :hubs_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
+                  =hidden_field_tag :modal_tab, "3"
+                .modal-footer
+                =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'hubs-button'
 
 - content_for :javascripts do
   = javascript_include_tag "stadistics/bootstrap-datetimepicker"
