@@ -65,8 +65,8 @@
                     %h4 Tipo de gráfico
                     =select_tag :producer_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
                     =hidden_field_tag :modal_tab, "2"
-                  .modal-footer
-                  =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'producer-button'
+                .modal-footer
+                =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'producer-button'
           #hubs-tab.tab-pane
             =form_tag 'index',:remote => true do
               .container
