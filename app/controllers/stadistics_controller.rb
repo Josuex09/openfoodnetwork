@@ -4,10 +4,12 @@ class StadisticsController < BaseController
   $graphics = [];
   $id = 0;
 
+  #Loads the main view of the stadistics module
   def index
-     @graphics = $graphics
+     @graphics = $graphics #If there is a graph already in the $graphics variable, load it.
   end
 
+  #Destroys a chart based on the id 
   def destroy
     id_del = params[:id_del]
     for i in $graphics
@@ -16,37 +18,42 @@ class StadisticsController < BaseController
       end
     end
 
+    #Deletes the graphic from the global array of graphics.
     $graphics.delete(graphic)
-
-    redirect_to :action =>  "index"
+    
+    #Redirects to the main stadistics page
+    redirect_to :action =>  "index" 
   end
 
+  #Creates a product chart base on the params sent in the index view
   def create_product_chart(params)
     chart_type = params[:chart_type]
     initial_date = params[:initial_date]
     final_date = params[:final_date]
-    graphic = ProductGraphic.new(initial_date,final_date,chart_type,$id)
+    graphic = ProductGraphic.new(initial_date,final_date,chart_type,$id) #Creates the graphic with the data sent.
     graphic.generate
     return graphic
   end
 
+  #Creates a producer chart, base on the params sent in the index view.
   def create_producer_chart(params)
     option = params[:producer_option_type]
     chart_type = params[:producer_chart_type]
-    graphic = ProducerGraphic.new(chart_type,$id,option)
+    graphic = ProducerGraphic.new(chart_type,$id,option) #Sends the params to create a new Producer Graphic.
     if option == "1"
-      graphic.generate_per_month
+      graphic.generate_per_month #Generates a chart base on the producers per month
     else
-      graphic.generate_per_prov
+      graphic.generate_per_prov #Generates a chart based on the region.
     end
     return graphic
 
   end
 
+  #Create a hub chart base on the params
   def create_hub_chart(params)
     option = params[:hubs_option_type]
     chart_type = params[:hubs_chart_type]
-    graphic = HubGraphic.new(chart_type,$id,option)
+    graphic = HubGraphic.new(chart_type,$id,option) #Sends the data to the constructor and creates a new hubs graphic.
     if option == "1"
       graphic.generate_per_month
     else
@@ -56,22 +63,23 @@ class StadisticsController < BaseController
 
   end
 
-
+  #Based on the data sent in the index view calls an specific method that creates a specific chart.
   def create_chart  
     tab = params[:modal_tab];
     puts "Es el tab numero "+tab.to_s
 
     if tab == "1"
-      graphic = create_product_chart(params)
+      graphic = create_product_chart(params) #Calls the product chart function
     elsif tab == "2"
-      graphic = create_producer_chart(params)
+      graphic = create_producer_chart(params) #Calls the producer chart function
     elsif tab == "3"
-      graphic = create_hub_chart(params)
+      graphic = create_hub_chart(params) #Calls the hubs chart function
     else
-      redirect_to :action => "index"
+      redirect_to :action => "index" #Reload the page with the updated charts.
     end  
     $id +=1
     
+    #Check if a graphic is already in the view, to avoid duplicated graphics
     if(!graphic.includes?($graphics))
       $graphics.push(graphic)
     end

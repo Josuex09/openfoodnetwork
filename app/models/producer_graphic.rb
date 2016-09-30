@@ -7,7 +7,7 @@ class ProducerGraphic
              "2016-05-01","2016-05-31","2016-06-01","2016-06-30","2016-07-01","2016-07-31","2016-08-01","2016-08-31",
              "2016-09-01","2016-09-30","2016-10-01","2016-10-31","2016-11-01","2016-11-30","2016-12-01","2016-12-31"];
 
-
+  #Constructor
   def initialize(chart,id, option)
     @chart = chart
     @title = ""
@@ -15,8 +15,9 @@ class ProducerGraphic
     @option = option
   end
 
+  #Does a query getting the new producers per month.
   def generate_per_month
-    #Arreglo con valor de cada tipo
+    #Array containing each type value
     values = [];
     for i in 0..@@months.length-1
       values.push(0);
@@ -35,7 +36,8 @@ class ProducerGraphic
     @labels = @@months.to_s
     @value = values.to_s
   end
-
+  
+  #Gets data that contains the new producers filtered per region
   def generate_per_prov
     #es temporal para poder mostrar datos en el grafico
     @@states = []
@@ -66,7 +68,7 @@ class ProducerGraphic
     @labels = @@states.to_s
     @value = values.to_s
   end
-
+#Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @title == i.title

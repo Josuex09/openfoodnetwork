@@ -3,6 +3,7 @@ class ProductGraphic
   @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
   @@hash = Hash[@@product_types.map.with_index.to_a];
 
+  #Constructor, recieving the staring date, end date, chart type and id respectively
   def initialize(initial_date,final_date,chart,id)
     @initial_date = initial_date
     @final_date = final_date
@@ -12,22 +13,24 @@ class ProductGraphic
   end
 
   def generate
-    #Arreglo con valor de cada tipo
+    #Array containing each type value
     values = [];
     for i in 0..@@product_types.length-1
       values.push(0);
     end
 
     time = "Product types sold since "
-    #Este codigo, da las categorias de los productos que se vendieron
-    if(@final_date == "" && @initial_date == "")
+    
+    if(@final_date == "" && @initial_date == "")#Gets  products sold with no date constraints
       lineitems = Spree::LineItem.all;
       time += "always";
     else
+      #Gets products sold with date constraints
       lineitems = Spree::LineItem.where("created_at >= :start_date AND created_at <= :end_date",{start_date: @initial_date, end_date: @final_date})
       time += @initial_date.to_s+" until "+@final_date.to_s;
     end
 
+    #Gets all the categories and count each article sent.
     lineitems.each do |item|
       variant_id = item.variant_id;
       variant = Spree::Variant.find(variant_id);
@@ -42,6 +45,7 @@ class ProductGraphic
     @value = values.to_s
   end
 
+#Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @title == i.title

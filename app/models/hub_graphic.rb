@@ -8,6 +8,7 @@ class HubGraphic
              "2016-09-01","2016-09-30","2016-10-01","2016-10-31","2016-11-01","2016-11-30","2016-12-01","2016-12-31"];
 
 
+  #Constructor
   def initialize(chart,id,option)
     @chart = chart
     @title = ""
@@ -15,6 +16,7 @@ class HubGraphic
     @option=option
   end
 
+   #Does a query getting the new hubs per month.
   def generate_per_month
     #Arreglo con valor de cada tipo
     values = [];
@@ -35,6 +37,7 @@ class HubGraphic
     @value = values
   end
 
+ #Does a query getting the new hubs per region.
   def generate_per_prov
     #es temporal para poder mostrar datos en el grafico
     @@states = []
@@ -66,7 +69,7 @@ class HubGraphic
     @value = values
 
   end
-
+#Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @title == i.title
