@@ -1,5 +1,5 @@
-.col-md-4.col-sm-4.col-xs-12
-  .x_panel.tile.fixed_height_320.overflow_hidden
+.col-md-4.col-sm-6.col-xs-12
+  .x_panel
     .x_title
       %h2
         = actual.title
@@ -11,8 +11,12 @@
           = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
       .clearfix
     .x_content
-      /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
       %canvas{:id =>"#{actual.id}-donut"}
+
+
+
+
+
 
 - content_for :javascripts do
   :javascript
