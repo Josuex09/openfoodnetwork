@@ -1,7 +1,7 @@
 class HubGraphic
 
   attr_accessor :value,:labels,:title,:id,:chart,:option
-  @@months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre"];
+  @@months = ["January","February","March","April","May","June","July","August","September","October","November","Dicember"];
   @@prov = ["San José","Alajuela","Cartago", "Heredia", "Guanacaste","Puntarenas", "Limón"]
   @@dates = ["2016-01-01","2016-01-31","2016-02-01","2016-02-28","2016-03-01","2016-03-31","2016-04-30","2016-04-30",
              "2016-05-01","2016-05-31","2016-06-01","2016-06-30","2016-07-01","2016-07-31","2016-08-01","2016-08-31",

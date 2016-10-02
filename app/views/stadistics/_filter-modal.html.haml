@@ -4,15 +4,15 @@
     .modal-content
       .modal-header
         %button.close{"data-dismiss" => "modal", :type => "button"} ×
-        %h4.modal-title.text-center Generación de Grafico
+        %h4.modal-title.text-center Create new chart
         .nav-center
           %ul.nav.nav-tabs.center-pills
             %li.active{:role => "presentation" , :id => "product-modal-button" }
-              %a{:href => "#product-tab","data-toggle" => "tab"} Productos
+              %a{:href => "#product-tab","data-toggle" => "tab"} Products
             %li{:role => "presentation", :id => "producer-modal-button"}
-              %a{:href => "#producer-tab", "data-toggle" => "tab"} Productores
+              %a{:href => "#producer-tab", "data-toggle" => "tab"} Producers
             %li{:role => "presentation", :id => "hubs-modal-button"}
-              %a{:href => "#hubs-tab", "data-toggle" => "tab"} Centros de Acopio
+              %a{:href => "#hubs-tab", "data-toggle" => "tab"} Hubs
       .modal-body
         / Calendario Inicio
         .tab-content
@@ -22,7 +22,7 @@
                 .row
                   .col-md-8.col-md-offset-2
                     .form-group
-                      %label.col-md-12.control-label.text-center.h4{:for => "dtp_input1"} Fecha inicial
+                      %label.col-md-12.control-label.text-center.h4{:for => "dtp_input1"} Initial date
                       .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                         = text_field_tag :initial_date ,'' ,:class => "form-control", :readonly => true
                         %span.input-group-addon
@@ -36,7 +36,7 @@
                 .row
                   .col-md-8.col-md-offset-2
                     .form-group
-                      %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Fecha final
+                      %label.col-md-12.control-label.text-center.h4{:for => "dtp_input2"} Final date
                       .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                         = text_field_tag :final_date ,'' ,:class => "form-control", :readonly => true
                         %span.input-group-addon
@@ -49,8 +49,8 @@
               .container
                 .row
                   .col-sm-6.col-md-offset-3.text-center
-                    %h4 Tipo de gráfico
-                    =select_tag :chart_type ,options_for_select([["Barras" , "1" ], ["Lineas" , "2" ], ["Circular" , "3" ]]), :class => 'selectpicker btn col-sm-12'
+                    %h4 Chart type
+                    =select_tag :chart_type ,options_for_select([["Bar" , "1" ], ["Line" , "2" ], ["Donut" , "3" ]]), :class => 'selectpicker btn col-sm-12'
                     =hidden_field_tag :modal_tab, "1"
               .modal-footer
               =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'product-button'
@@ -60,26 +60,26 @@
                 .row
                   .col-sm-4.col-md-offset-2
                     %h4 Opción de gráfico
-                    =select_tag :producer_option_type ,options_for_select([["Productores nuevos por mes" , "1" ], ["Productores por region" , "2" ]]), :class => 'selectpicker btn'
+                    =select_tag :producer_option_type ,options_for_select([["New producers per month" , "1" ], ["New producers per region" , "2" ]]), :class => 'selectpicker btn'
                   .col-sm-4.col-md-offset-1
                     %h4 Tipo de gráfico
-                    =select_tag :producer_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
+                    =select_tag :producer_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ]]), :class => 'selectpicker btn'
                     =hidden_field_tag :modal_tab, "2"
                 .modal-footer
-                =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'producer-button'
+                =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'producer-button'
           #hubs-tab.tab-pane
             =form_tag 'index',:remote => true do
               .container
                 .row
                   .col-sm-4.col-md-offset-2
                     %h4 Opción de gráfico
-                    =select_tag :hubs_option_type ,options_for_select([["Hubs nuevos por mes" , "1" ], ["Hubs por region" , "2" ]]), :class => 'selectpicker btn'
+                    =select_tag :hubs_option_type ,options_for_select([["New hubs per month" , "1" ], ["New hubs per region" , "2" ]]), :class => 'selectpicker btn'
                   .col-sm-4.col-md-offset-1
                     %h4 Tipo de gráfico
-                    =select_tag :hubs_chart_type ,options_for_select([["Barras" , "1" ], ["Líneas" , "2" ],["Circular" , "3" ]]), :class => 'selectpicker btn'
+                    =select_tag :hubs_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ]]), :class => 'selectpicker btn'
                     =hidden_field_tag :modal_tab, "3"
                 .modal-footer
-                =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'hubs-button'
+                =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'hubs-button'
 
 - content_for :javascripts do
   = javascript_include_tag "stadistics/bootstrap-datetimepicker"
