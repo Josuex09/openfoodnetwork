@@ -53,16 +53,16 @@
                     =select_tag :chart_type ,options_for_select([["Bar" , "1" ], ["Line" , "2" ], ["Donut" , "3" ]]), :class => 'selectpicker btn col-sm-12'
                     =hidden_field_tag :modal_tab, "1"
               .modal-footer
-              =submit_tag "Generar gráfico", :class => 'btn btn-default pull-right', :name => 'product-button'
+              =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'product-button'
           #producer-tab.tab-pane
             =form_tag 'index',:remote => true do
               .container
                 .row
                   .col-sm-4.col-md-offset-2
-                    %h4 Opción de gráfico
-                    =select_tag :producer_option_type ,options_for_select([["New producers per month" , "1" ], ["New producers per region" , "2" ]]), :class => 'selectpicker btn'
+                    %h4 Filer option
+                    =select_tag :producer_option_type ,options_for_select([["New producers per month" , "1" ], ["Producers per region" , "2" ]]), :class => 'selectpicker btn'
                   .col-sm-4.col-md-offset-1
-                    %h4 Tipo de gráfico
+                    %h4 Chart type
                     =select_tag :producer_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ]]), :class => 'selectpicker btn'
                     =hidden_field_tag :modal_tab, "2"
                 .modal-footer
@@ -72,10 +72,10 @@
               .container
                 .row
                   .col-sm-4.col-md-offset-2
-                    %h4 Opción de gráfico
-                    =select_tag :hubs_option_type ,options_for_select([["New hubs per month" , "1" ], ["New hubs per region" , "2" ]]), :class => 'selectpicker btn'
+                    %h4 Filter option
+                    =select_tag :hubs_option_type ,options_for_select([["New hubs per month" , "1" ], ["Hubs per region" , "2" ]]), :class => 'selectpicker btn'
                   .col-sm-4.col-md-offset-1
-                    %h4 Tipo de gráfico
+                    %h4 Chart type
                     =select_tag :hubs_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ]]), :class => 'selectpicker btn'
                     =hidden_field_tag :modal_tab, "3"
                 .modal-footer

@@ -30,7 +30,7 @@ class HubGraphic
       tmp+=2;
     end
 
-    @title = "Hubs nuevos por mes"
+    @title = "New hubs per month"
     @labels = @@months
     @value = values
   end
@@ -61,7 +61,7 @@ class HubGraphic
     end
 
 
-    @title = "Hubs por region"
+    @title = "Hubs per region"
     @labels = @@states
     @value = values
 

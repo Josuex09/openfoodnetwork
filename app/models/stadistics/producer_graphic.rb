@@ -30,7 +30,7 @@ class ProducerGraphic
       tmp+=2;
     end
 
-    @title = "Productores nuevos por mes"
+    @title = "New producers per month"
     #@value = hash_to_json(values,@@months);
     @labels = @@months.to_s
     @value = values.to_s
@@ -62,7 +62,7 @@ class ProducerGraphic
     end
 
 
-    @title = "Productores por region"
+    @title = "Producers per region"
     @labels = @@states.to_s
     @value = values.to_s
   end
