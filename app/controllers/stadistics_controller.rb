@@ -6,7 +6,6 @@ class StadisticsController < BaseController
 
   #Loads the main view of the stadistics module
   def index
-     @graphics = $graphics #If there is a graph already in the $graphics variable, load it.
   end
 
   #Destroys a chart based on the id 

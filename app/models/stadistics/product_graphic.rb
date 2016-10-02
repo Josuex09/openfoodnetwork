@@ -18,14 +18,20 @@ class ProductGraphic
       values.push(0);
     end
 
-    time = "Product types sold since "
+    time = "Product types sold "
     #Este codigo, da las categorias de los productos que se vendieron
-    if(@final_date == "" && @initial_date == "")
+    if(@final_date.empty? && @initial_date.empty?)
       lineitems = Spree::LineItem.all;
-      time += "always";
-    else
+      time += "since always";
+    elsif (@final_date.empty?)
+      lineitems = Spree::LineItem.where("created_at >= :start_date",{start_date: @initial_date})
+      time += "since "+ @initial_date.to_s;
+    elsif (@initial_date.empty?)
+      lineitems = Spree::LineItem.where("created_at <= :end_date",{end_date: @final_date})
+      time += "until "+@final_date.to_s;      
+    elsif (!@final_date.empty? && !@initial_date.empty?)
       lineitems = Spree::LineItem.where("created_at >= :start_date AND created_at <= :end_date",{start_date: @initial_date, end_date: @final_date})
-      time += @initial_date.to_s+" until "+@final_date.to_s;
+      time += "since "+@initial_date.to_s+" until "+@final_date.to_s;
     end
 
     lineitems.each do |item|

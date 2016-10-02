@@ -838,7 +838,10 @@ h2 {
   display: block;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; }
+  white-space: nowrap;
+  max-width: 95%;
+  
+  }
 
 .x_title h2 small {
   margin-left: 10px; }
@@ -4161,4 +4164,10 @@ ul.notifications {
 	border-color: #F27052 !important;
 	background: #FFFFFF !important;
 	color: #F27052 !important;
+}
+
+.titleicon{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

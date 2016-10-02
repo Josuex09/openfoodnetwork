@@ -19,15 +19,21 @@ class ProductGraphic
       values.push(0);
     end
 
-    time = "Product types sold since "
+    time = "Product types sold "
     
     if(@final_date == "" && @initial_date == "")#Gets  products sold with no date constraints
       lineitems = Spree::LineItem.all;
-      time += "always";
+      time += "since always";
+    elsif(@final_date !="" && @initial_date =="")
+      lineitems = Spree::LineItem.where("created_at <= :end_date",{end_date: @final_date})
+      time += "untill "+@final_date.to_s;      
+    elsif(@initial_date !="" && @final_date =="")
+      lineitems = Spree::LineItem.where("created_at >= :start_date",{start_date: @initial_date})
+      time += "since "+@initial_date.to_s;  
     else
       #Gets products sold with date constraints
       lineitems = Spree::LineItem.where("created_at >= :start_date AND created_at <= :end_date",{start_date: @initial_date, end_date: @final_date})
-      time += @initial_date.to_s+" until "+@final_date.to_s;
+      time += "since "+@initial_date.to_s+" until "+@final_date.to_s;
     end
 
     #Gets all the categories and count each article sent.
