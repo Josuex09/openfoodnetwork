@@ -1,0 +1,38 @@
+.col-md-4.col-sm-6.col-xs-12
+  .x_panel
+    .x_title
+      %ul.nav.navbar-right.panel_toolbox
+        %li
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+        %li
+          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
+      %h2{ :title => actual.title}
+        = actual.title
+      .clearfix
+    .x_content
+      %canvas{:id =>"#{actual.id}-radar"}
+
+- content_for :javascripts do
+  :javascript
+    Chart.defaults.global.legend = {
+    enabled: false
+    };
+    var ctx = document.getElementById("#{actual.id}-radar");
+    var data = {
+      labels: JSON.parse('#{actual.labels}'),
+      datasets: [{
+        backgroundColor: "rgba(3, 88, 106, 0.2)",
+        borderColor: "rgba(3, 88, 106, 0.80)",
+        pointBorderColor: "rgba(3, 88, 106, 0.80)",
+        pointBackgroundColor: "rgba(3, 88, 106, 0.80)",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgba(220,220,220,1)",
+        data: JSON.parse('#{actual.value}')
+      }]
+    };
+    var canvasRadar = new Chart(ctx, {
+       type: 'radar',
+       data: data,
+     });
+

@@ -41,7 +41,10 @@
                 = render 'stadistics/charts/line-chart', actual:actual
               - elsif actual.chart == '3'
                 = render 'stadistics/charts/doughnut-chart', actual:actual
-                
+              - elsif actual.chart == '4'
+                = render 'stadistics/charts/radar-chart', actual:actual
+              - elsif actual.chart == '5'
+                = render 'stadistics/charts/pie-chart', actual:actual
         .sidebar-widget.pull-right{:role => "button"}
           %button.btn.btn-info.btn-circle.btn-xl{"data-target" => "#filterModal", "data-toggle" => "modal", :type => "button"}
             %span +
