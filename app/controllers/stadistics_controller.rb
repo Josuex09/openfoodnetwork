@@ -6,6 +6,9 @@ class StadisticsController < BaseController
 
   #Loads the main view of the stadistics module
   def index
+    if(spree_current_user == nil || !spree_current_user.admin?)
+      redirect_to ""
+    end
   end
 
   #Destroys a chart based on the id 
@@ -38,11 +41,11 @@ class StadisticsController < BaseController
   def create_producer_chart(params)
     option = params[:producer_option_type]
     chart_type = params[:producer_chart_type]
-    graphic = ProducerGraphic.new(chart_type,$id,option) #Sends the params to create a new Producer Graphic.
+    graphic = ProducerGraphic.new(chart_type,$id) #Sends the params to create a new Producer Graphic.
     if option == "1"
-      graphic.generate_per_month #Generates a chart base on the producers per month
+      graphic.generate_per_period(params[:producer_period]) #Generates a chart base on the producers per month
     else
-      graphic.generate_per_prov #Generates a chart based on the region.
+      graphic.generate_per_region #Generates a chart based on the region.
     end
     return graphic
 
@@ -52,11 +55,11 @@ class StadisticsController < BaseController
   def create_hub_chart(params)
     option = params[:hubs_option_type]
     chart_type = params[:hubs_chart_type]
-    graphic = HubGraphic.new(chart_type,$id,option) #Sends the data to the constructor and creates a new hubs graphic.
+    graphic = HubGraphic.new(chart_type,$id) #Sends the data to the constructor and creates a new hubs graphic.
     if option == "1"
-      graphic.generate_per_month
+      graphic.generate_per_period(params[:hub_period])
     else
-      graphic.generate_per_prov
+      graphic.generate_per_region
     end
     return graphic
 
@@ -79,7 +82,7 @@ class StadisticsController < BaseController
     $id +=1
     
     #Check if a graphic is already in the view, to avoid duplicated graphics
-    if(!graphic.includes?($graphics))
+    if(!graphic.includes?($graphics) && $graphics.length<6)
       $graphics.push(graphic)
     end
 

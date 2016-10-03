@@ -3,9 +3,6 @@
     .x_title
       %ul.nav.navbar-right.panel_toolbox
         %li
-          %a.collapse-link
-            %i.fa.fa-chevron-up
-        %li
           = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'    
       %h2{ :title => actual.title}  
         = actual.title
