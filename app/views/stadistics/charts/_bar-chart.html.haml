@@ -2,7 +2,7 @@
   .x_panel
     .x_title
       %ul.nav.navbar-right.panel_toolbox
-        %li
+        %li.pull-right
           = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'    
       %h2{ :title => actual.title}        
         = actual.title
