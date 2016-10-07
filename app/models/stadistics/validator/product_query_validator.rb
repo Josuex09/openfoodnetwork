@@ -9,7 +9,7 @@ class ProductQueryValidator
   end
     
   def valid_chart?(chart)
-    if chart > 0 && chart < 4
+    if chart > 0 && chart < 6
       return true
     else
       return false

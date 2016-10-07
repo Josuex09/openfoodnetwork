@@ -65,10 +65,23 @@ class StadisticsController < BaseController
 
   end
 
+  #Create a user chart base on the params
+  def create_user_chart(params)
+    option = params[:user_option_type]
+    chart_type = params[:user_chart_type]
+    graphic = UserGraphic.new(chart_type,$id) #Sends the data to the constructor and creates a new hubs graphic.
+    if option == "1"
+      graphic.generate_per_period(params[:user_period])
+    else
+      graphic.generate_per_region
+    end
+    return graphic
+
+  end
+
   #Based on the data sent in the index view calls an specific method that creates a specific chart.
   def create_chart  
-    tab = params[:modal_tab];
-    puts "Es el tab numero "+tab.to_s
+    tab = params[:modal_tab]
 
     if tab == "1"
       graphic = create_product_chart(params) #Calls the product chart function
@@ -76,6 +89,8 @@ class StadisticsController < BaseController
       graphic = create_producer_chart(params) #Calls the producer chart function
     elsif tab == "3"
       graphic = create_hub_chart(params) #Calls the hubs chart function
+    elsif tab == "4"
+      graphic = create_user_chart(params) #Calls the users chart function
     else
       redirect_to :action => "index" #Reload the page with the updated charts.
     end  

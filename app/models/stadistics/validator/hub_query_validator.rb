@@ -5,7 +5,7 @@ class HubQueryValidator
   end
     
   def valid_chart?(chart)
-    return (chart>0 && chart<4)
+    return (chart>0 && chart<6)
   end
 
      
