@@ -85,7 +85,7 @@
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
                     %h4{:for => "dtp_input1"} Filter Option
-                    =select_tag :hubs_option_type ,options_for_select([["New hubs per month" , "1" ], ["Hubs per region" , "2" ]]), :class => 'selectpicker btn hubfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
+                    =select_tag :hubs_option_type ,options_for_select([["New hubs per period" , "1" ], ["Hubs per region" , "2" ]]), :class => 'selectpicker btn hubfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
               .container.hub-period-container  
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.hub_period-container 
@@ -106,7 +106,7 @@
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
                     %h4{:for => "dtp_input1"} Filter Option
-                    =select_tag :user_option_type ,options_for_select([["New user per month" , "1" ]]), :class => 'selectpicker btn userfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
+                    =select_tag :user_option_type ,options_for_select([["New user per period" , "1" ],["Conexions per period" , "2" ]]), :class => 'selectpicker btn userfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
               .container.user-period-container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.user_period-container
@@ -154,14 +154,6 @@
       }
     });
 
-    $(".userfilterpicker").click(function(){
-      if ($(this).val() === "1"){
-        $(".user-period-container").show();
-      }
-      else{
-        $(".user-period-container").hide();
-      }
-    });
 
 
 

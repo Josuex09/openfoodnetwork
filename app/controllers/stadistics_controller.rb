@@ -73,7 +73,7 @@ class StadisticsController < BaseController
     if option == "1"
       graphic.generate_per_period(params[:user_period])
     else
-      graphic.generate_per_region
+      graphic.conexions_per_period(params[:user_period])
     end
     return graphic
 
