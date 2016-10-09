@@ -2,17 +2,18 @@ require 'date'
 require 'time'
 class ProducerGraphic
 
-  attr_accessor :value,:labels,:title,:id,:chart,:option
+  attr_accessor :value,:labels,:id,:chart,:option,:tags
   #Constructor
   def initialize(chart,id)
     @chart = chart
-    @title = ""
     @id=id
+    @tags = "producer"
   end
 
 
 
   def generate_per_year
+    @tags +="-year"
     months = ["January","February","March","April","May","June","July","August","September","October","November","Dicember"];
     dates = ["-01-01","-02-01","-03-01","-04-30","-05-01","-06-01","-07-01","-08-01","-09-01","-10-01","-11-01","-12-01"];
     values = Array.new(months.length,0);
@@ -31,6 +32,7 @@ class ProducerGraphic
   end
   
   def generate_per_month
+    @tags +="-month"
     days = []
     for i in 1..30
       days.push(i.to_s)
@@ -56,6 +58,7 @@ class ProducerGraphic
   end
   
   def generate_per_week
+    @tags +="-week"
     days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     day= Time.now.strftime("%A")
     days[days.index(day)] = "Today"
@@ -81,6 +84,7 @@ class ProducerGraphic
   
   #Does a query getting the new producers per month.
   def generate_per_period(period)
+    @tags+="-new-period"
     #Array containing each type value    
     if period == "Year"
       generate_per_year
@@ -94,6 +98,7 @@ class ProducerGraphic
   
   #Gets data that contains the new producers filtered per region
   def generate_per_region
+    @tags +="-region"
     states = []
     sta = Spree::State.where('country_id = 109')#154
     sta.each do |item|
@@ -111,9 +116,10 @@ class ProducerGraphic
     producers.each do |item|
       address_id = item.address_id
       state = Spree::Address.find(address_id)
-      values[hash[state.state_name.to_s]] +=1
+      if(hash[state.state_name.to_s] != nil)
+        values[hash[state.state_name.to_s]] +=1
+      end
     end
-    @title = "Producers per region"
     @labels = states.to_s
     @value = values.to_s
   end
@@ -121,7 +127,7 @@ class ProducerGraphic
 #Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
-      if @chart == i.chart && @title == i.title
+      if @chart == i.chart && @tags == i.tags
         return true
       end
     end

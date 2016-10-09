@@ -4,7 +4,8 @@
       .col-md-3.left_col
         .left_col.scroll-view
           .navbar.nav_title{:style => "border: 0;"}
-            %a.site_title{:href => "/"} Open Food Network          
+            %a.site_title{:href => "/"} 
+              = t('stadistics.title')          
             /%img.titleicon{:src => "/assets/stadistics-logo.svg",:href => "/"}            
           .clearfix
           %br/
@@ -15,11 +16,12 @@
                 %li
                   %a
                     %i.fa.fa-home
-                    Stadistics
+                    = t('stadistics.stadistics')
                     %span.fa.fa-chevron-down
                   %ul.nav.child_menu
                     %li
-                      %a{:href => "index.html"} System
+                      %a{:href => "index.html"}
+                        = t('stadistics.system')
           / /sidebar menu
       .top_nav
         .nav_menu

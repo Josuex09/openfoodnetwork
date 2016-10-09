@@ -1,5 +1,5 @@
 class ProductGraphic
-  attr_accessor :value,:labels,:title,:initial_date,:final_date,:id,:chart
+  attr_accessor :value,:labels,:initial_date,:final_date,:id,:chart,:tags
   @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
   @@hash = Hash[@@product_types.map.with_index.to_a];
 
@@ -8,32 +8,31 @@ class ProductGraphic
     @initial_date = initial_date
     @final_date = final_date
     @chart = chart
-    @title = ""
     @id=id
+    @tags = "product"
   end
 
   def generate
+    @tags += "-most_sold"
     #Array containing each type value
     values = [];
     for i in 0..@@product_types.length-1
       values.push(0);
     end
 
-    time = "Product types sold "
-    
     if(@final_date == "" && @initial_date == "")#Gets  products sold with no date constraints
       lineitems = Spree::LineItem.all;
-      time += "since always";
+      @tags += "-always";
     elsif(@final_date !="" && @initial_date =="")
       lineitems = Spree::LineItem.where("created_at <= :end_date",{end_date: @final_date})
-      time += "untill "+@final_date.to_s;      
+      @tags +="-final_date"      
     elsif(@initial_date !="" && @final_date =="")
       lineitems = Spree::LineItem.where("created_at >= :start_date",{start_date: @initial_date})
-      time += "since "+@initial_date.to_s;  
+      @tags += "-initial_date"
     else
       #Gets products sold with date constraints
       lineitems = Spree::LineItem.where("created_at >= :start_date AND created_at <= :end_date",{start_date: @initial_date, end_date: @final_date})
-      time += "since "+@initial_date.to_s+" until "+@final_date.to_s;
+      @tags += "-both_dates"
     end
 
     #Gets all the categories and count each article sent.
@@ -46,7 +45,6 @@ class ProductGraphic
       taxon = Spree::Taxon.find(taxon_id);
       values[@@hash[taxon.name]] +=1;
     end
-    @title = time;
     @labels = @@product_types.to_s
     @value = values.to_s
   end
@@ -54,7 +52,7 @@ class ProductGraphic
 #Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
-      if @chart == i.chart && @title == i.title
+      if @chart == i.chart && @tags == i.tags
         return true
       end
     end

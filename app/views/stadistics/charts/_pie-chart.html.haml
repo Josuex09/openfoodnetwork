@@ -4,8 +4,7 @@
       %ul.nav.navbar-right.panel_toolbox
         %li.pull-right
           = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
-      %h2{ :title => actual.title}
-        = actual.title
+      = render "stadistics/title", actual:actual
       .clearfix
     .x_content
       %canvas{:id =>"#{actual.id}-pie"}

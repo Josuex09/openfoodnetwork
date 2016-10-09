@@ -2,15 +2,16 @@ require 'date'
 require 'time'
 class HubGraphic
 
-  attr_accessor :value,:labels,:title,:id,:chart,:option
+  attr_accessor :value,:labels,:id,:chart,:option,:tags
   #Constructor
   def initialize(chart,id)
     @chart = chart
-    @title = ""
+    @tags = "hub"
     @id=id
   end
 
   def generate_per_year
+    @tags +="-year"
     months = ["January","February","March","April","May","June","July","August","September","October","November","Dicember"];
     dates = ["-01-01","-02-01","-03-01","-04-30","-05-01","-06-01","-07-01","-08-01","-09-01","-10-01","-11-01","-12-01"];
     values = Array.new(months.length,0);
@@ -21,13 +22,13 @@ class HubGraphic
     end
     values[values.length-1] = Enterprise.is_hub.activated.visible.where("created_at >= :start_date",{start_date: year+dates[dates.length-1]}).count
     
-    @title = "New hubs in last 12 months"
     @labels = months.to_s
     @value = values.to_s    
     
   end
   
   def generate_per_month
+    @tags +="-month"
     days = []
     for i in 1..30
       days.push(i.to_s)
@@ -46,13 +47,13 @@ class HubGraphic
     values[values.length-1] = Enterprise.is_hub.activated.visible.where("created_at >= :start_date",{start_date: dates[dates.length-1]}).count
     
     
-    @title = "New hubs in last 30 days"
     @labels = days.to_s
     @value = values.to_s
     
   end
   
   def generate_per_week
+    @tags +="-week"
     days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     day= Time.now.strftime("%A")
     days[days.index(day)] = "Today"
@@ -71,13 +72,13 @@ class HubGraphic
     
     
     @value =values.to_s
-    @title = "New hubs in last 7 days"
     @labels = days.to_s
     
   end
   
   #Does a query getting the new producers per month.
   def generate_per_period(period)
+    @tags +="-new-period"
     #Array containing each type value    
     if period == "Year"
       generate_per_year
@@ -92,6 +93,7 @@ class HubGraphic
  #Gets data that contains the new producers filtered per region
  #Does a query getting the new hubs per region.
   def generate_per_region
+    @tags +="-region"
     states = []
     sta = Spree::State.where('country_id = 109')
     sta.each do |item|
@@ -111,7 +113,6 @@ class HubGraphic
       state = Spree::Address.find(address_id)
       values[hash[state.state_name.to_s]] +=1
     end
-    @title = "Hubs per region"
     @labels = states
     @value = values
 
@@ -120,7 +121,7 @@ class HubGraphic
 #Checks if a chart is already in the array
   def includes?(arr)
     for i in arr
-      if @chart == i.chart && @title == i.title
+      if @chart == i.chart && @tags == i.tags
         return true
       end
     end

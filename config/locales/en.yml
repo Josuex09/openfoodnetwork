@@ -1097,3 +1097,63 @@ Please follow the instructions there to make your enterprise visible on the Open
       resumed: resumed
       returned: returned
       skrill: skrill
+      
+  stadistics:
+    title: Open Food Network
+    stadistics: Stadistics
+    system: System
+    
+    products: Products
+    producers: Producers
+    hubs: Hubs
+    users: Users
+
+    bar: Bar
+    line: Line
+    donut: Donut
+    pie: Pie
+    radar: Radar
+            
+    initial_date: Initial date
+    final_date: Final date
+    filter_option: Filter option
+    period: Period
+    year: Year
+    month: Month
+    week: Week
+    new_chart: Create new chart
+    chart_type: Chart type
+    create_chart: Create chart
+    
+    product_initial_date: Product types sold since %{initial_date}
+    product_final_date: Product types sold untill %{final_date}
+    product_always: Total product types sold 
+    product_both_dates: Product types sold since %{initial_date} untill %{final_date}
+     
+    new_producers_year: New producers in last 12 months
+    new_producers_month: New producers in last 30 days
+    new_producers_week: New producers in last 7 days
+    producer_region: Producers per region
+    
+    new_hubs_year: New hubs in last 12 months
+    new_hubs_month: New hubs in last 30 days
+    new_hubs_week: New hubs in last 7 days
+    hub_region: hubs per region
+    
+    
+    new_users_year: New users in last 12 months
+    new_users_month: New users in last 30 days
+    new_users_week: New users in last 7 days
+    last_connected_year: Users connected in last 12 months
+    last_connected_month: Users connected in last 30 days
+    last_connected_week: Users connected in last 7 days
+        
+    new_producers: New producers
+    producers_per_region: Producers per region
+    
+    new_hubs: New hubs
+    hubs_per_region: Hubs per region
+    
+    new_users: New users
+    users_connected: Users connected
+    

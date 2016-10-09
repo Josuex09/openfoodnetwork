@@ -3,9 +3,8 @@
     .x_title
       %ul.nav.navbar-right.panel_toolbox
         %li.pull-right
-          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'    
-      %h2{ :title => actual.title}        
-        = actual.title
+          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
+      = render "stadistics/title", actual:actual
       .clearfix
     .x_content
       /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo

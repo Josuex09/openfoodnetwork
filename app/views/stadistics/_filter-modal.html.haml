@@ -4,17 +4,22 @@
     .modal-content
       .modal-header
         %button.close{"data-dismiss" => "modal", :type => "button"} ×
-        %h4.modal-title.text-center Create new chart
+        %h4.modal-title.text-center 
+          = t('stadistics.new_chart')
         .nav-center
           %ul.nav.nav-tabs.center-pills
             %li.active{:role => "presentation" , :id => "product-modal-button" }
-              %a{:href => "#product-tab","data-toggle" => "tab"} Products
+              %a{:href => "#product-tab","data-toggle" => "tab"}
+                = t('stadistics.products')
             %li{:role => "presentation", :id => "producer-modal-button"}
-              %a{:href => "#producer-tab", "data-toggle" => "tab"} Producers
+              %a{:href => "#producer-tab", "data-toggle" => "tab"}
+                = t('stadistics.producers')
             %li{:role => "presentation", :id => "hubs-modal-button"}
-              %a{:href => "#hubs-tab", "data-toggle" => "tab"} Hubs
+              %a{:href => "#hubs-tab", "data-toggle" => "tab"}
+                = t('stadistics.hubs')
             %li{:role => "presentation", :id => "user-modal-button"}
-              %a{:href => "#user-tab", "data-toggle" => "tab"} Users
+              %a{:href => "#user-tab", "data-toggle" => "tab"}
+                = t('stadistics.users')
       .modal-body
         / Calendario Inicio
         .tab-content
@@ -24,7 +29,8 @@
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2
                     .form-group
-                      %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input1"} Initial date
+                      %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input1"}
+                        = t('stadistics.initial_date')
                       .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                         = text_field_tag :initial_date ,'' ,:class => "form-control", :readonly => true
                         %span.input-group-addon
@@ -37,7 +43,8 @@
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2
                     .form-group
-                      %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input2"} Final date 
+                      %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input2"}
+                        = t('stadistics.final_date') 
                       .input-group.date.form_date.col-md-12{"data-date" => "", "data-date-format" => "yyyy-mm-dd", "data-link-field" => "dtp_input2", "data-link-format" => "yyyy-mm-dd"}
                         = text_field_tag :final_date ,'' ,:class => "form-control", :readonly => true
                         %span.input-group-addon
@@ -49,11 +56,12 @@
                 .container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.text-center
-                    %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input2"} Chart Type
-                    =select_tag :chart_type ,options_for_select([["Bar" , "1" ], ["Line" , "2" ], ["Donut" , "3" ],["Radar" , "4" ],["Pie" , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-sm-4 col-xs-4'
+                    %label.col-md-12.col-xs-4.control-label.text-center.h4{:for => "dtp_input2"}
+                      = t('stadistics.chart_type')
+                    =select_tag :chart_type ,options_for_select([[t('stadistics.bar') , "1" ], [t('stadistics.line') , "2" ], [t('stadistics.donut') , "3" ],[t('stadistics.radar') , "4" ],[t('stadistics.pie') , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-sm-4 col-xs-4'
                     =hidden_field_tag :modal_tab, "1"
               .modal-footer
-              =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'product-button'
+              =submit_tag t('stadistics.create_chart'), :class => 'btn btn-default pull-right', :name => 'product-button'
               
               
               
@@ -62,21 +70,23 @@
               .container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4{:for => "dtp_input1"} Filter Option
-                    =select_tag :producer_option_type ,options_for_select([["New producers" , "1" ], ["Producers per region" , "2" ]]), :class => 'selectpicker btn producerfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
+                    %h4{:for => "dtp_input1"}
+                      = t('stadistics.filter_option')
+                    =select_tag :producer_option_type ,options_for_select([[t('stadistics.new_producers') , "1" ], [t('stadistics.producers_per_region') , "2" ]]), :class => 'selectpicker btn producerfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
               .container.producer-period-container  
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.producer_period-container
                     %h4 Period
-                    =select_tag :producer_period ,options_for_select([["Year" , "Year" ], ["Month" , "Month" ],["Week" , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
+                    =select_tag :producer_period ,options_for_select([[t('stadistics.year') , "Year" ], [t('stadistics.month') , "Month" ],[t('stadistics.week') , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
               .container  
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4 Chart type
-                    =select_tag :producer_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ],["Radar" , "4" ],["Pie" , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
+                    %h4
+                      = t('stadistics.chart_type')
+                    =select_tag :producer_chart_type ,options_for_select([[t('stadistics.bar') , "1" ], [t('stadistics.line') , "2" ],[t('stadistics.donut') , "3" ],[t('stadistics.radar') , "4" ],[t('stadistics.pie') , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
                     =hidden_field_tag :modal_tab, "2"
                 .modal-footer
-                =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'producer-button'
+                =submit_tag t('stadistics.create_chart'), :class => 'btn btn-default pull-right', :name => 'producer-button'
       
       
           #hubs-tab.tab-pane
@@ -84,42 +94,48 @@
               .container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4{:for => "dtp_input1"} Filter Option
-                    =select_tag :hubs_option_type ,options_for_select([["New hubs per period" , "1" ], ["Hubs per region" , "2" ]]), :class => 'selectpicker btn hubfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
+                    %h4{:for => "dtp_input1"}
+                      = t('stadistics.filter_option')
+                    =select_tag :hubs_option_type ,options_for_select([[t('stadistics.new_hubs'), "1" ], [t('stadistics.hubs_per_region') , "2" ]]), :class => 'selectpicker btn hubfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
               .container.hub-period-container  
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.hub_period-container 
-                    %h4 Period
-                    =select_tag :hub_period ,options_for_select([["Year" , "Year" ], ["Month" , "Month" ],["Week" , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'                   
+                    %h4
+                      = t('stadistics.period')
+                    =select_tag :hub_period ,options_for_select([[t('stadistics.year') , "Year" ], [t('stadistics.month') , "Month" ],[t('stadistics.week') , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'                   
               .container
                 .row                    
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4 Chart type
-                    =select_tag :hubs_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ],["Radar" , "4" ],["Pie" , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
+                    %h4
+                      = t('stadistics.chart_type')
+                    =select_tag :hubs_chart_type ,options_for_select([[t('stadistics.bar') , "1" ], [t('stadistics.line') , "2" ],[t('stadistics.donut') , "3" ],[t('stadistics.radar') , "4" ],[t('stadistics.pie') , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
                     =hidden_field_tag :modal_tab, "3"
                 .modal-footer
-                =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'hubs-button'
+                =submit_tag t('stadistics.create_chart'), :class => 'btn btn-default pull-right', :name => 'hubs-button'
 
           #user-tab.tab-pane
             =form_tag 'index',:remote => true do
               .container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4{:for => "dtp_input1"} Filter Option
-                    =select_tag :user_option_type ,options_for_select([["New user per period" , "1" ],["Conexions per period" , "2" ]]), :class => 'selectpicker btn userfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
+                    %h4{:for => "dtp_input1"}
+                      = t('stadistics.filter_option')
+                    =select_tag :user_option_type ,options_for_select([[t('stadistics.new_users') , "1" ],[t('stadistics.users_connected') , "2" ]]), :class => 'selectpicker btn userfilterpicker col-md-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-sm-6 col-xs-6'
               .container.user-period-container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.user_period-container
-                    %h4 Period
-                    =select_tag :user_period ,options_for_select([["Year" , "Year" ], ["Month" , "Month" ],["Week" , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
+                    %h4
+                      = t('stadistics.period')
+                    =select_tag :user_period ,options_for_select([[t('stadistics.year') , "Year" ], [t('stadistics.month') , "Month" ],[t('stadistics.week') , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
               .container
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center
-                    %h4 Chart type
-                    =select_tag :user_chart_type ,options_for_select([["Bar" , "1" ], ["Lines" , "2" ],["Donut" , "3" ],["Radar" , "4" ],["Pie" , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
+                    %h4
+                      = t('stadistics.chart_type')
+                    =select_tag :user_chart_type ,options_for_select([[t('stadistics.bar') , "1" ], [t('stadistics.line') , "2" ],[t('stadistics.donut') , "3" ],[t('stadistics.radar') , "4" ],[t('stadistics.pie') , "5" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
                     =hidden_field_tag :modal_tab, "4"
                 .modal-footer
-                =submit_tag "Create Chart", :class => 'btn btn-default pull-right', :name => 'user-button'
+                =submit_tag t('stadistics.create_chart'), :class => 'btn btn-default pull-right', :name => 'user-button'
 
 - content_for :javascripts do
   = javascript_include_tag "stadistics/bootstrap-datetimepicker"
