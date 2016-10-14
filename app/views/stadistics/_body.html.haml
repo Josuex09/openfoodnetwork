@@ -38,7 +38,7 @@
           -index = 0
           -while index < $titles.size do
             .col-md-2.col-sm-4.col-xs-6.tile_stats_count
-              %span.count_top
+              %span.count_top{:title => $titles[index]}
                 %li.glyphicon.glyphicon-align-right
                 =$titles[index]
               .count 
@@ -70,5 +70,7 @@
       = render "/stadistics/filter-modal"
       = render "/stadistics/bar-modal"
 
-
+- content_for :javascripts do
+  :javascript
+     $('[data-toggle="tooltip"]').tooltip();
 
