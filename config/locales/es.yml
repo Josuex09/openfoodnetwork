@@ -1,4 +1,26 @@
+# Spanish language file
+# ---------------------
+#
+# This is the source language file maintained by the Australian OFN team.
+# Visit Transifex to translate this file into other languages:
+#
+#   https://www.transifex.com/open-food-foundation/open-food-network/
+#
+# If you translate this file in a text editor, please share your results with us by
+#
+# - uploading the file to Transifex or
+# - opening a pull request at GitHub.
+#
+#
+# See http://community.openfoodnetwork.org/t/localisation-ofn-in-your-language/397
+
 es:
+  activerecord:
+    # Overridden here due to a bug in spree i18n (Issue #870)
+    attributes:
+      spree/order:
+        payment_state: Estado de pago
+        shipment_state: Estado del envío  
   devise:
     failure:
       invalid: |
@@ -10,14 +32,25 @@ es:
         not_confirmed: La dirección de correo no pudo ser confirmada. ¿Tal vez ya completó este paso?
         confirmation_sent: "¡Correo de confirmación enviado!"
         confirmation_not_sent: "No se pudo enviar un correo de confirmación."
+  enterprise_mailer:
+    confirmation_instructions:
+      subject: "Por favor, confirmar la dirección de correo electronico para %{enterprise}"
+    welcome:
+      subject: "%{enterprise} está ahora en %{sitename}"        
   home: "OFN"
   title: Open Food Network
   welcome_to: 'Bienvenido a '
+  site_meta_description: "Empezamos desde cero. Con los agricultores y productores listos para contar sus historias con orgullo. Con distribuidores listo para conectar a la gente con los productos de manera justa y honesta. Con compradores que creen que las mejores decisiones de compras semanales pueden..."  
   search_by_name: Buscar por nombre o barrio...
   producers: Productores australianos
   producers_join: Los productores australianos ahora son bienvenidos a unirse a Open Food Network.
   charges_sales_tax: ¿Cargos de GST?
-  print: "Imprimir"
+  send_invoice: "Enviar factura"
+  resend_confirmation: "Reenviar la confirmación"
+  view_order: "Ver Orden"
+  edit_order: "Editar Orden"
+  ship_order: "Enviar Orden"
+  cancel_order: "Cancelar Orden"
   confirm_send_invoice: "Una factura para esta orde se envió al cliente. ¿Está seguro que quiere continuar?"
   must_have_valid_business_number: "%{enterprise_name} debe tener un ABN válido antes de que las facturas se puedan enviar."
   logo: "Logo (640x130)"
@@ -578,3 +611,79 @@ es:
   price_graph: "Gráfico de precios"
   included_tax: "Impuesto incluido"
   remove_tax: "Eliminar impuesto"
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  stadistics:
+    title: Open Food Network
+    stadistics: Estadísticas
+    system: Sistema
+    
+    products: Productos
+    producers: Productores
+    hubs: Centros
+    users: Usuarios
+
+    bar: Barra
+    line: Linea
+    donut: Circular
+    pie: Pie
+    radar: Radar
+            
+    initial_date: Fecha inicial
+    final_date: Fecha final
+    filter_option: Filtro
+    period: Periodo
+    year: Año
+    month: Mes
+    week: Semana
+    new_chart: Crear nuevo gráfico
+    chart_type: Tipo de gráfico
+    create_chart: Generar gráfico
+    
+    product_initial_date: Tipos de productos vendidos desde %{initial_date}
+    product_final_date: Tipos de productos vendidos hasta %{final_date}
+    product_always: Total de tipos de productos vendidos
+    product_both_dates: Tipos de productos vendidos desde %{initial_date} hasta %{final_date}
+     
+    new_producers_year: Productores nuevos en los últimos 12 meses
+    new_producers_month: Productores nuevos en los últimos 30 días 
+    new_producers_week: Productores nuevos en los últimos 7 días
+    producer_region: Cantidad de productores por región
+    
+    new_hubs_year: Centros nuevos en los últimos 12 meses
+    new_hubs_month: Centros nuevos en los últimos 30 días
+    new_hubs_week: Centros nuevos en los últimos 7 días
+    hub_region: Cantidad de centros por región
+    
+    
+    new_users_year: Usuarios nuevos en los últimos 12 meses
+    new_users_month: Usuarios nuevos en los últimos 30 días
+    new_users_week: Usuarios nuevos en los últimos 7 días
+    last_connected_year: Cantidad de usuarios conectados en los últimos 12 meses
+    last_connected_month: Cantidad de usuarios conectados en los últimos 30 días
+    last_connected_week: Cantidad de usuarios conectados en los últimos 7 días
+        
+    new_producers: Cantidad de productores nuevos
+    producers_per_region: Cantidad de productores por región
+    
+    new_hubs: Cantidad de centros nuevos
+    hubs_per_region: Cantidad de centros por región
+    
+    new_users: Cantidad de usuarios nuevos
+    users_connected: Cantidad de usuarios conectados
