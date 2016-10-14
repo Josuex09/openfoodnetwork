@@ -7,7 +7,8 @@ class StadisticsController < BaseController
   $titles,$values = $stat.get_values
   #Loads the main view of the stadistics module
   def index
-    
+    puts Enterprise.columns.collect { |c| "#{c.name} (#{c.type})" }
+
     if(spree_current_user == nil || !spree_current_user.admin?)
       redirect_to ""
     end
@@ -119,13 +120,6 @@ class StadisticsController < BaseController
     return result
   end
   
-  def complete_data_values (arr, max_length)
-    new_arr = arr
-    while new_arr.length < max_length do
-      new_arr.push("")
-    end
-    return new_arr
-  end
   
   def generate_stat
     limit = 5
@@ -133,8 +127,6 @@ class StadisticsController < BaseController
     values = array_to_int( option_values)
     stat = Stats.new(values)
     $titles,$values = stat.get_values
-    $titles = complete_data_values($titles, limit)
-    $values = complete_data_values($values,limit)
     redirect_to :action =>  "index"
   end
    
