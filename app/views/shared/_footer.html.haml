@@ -87,6 +87,9 @@
           %p
             %a{href: ContentConfig.footer_email.reverse, mailto: true, target: '_blank'}
               = t :footer_contact_email
+          %p
+            %a{href: "help"}
+              = t :footer_help
         = render_markdown(ContentConfig.footer_links_md).html_safe
 
 

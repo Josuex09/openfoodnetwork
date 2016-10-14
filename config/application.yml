@@ -8,7 +8,7 @@ TIMEZONE: Central America
 # Default country for dropdowns etc. See for codes: http://en.wikipedia.org/wiki/ISO_3166-1
 DEFAULT_COUNTRY_CODE: CR
 # Locale for translation.
-LOCALE: es
+LOCALE: en
 # Spree zone.
 CHECKOUT_ZONE: Costa Rica
 # Find currency codes at http://en.wikipedia.org/wiki/ISO_4217.

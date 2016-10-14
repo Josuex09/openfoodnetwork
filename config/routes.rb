@@ -3,6 +3,12 @@ Openfoodnetwork::Application.routes.draw do
   get "stadistics/index", to: "stadistics#index"
   post"stadistics/index", to: "stadistics#create_chart"
   get "stadistics/index/:id_del", to: "stadistics#destroy"
+  
+  get "help", to: "help#index"
+  get "help/introduction", to: "help#introduction"
+  get "help/faq", to: "help#faq"
+  get "help/contact", to: "help#contact"
+  get "help/userguide", to: "help#userguide"
 
   root :to => 'home#index'
 
