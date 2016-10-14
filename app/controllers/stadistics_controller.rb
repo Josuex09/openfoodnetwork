@@ -3,8 +3,8 @@ class StadisticsController < BaseController
   
   $graphics = [];
   $id = 0;
-  $titles = ["","","","",""]
-  $values = ["","","","",""]
+  $stat = Stats.new([1,2,3,4,5])
+  $titles,$values = $stat.get_values
   #Loads the main view of the stadistics module
   def index
     
@@ -130,7 +130,6 @@ class StadisticsController < BaseController
   def generate_stat
     limit = 5
     option_values = JSON.parse(params[:bar_data])
-    
     values = array_to_int( option_values)
     stat = Stats.new(values)
     $titles,$values = stat.get_values

@@ -68,5 +68,9 @@
       $('#checkboxes input:checked').each(function() {
           selected.push($(this).attr('value'));
       });
+      if (selected.length != 5){
+        alert("You have to select five options")
+        return false
+      }
       $("#bar_data").val(JSON.stringify(selected))
     });

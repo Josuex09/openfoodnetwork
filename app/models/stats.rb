@@ -38,7 +38,7 @@ class Stats
     index = 0
     while index < @option_values.length
       @result.push(queries[@option_values[index]-1])
-      @result_titles.push(@option_titles[index])
+      @result_titles.push(@option_titles[@option_values[index]-1])
       index+=1
     end
     return @result_titles,@result

@@ -42,8 +42,8 @@
               .count 
                 =$values[index]
               -index+=1
-          .col-md-2.col-sm-4.col-xs-6
-            %button#bar-button.btn.btn-default.btn-md{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} Seleccionar datos a mostrar
+          .col-md-2.col-sm-4.col-xs-6.text-center
+            %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} Seleccionar datos
 
         .row
           -if $graphics != nil
