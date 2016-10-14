@@ -1,0 +1,76 @@
+#bar-modal.modal.fade.bd-example-modal-md{:role => "dialog"}
+  .modal-dialog.modal-lg
+    / Modal content
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title Data
+      .modal-body
+        #options
+          =form_tag 'data',:remote => true do
+            .container
+              .row
+                .col-md-4  
+                .col-md-6
+                  #checkboxes
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "1"}>/
+                        Total users
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "2"}>/
+                        Total producers
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "3"}>/
+                        Total products
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "4"}>/
+                        Total orders
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "5"}>/
+                        Total hubs
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "6"}>/
+                        Total completed orders
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "7"}>/
+                        Total incompleted orders
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "8"}>/
+                        Completed order cycles
+                    .checkbox
+                      %label
+                        %input{:name => "data",:type => "checkbox", :value => "9"}>/
+                        Incompleted order cycles
+              .modal-footer
+                =hidden_field_tag :bar_data, "", :id=>"bar_data"
+                =submit_tag "Update", :class => 'btn btn-default pull-right', :id => 'data-button'
+
+- content_for :javascripts do
+  :javascript
+    $("input[name='data']").change(function () {
+        var maxAllowed = 5;
+        var cnt = $("input[name='data']:checked").length;
+        if (cnt > maxAllowed) {
+            $(this).prop("checked", "");
+            alert('You can select maximum ' + maxAllowed + ' options');
+        }
+    });
+    $("#data-button").click(function(){
+      var selected = [];
+      $('#checkboxes input:checked').each(function() {
+          selected.push($(this).attr('value'));
+      });
+      if (selected.length != 5){
+        alert("You have to select five options")
+        return false
+      }
+      $("#bar_data").val(JSON.stringify(selected))
+    });

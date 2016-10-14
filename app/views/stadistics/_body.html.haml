@@ -29,10 +29,24 @@
             .nav.toggle
               %a#menu_toggle
                 %i.fa.fa-bars
+        
                     
                 
       / page content
       .right_col{:role => "main"}
+        .row.tile_count
+          -index = 0
+          -while index < $titles.size do
+            .col-md-2.col-sm-4.col-xs-6.tile_stats_count
+              %span.count_top
+                %li.glyphicon.glyphicon-align-right
+                =$titles[index]
+              .count 
+                =$values[index]
+              -index+=1
+          .col-md-2.col-sm-4.col-xs-6.text-center
+            %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} Seleccionar datos
+
         .row
           -if $graphics != nil
             - $graphics.each do |actual|
@@ -54,6 +68,7 @@
                  
       / Modal
       = render "/stadistics/filter-modal"
+      = render "/stadistics/bar-modal"
 
 
 

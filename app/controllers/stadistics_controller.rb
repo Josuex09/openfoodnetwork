@@ -3,9 +3,11 @@ class StadisticsController < BaseController
   
   $graphics = [];
   $id = 0;
-
+  $stat = Stats.new([1,2,3,4,5])
+  $titles,$values = $stat.get_values
   #Loads the main view of the stadistics module
   def index
+    
     if(spree_current_user == nil || !spree_current_user.admin?)
       redirect_to ""
     end
@@ -103,6 +105,37 @@ class StadisticsController < BaseController
 
     redirect_to :action =>  "index"
   
+  end
+  
+  #This method converts a array of string into a array of integers
+  #@param arr [Array] a array containing numbers in string format
+  #@return [Array] a array of integers  
+  def array_to_int(arr)
+    actual = arr
+    result = []
+    actual.each do |val|
+      result.push(val.to_i)
+    end
+    return result
+  end
+  
+  def complete_data_values (arr, max_length)
+    new_arr = arr
+    while new_arr.length < max_length do
+      new_arr.push("")
+    end
+    return new_arr
+  end
+  
+  def generate_stat
+    limit = 5
+    option_values = JSON.parse(params[:bar_data])
+    values = array_to_int( option_values)
+    stat = Stats.new(values)
+    $titles,$values = stat.get_values
+    $titles = complete_data_values($titles, limit)
+    $values = complete_data_values($values,limit)
+    redirect_to :action =>  "index"
   end
    
 end
