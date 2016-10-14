@@ -191,40 +191,40 @@ es:
 
     enterprises:
       index:
-        producer?: Producer?
-        package: Package
-        status: Status
-        manage: Manage
+        producer?: Productor?
+        package: Paquete
+        status: Estado
+        manage: Gestionar
       form:
         primary_details:
           shopfront_requires_login: "Shopfront requires login?"
           shopfront_requires_login_tip: "Choose whether customers must login to view the shopfront."
-          shopfront_requires_login_false: "Public"
+          shopfront_requires_login_false: "Publico"
           shopfront_requires_login_true: "Require customers to login"
 
   home:
     hubs:
       show_closed_shops: "Show closed shops"
       hide_closed_shops: "Hide closed shops"
-      show_on_map: "Show all on the map"
+      show_on_map: "Ver todos en el mapa"
   shared:
     register_call:
       selling_on_ofn: "Interested in getting on the Open Food Network?"
-      register: "Register here"
+      register: "Registrese aquí"
   shop:
     messages:
       login: "login"
       register: "register"
-      contact: "contact"
+      contact: "contacte"
       require_customer_login: "This shop is for customers only."
-      require_login_html: "Please %{login} if you have an account already. Otherwise, %{register} to become a customer."
-      require_customer_html: "Please %{contact} %{enterprise} to become a customer."
+      require_login_html: "Por favor %{login} si ya posee una cuenta. Si no es así, %{register} para volverse un cliente."
+      require_customer_html: "Por favor %{contact} %{enterprise} para volverse un cliente."
 
   # Printable Invoice Columns
   invoice_column_item: "Item"
-  invoice_column_qty: "Qty"
+  invoice_column_qty: "Cant"
   invoice_column_tax: "GST"
-  invoice_column_price: "Price"
+  invoice_column_price: "Precio"
 
   logo: "Logo (640x130)" #FIXME
   logo_mobile: "Mobile logo (75x26)" #FIXME
@@ -243,17 +243,17 @@ es:
   footer_about_url: "About URL"
   footer_tos_url: "Terms of Service URL"
 
-  name: Name
-  first_name: First Name
-  last_name: Last Name
+  name: Nombre
+  first_name: Nombre
+  last_name: Apellido
   email: Email
-  phone: Phone
-  next: Next
-  address: Address
-  address2: Address (contd.)
-  city: City
-  state: State
-  postcode: Postcode
+  phone: Teléfono
+  next: Siguiente
+  address: Dirección
+  address2: Dirección (contd.)
+  city: Ciudad
+  state: Provincia
+  postcode: Código postal
   country: Country
   unauthorized: Unauthorized
   terms_of_service: "Terms of service"
@@ -261,80 +261,80 @@ es:
   none: None
 
   label_shops: "Shops"
-  label_map: "Map"
-  label_producers: "Producers"
-  label_groups: "Groups"
-  label_about: "About"
-  label_connect: "Connect"
+  label_map: "Mapa"
+  label_producers: "Productores"
+  label_groups: "Grupos"
+  label_about: "Acerca"
+  label_connect: "Conectar"
   label_learn: "Learn"
   label_shopping: "Shopping"
   label_login: "Login"
   label_logout: "Logout"
   label_signup: "Sign up"
-  label_administration: "Administration"
-  label_stadistics: "Stadistics"
+  label_administration: "Administración"
+  label_stadistics: "Estadísticas"
   label_admin: "Admin"
-  label_account: "Account"
-  label_more: "Show more"
-  label_less: "Show less"
-  label_notices: "Notices"
+  label_account: "Cuenta"
+  label_more: "Mostrar más"
+  label_less: "Mostrar menos"
+  label_notices: "Noticias"
 
   items: "items"
-  cart_headline: "Your shopping cart"
+  cart_headline: "Su carrito"
   total: "Total"
   checkout: "Checkout now"
   cart_updating: "Updating cart..."
-  cart_empty: "Cart empty"
-  cart_edit: "Edit your cart"
+  cart_empty: "Carrito vacío"
+  cart_edit: "Editar su carrito"
 
-  card_number: Card Number
-  card_securitycode: "Security Code"
-  card_expiry_date: Expiry Date
+  card_number: Número de tarjeta
+  card_securitycode: "Código de seguridad"
+  card_expiry_date: Fecha de vencimiento
 
   ofn_cart_headline: "Current cart for:"
   ofn_cart_distributor: "Distributor:"
   ofn_cart_oc: "Order cycle:"
-  ofn_cart_from: "From:"
-  ofn_cart_to: "To:"
-  ofn_cart_product: "Product:"
-  ofn_cart_quantitiy: "Quantity:"
-  ofn_cart_send: "Buy me"
+  ofn_cart_from: "De:"
+  ofn_cart_to: "Para:"
+  ofn_cart_product: "Producto:"
+  ofn_cart_quantitiy: "Cantidad:"
+  ofn_cart_send: "Comprar"
 
-  ie_warning_headline: "Your browser is out of date :-("
-  ie_warning_text: "For the best Open Food Network experience, we strongly recommend upgrading your browser:"
-  ie_warning_chrome: Download Chrome
-  ie_warning_firefox: Download Firefox
-  ie_warning_ie: Upgrade Internet Explorer
-  ie_warning_other: "Can't upgrade your browser? Try Open Food Network on your smartphone :-)"
+  ie_warning_headline: "Su navegador está desactualizado :-("
+  ie_warning_text: "Para una mejor experiencia con Open Food Network, le recomendamos acutalizar su navegador:"
+  ie_warning_chrome: Descargar Chrome
+  ie_warning_firefox: Descargar Firefox
+  ie_warning_ie: Actualizar Internet Explorer
+  ie_warning_other: "¿No puede actualizar su navegador? Intente utilizar Open Food Network desde su teléfono inteligente :-)"
 
   footer_global_headline: "OFN Global"
   footer_global_home: "Home"
-  footer_global_news: "News"
-  footer_global_about: "About"
-  footer_global_contact: "Contact"
+  footer_global_news: "Noticias"
+  footer_global_about: "Acerca de"
+  footer_global_contact: "Contactar"
 
   footer_sites_headline: "OFN Sites"
-  footer_sites_developer: "Developer"
-  footer_sites_community: "Community"
-  footer_sites_userguide: "User Guide"
+  footer_sites_developer: "Desarrollador"
+  footer_sites_community: "Comunidad"
+  footer_sites_userguide: "Guía de usuario"
 
-  footer_secure: "Secure and trusted."
-  footer_secure_text: "Open Food Network uses SSL encryption (2048 bit RSA) everywhere to keep your shopping and payment information private. Our servers do not store your credit card details and payments are processed by PCI-compliant services."
+  footer_secure: "Seguro y confiable."
+  footer_secure_text: "Open Food Network usa cifrado SSL (2048 bit RSA) para mantener su información de compra y pago privado. Nuestros servidores no almacenan los detalles de su tarjeta de credito y los pagos son procesados por los servicios de PCI-compliant."
 
-  footer_contact_headline: "Keep in touch"
-  footer_contact_email: "Email us"
+  footer_contact_headline: "Mantenerse en contacto"
+  footer_contact_email: "Envíanos un correo electrónico"
 
-  footer_nav_headline: "Navigate"
-  footer_join_headline: "Join us"
+  footer_nav_headline: "Navegar"
+  footer_join_headline: "Únete a nosotros"
   footer_join_body: "Create a listing, shop or group directory on the Open Food Network."
   footer_join_cta: "Tell me more!"
 
   footer_legal_call: "Read our"
-  footer_legal_tos: "Terms and conditions"
-  footer_legal_visit: "Find us on"
-  footer_legal_text_html: "Open Food Network is a free and open source software platform. Our content is licensed with %{content_license} and our code with %{code_license}."
+  footer_legal_tos: "Términos y condiciones"
+  footer_legal_visit: "Encuentrenos en"
+  footer_legal_text_html: "Open Food Network es una plataforma gratis y de código abierto. Nuestro contenido posee licencia %{content_license} y nuestro código %{code_license}"
 
-  home_shop: Shop Now
+  home_shop: Compra ahora
 
   brandstory_headline: "Food, unincorporated."
   brandstory_intro: "Sometimes the best way to fix the system is to start a new one…"
