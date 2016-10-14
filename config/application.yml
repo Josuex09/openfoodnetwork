@@ -4,15 +4,15 @@
 # Minimum 30 but usually 128 characters. To obtain run 'rake secret', or faster, 'openssl rand -hex 128'
 SECRET_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-TIMEZONE: Central America
+TIMEZONE: Melbourne
 # Default country for dropdowns etc. See for codes: http://en.wikipedia.org/wiki/ISO_3166-1
-DEFAULT_COUNTRY_CODE: CR
+DEFAULT_COUNTRY_CODE: AU
 # Locale for translation.
 LOCALE: en
 # Spree zone.
-CHECKOUT_ZONE: Costa Rica
+CHECKOUT_ZONE: Australia
 # Find currency codes at http://en.wikipedia.org/wiki/ISO_4217.
-CURRENCY: CRC
+CURRENCY: AUD
 
 # SingleSignOn login for Discourse
 #

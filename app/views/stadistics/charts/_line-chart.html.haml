@@ -3,7 +3,9 @@
     .x_title
       %ul.nav.navbar-right.panel_toolbox
         %li.pull-right
-          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'    
+          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
+        %li.pull-right
+          %a{:class => 'fa fa-cloud-download', :id =>"#{actual.id}-save"}
       = render "stadistics/title", actual:actual
       .clearfix
     .x_content
@@ -12,6 +14,11 @@
 
 -content_for :javascripts do
   :javascript
+    $("##{actual.id}-save").click(function() {
+      document.getElementById("#{actual.id}-line").toBlob(function(blob) {
+          saveAs(blob, "chart_#{actual.id}.png");
+      });
+    });
     Chart.defaults.global.legend = {
       enabled: false
     };
