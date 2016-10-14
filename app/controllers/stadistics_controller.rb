@@ -101,7 +101,7 @@ class StadisticsController < BaseController
     
     #Check if a graphic is already in the view, to avoid duplicated graphics
     if(!graphic.includes?($graphics) && $graphics.length<6)
-      $graphics.push(graphic)
+      $graphics.insert(0,graphic)
     end
 
     redirect_to :action =>  "index"
