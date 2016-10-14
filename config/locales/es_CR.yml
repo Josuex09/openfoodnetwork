@@ -148,43 +148,43 @@ es:
         add: Agregar
         hide: Ocultar
         select_a_shop: Select A Shop
-        review_now: Review Now
-        new_products_alert_message: There are %{new_product_count} new products available to add to your inventory.
+        review_now: Reseñar ahora
+        new_products_alert_message: Existen %{new_product_count} nuevos productos disponibles para agregar a su inventario.
         currently_empty: Su inventario está vacío actualmente.
-        no_matching_products: No matching products found in your inventory
+        no_matching_products: No hay productos que coincidan en su inventario
         no_hidden_products: No products have been hidden from this inventory
         no_matching_hidden_products: No hidden products match your search criteria
         no_new_products: No new products are available to add to this inventory
-        no_matching_new_products: No new products match your search criteria
-        inventory_powertip: This is your inventory of products. To add products to your inventory, select 'New Products' from the Viewing dropdown.
+        no_matching_new_products: No new products match your search criteria  
+        inventory_powertip: Este es su inventario de productos. Para agregar productos a su inventario, seleccione 'Productos nuevos' en la lista desplegable.
         hidden_powertip: These products have been hidden from your inventory and will not be available to add to your shop. You can click 'Add' to add a product to you inventory.
-        new_powertip: These products are available to be added to your inventory. Click 'Add' to add a product to your inventory, or 'Hide' to hide it from view. You can always change your mind later!
+        new_powertip: Estos productos estan disponibles para ser agregados en su inventario. Haga clic en 'Agregar' para agregar un producto a su inventario, o 'Ocultar' para ocultarlo de la vista. !Siempre puedes cambiar de opinión luego!
 
     orders:
       bulk_management:
         tip: "Use this page to alter product quantities across multiple orders. Products may also be removed from orders entirely, if required."
         shared: "Shared Resource?"
-        order_no: "Order No."
-        order_date: "Order Date"
-        max: "Max"
-        product_unit: "Product: Unit"
-        weight_volume: "Weight/Volume"
-        ask: "Ask?"
+        order_no: "Orden Núm."
+        order_date: "Fecha de la Orden"
+        max: "Máximo"
+        product_unit: "Producto: Unidad"
+        weight_volume: "Peso/Volumen"
+        ask: "Preguntar?"
         page_title: "Bulk Order Management"
-        actions_delete: "Delete Selected"
-        loading: "Loading orders"
-        no_results: "No orders found."
+        actions_delete: "Borrar seleccionados"
+        loading: "Cargando órdenes"
+        no_results: "No se han encontrado órdenes."
         group_buy_unit_size: "Group Buy Unit Size"
         total_qtt_ordered: "Total Quantity Ordered"
         max_qtt_ordered: "Max Quantity Ordered"
         current_fulfilled_units: "Current Fulfilled Units"
         max_fulfilled_units: "Max Fulfilled Units"
-        order_error: "Some errors must be resolved before you can update orders.\nAny fields with red borders contain errors."
-        variants_without_unit_value: "WARNING: Some variants do not have a unit value"
+        order_error: "Algunos errores dben ser resueltos antes de actualizar las órdenes.\nTodos los campos con borde rojo contiene errores."
+        variants_without_unit_value: "ADVERTENCIA: Algunas variantes no tienen valor unitario"
 
     order_cycles:
       edit:
-        choose_products_from: "Choose Products From:"
+        choose_products_from: "choose Products From:"
 
     enterprise:
       select_outgoing_oc_products_from: Select outgoing OC products from
