@@ -66,7 +66,7 @@ es:
   plus_tax: "más GST"
   total_monthly_bill_incl_tax: "Total Monthly Bill (Incl. Impuestos)"
   min_bill_turnover_desc: "once turnover exceeds %{mbt_amount}"
-  business_model_configuration: "Business model configuration"
+  business_model_configuration: "Configuración del modelo de negocios"
   say_no: "No"
   say_yes: "Sí"
   then: entonces
@@ -82,7 +82,7 @@ es:
     on_hand: En mano
     on_demand: On Demand
     on_demand?: On Demand?
-    order_cycle: Order Cycle
+    order_cycle: Ciclo de pedidos
     phone: Teléfono
     price: Precio
     producer: Productor
@@ -132,7 +132,7 @@ es:
     products:
       bulk_edit:
         unit: Unidad
-        display_as: Display As
+        display_as: Mostrar como
         category: Categoría
         tax_category: Categoría de Impuesto
         inherits_properties?: Inherits Properties?
@@ -147,23 +147,23 @@ es:
         inherit?: Inherit?
         add: Agregar
         hide: Ocultar
-        select_a_shop: Select A Shop
+        select_a_shop: Seleccione una tienda
         review_now: Reseñar ahora
         new_products_alert_message: Existen %{new_product_count} nuevos productos disponibles para agregar a su inventario.
         currently_empty: Su inventario está vacío actualmente.
         no_matching_products: No hay productos que coincidan en su inventario
-        no_hidden_products: No products have been hidden from this inventory
-        no_matching_hidden_products: No hidden products match your search criteria
-        no_new_products: No new products are available to add to this inventory
-        no_matching_new_products: No new products match your search criteria  
+        no_hidden_products: Ningún producto ha sido oculto de este inventario
+        no_matching_hidden_products: Ningún producto oculto coincide con su criterio de búsqueda
+        no_new_products: No hay nuevos productos disponibles para agregar a este inventario
+        no_matching_new_products: No hay nuevos productos que coincidan con su criterio de búsqueda
         inventory_powertip: Este es su inventario de productos. Para agregar productos a su inventario, seleccione 'Productos nuevos' en la lista desplegable.
-        hidden_powertip: These products have been hidden from your inventory and will not be available to add to your shop. You can click 'Add' to add a product to you inventory.
-        new_powertip: Estos productos estan disponibles para ser agregados en su inventario. Haga clic en 'Agregar' para agregar un producto a su inventario, o 'Ocultar' para ocultarlo de la vista. !Siempre puedes cambiar de opinión luego!
+        hidden_powertip: Estos productos han sido ocultados de tu inventario y no estarán disponibles para agregar a su tienda. Puede hacer clic en "Agregar" para añadir un producto a su inventario.
+        new_powertip: Estos productos estan disponibles para ser agregados en su inventario. Haga clic en 'Agregar' para agregar un producto a su inventario, o 'Ocultar' para ocultarlo de la vista. ¡Siempre puedes cambiar de opinión luego!
 
     orders:
       bulk_management:
-        tip: "Use this page to alter product quantities across multiple orders. Products may also be removed from orders entirely, if required."
-        shared: "Shared Resource?"
+        tip: "Utilice esta página para alterar las cantidades de producto a través de varias órdenes. Los productos también pueden ser removidos de órdenes por completo, si es necesario."
+        shared: "¿Recursos compartidos?"
         order_no: "Orden Núm."
         order_date: "Fecha de la Orden"
         max: "Máximo"
@@ -175,8 +175,8 @@ es:
         loading: "Cargando órdenes"
         no_results: "No se han encontrado órdenes."
         group_buy_unit_size: "Group Buy Unit Size"
-        total_qtt_ordered: "Total Quantity Ordered"
-        max_qtt_ordered: "Max Quantity Ordered"
+        total_qtt_ordered: "Cantidad total ordenada"
+        max_qtt_ordered: "Cantidad maxima ordenada"
         current_fulfilled_units: "Current Fulfilled Units"
         max_fulfilled_units: "Max Fulfilled Units"
         order_error: "Algunos errores dben ser resueltos antes de actualizar las órdenes.\nTodos los campos con borde rojo contiene errores."
@@ -184,7 +184,7 @@ es:
 
     order_cycles:
       edit:
-        choose_products_from: "choose Products From:"
+        choose_products_from: "elegir productos de:"
 
     enterprise:
       select_outgoing_oc_products_from: Select outgoing OC products from
@@ -200,23 +200,23 @@ es:
           shopfront_requires_login: "Shopfront requires login?"
           shopfront_requires_login_tip: "Choose whether customers must login to view the shopfront."
           shopfront_requires_login_false: "Publico"
-          shopfront_requires_login_true: "Require customers to login"
+          shopfront_requires_login_true: "Requiere inicio de sesión del cliente"
 
   home:
     hubs:
-      show_closed_shops: "Show closed shops"
-      hide_closed_shops: "Hide closed shops"
+      show_closed_shops: "Mostrar tiendas cerradas"
+      hide_closed_shops: "Ocultar tiendas cerradas"
       show_on_map: "Ver todos en el mapa"
   shared:
     register_call:
-      selling_on_ofn: "Interested in getting on the Open Food Network?"
+      selling_on_ofn: "¿Interesado en Open Food Network?"
       register: "Registrese aquí"
   shop:
     messages:
-      login: "login"
-      register: "register"
+      login: "inicie sesión"
+      register: "registrese"
       contact: "contacte"
-      require_customer_login: "This shop is for customers only."
+      require_customer_login: "Esta tienda es solo para clientes regitrados."
       require_login_html: "Por favor %{login} si ya posee una cuenta. Si no es así, %{register} para volverse un cliente."
       require_customer_html: "Por favor %{contact} %{enterprise} para volverse un cliente."
 
@@ -230,7 +230,7 @@ es:
   logo_mobile: "Mobile logo (75x26)" #FIXME
   logo_mobile_svg: "Mobile logo (SVG)" #FIXME
   home_hero: "Hero image"
-  home_show_stats: "Show statistics"
+  home_show_stats: "Ver estadísticas"
   footer_logo: "Logo (220x76)" #FIXME
   footer_facebook_url: "Facebook URL"
   footer_twitter_url: "Twitter URL"
@@ -239,9 +239,9 @@ es:
   footer_googleplus_url: "Google Plus URL"
   footer_pinterest_url: "Pinterest URL"
   footer_email: "Email"
-  footer_links_md: "Links"
-  footer_about_url: "About URL"
-  footer_tos_url: "Terms of Service URL"
+  footer_links_md: "Enlaces"
+  footer_about_url: "Sobre URL"
+  footer_tos_url: "Términos de servicio URL"
 
   name: Nombre
   first_name: Nombre
@@ -254,23 +254,23 @@ es:
   city: Ciudad
   state: Provincia
   postcode: Código postal
-  country: Country
-  unauthorized: Unauthorized
-  terms_of_service: "Terms of service"
+  country: País
+  unauthorized: No autorizado
+  terms_of_service: "Términos de servicio"
   on_demand: On demand
   none: None
 
-  label_shops: "Shops"
+  label_shops: "Tiendas"
   label_map: "Mapa"
   label_producers: "Productores"
   label_groups: "Grupos"
   label_about: "Acerca"
   label_connect: "Conectar"
-  label_learn: "Learn"
-  label_shopping: "Shopping"
-  label_login: "Login"
-  label_logout: "Logout"
-  label_signup: "Sign up"
+  label_learn: "Conocer"
+  label_shopping: "Comprar"
+  label_login: "Iniciar sesión"
+  label_logout: "Cerrar sesión"
+  label_signup: "Registrarse"
   label_administration: "Administración"
   label_stadistics: "Estadísticas"
   label_admin: "Admin"
@@ -283,7 +283,7 @@ es:
   cart_headline: "Su carrito"
   total: "Total"
   checkout: "Checkout now"
-  cart_updating: "Updating cart..."
+  cart_updating: "Actualizando carrito..."
   cart_empty: "Carrito vacío"
   cart_edit: "Editar su carrito"
 
@@ -291,9 +291,9 @@ es:
   card_securitycode: "Código de seguridad"
   card_expiry_date: Fecha de vencimiento
 
-  ofn_cart_headline: "Current cart for:"
-  ofn_cart_distributor: "Distributor:"
-  ofn_cart_oc: "Order cycle:"
+  ofn_cart_headline: "Carricto actual para:"
+  ofn_cart_distributor: "Distribuidor:"
+  ofn_cart_oc: "Ciclo de pedidos:"
   ofn_cart_from: "De:"
   ofn_cart_to: "Para:"
   ofn_cart_product: "Producto:"
@@ -308,7 +308,7 @@ es:
   ie_warning_other: "¿No puede actualizar su navegador? Intente utilizar Open Food Network desde su teléfono inteligente :-)"
 
   footer_global_headline: "OFN Global"
-  footer_global_home: "Home"
+  footer_global_home: "Inicio"
   footer_global_news: "Noticias"
   footer_global_about: "Acerca de"
   footer_global_contact: "Contactar"
@@ -327,7 +327,7 @@ es:
   footer_nav_headline: "Navegar"
   footer_join_headline: "Únete a nosotros"
   footer_join_body: "Create a listing, shop or group directory on the Open Food Network."
-  footer_join_cta: "Tell me more!"
+  footer_join_cta: "¡Quiero saber más!"
 
   footer_legal_call: "Read our"
   footer_legal_tos: "Términos y condiciones"
@@ -351,26 +351,26 @@ es:
   connect_body: "Busca nuestro directorio completo de productores, centros y grupos para encontrar los que más cercanos. Anuncie su negocio o organización en OFN para que los consumidores lo puedan encontrar. Únete a la comunidad para obtener consejos y resolver problemas juntos."
   connect_cta: "Explora ya"
 
-  system_headline: "Shopping - here's how it works."
-  system_step1: "1. Search"
-  system_step1_text: "Search our diverse, independent shops for seasonal local food. Search by neighbourhood and food category, or whether you prefer delivery or pickup."
-  system_step2: "2. Shop"
-  system_step2_text: "Transform your transactions with affordable local food from diverse producers and hubs. Know the stories behind your food and the people who make it!"
-  system_step3: "3. Pick-up / Delivery"
-  system_step3_text: "Hang on for your delivery, or visit your producer or hub for a more personal connection with your food. Food shopping as diverse as nature intended it."
+  system_headline: "Compras - Así es como funciona."
+  system_step1: "1. Buscar"
+  system_step1_text: "Busca entre nuestras diversas cantidad de tiendas independientes para comprar por temporadas. Busca por región y categoría de alimentos, o si desea que la compra se le envíe o haya que recogerla"
+  system_step2: "2. Tienda"
+  system_step2_text: "Transforme sus transacciones en comida local asequible de diversos productores y tiendas.¡Conoce las historias detrás de los alimentos y las personas que lo hacen!"
+  system_step3: "3. Recoger / Entrega"
+  system_step3_text: "Espere para recibir su compra, o visite a su productor o tienda para una conexión más personal con sus alimentos. Compras tan diversas como la naturaleza lo desea."
 
   cta_headline: "Compras que hace del mundo un mejor lugar."
   cta_label: "Estoy listo"
 
   stats_headline: "Estamos creando un nuevo sistema alimentario."
-  stats_producers: "food producers"
-  stats_shops: "food shops"
-  stats_shoppers: "food shoppers"
-  stats_orders: "food orders"
+  stats_producers: "productores"
+  stats_shops: "tiendas"
+  stats_shoppers: "clientes"
+  stats_orders: "ordenes"
 
   checkout_title: Checkout
   checkout_now: Checkout now
-  checkout_order_ready: Order ready for
+  checkout_order_ready: Orden lista para
   checkout_hide: Ocultar
   checkout_expand: Expandir
   checkout_headline: "Ok, ready to checkout?"
