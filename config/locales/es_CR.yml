@@ -561,129 +561,129 @@ Ver el %{link} para encontrar más de las características de  %{sitename} y par
   groups_signup_motivation7: We make food movements make more sense.
   groups_signup_motivation8: You need to activate and enable your networks, we offer a platform for conversation and action. You need real engagement. We’ll help reach all the players, all the stakeholders, all the sectors.
   groups_signup_motivation9: You need resourcing. We’ll bring all our experience to bear. You need cooperation. We’ll better connect you to a global network of peers.
-  groups_signup_pricing: Group Account
-  groups_signup_studies: Case Studies
-  groups_signup_contact: Ready to discuss?
-  groups_signup_contact_text: "Get in touch to discover what OFN can do for you:"
-  groups_signup_detail: "Here's the detail."
+  groups_signup_pricing: Cuenta Grupal
+  groups_signup_studies: Estudios de casos
+  groups_signup_contact: ¿Listo para discutir?
+  groups_signup_contact_text: "Póngase en contacto para descubrir lo que OFN puede hacer por usted:"
+  groups_signup_detail: "Aquí está el detalle."
 
-  login_invalid: "Invalid email or password"
+  login_invalid: "Correo o contraseña inválidos"
 
   modal_hubs: "Food Hubs"
   modal_hubs_abstract: Our food hubs are the point of contact between you and the people who make your food!
   modal_hubs_content1: You can search for a convenient hub by location or name. Some hubs have multiple points where you can pick-up your purchases, and some will also provide delivery options. Each food hub is a sales point with independent business operations and logistics - so variations between hubs are to be expected.
   modal_hubs_content2: You can only shop at one food hub at a time.
 
-  modal_groups: "Groups / Regions"
+  modal_groups: "Grupos / Regiones"
   modal_groups_content1: These are the organisations and relationships between hubs which make up the Open Food Network.
   modal_groups_content2: Some groups are clustered by location or council, others by non-geographic similarities.
 
-  modal_how: "How it works"
-  modal_how_shop: Shop the Open Food Network
+  modal_how: "Cómo funciona"
+  modal_how_shop: Compra en Open Food Network
   modal_how_shop_explained: Search for a food hub near you to start shopping! You can expand each food hub to see what kinds of goodies are available, and click through to start shopping. (You can only shop one food hub at a time.)
   modal_how_pickup: Pick-ups, delivery and shipping costs
   modal_how_pickup_explained: Some food hubs deliver to your door, while others require you to pick-up your purchases. You can see which options are available on the homepage, and select which you'd like at the shopping and check-out pages. Delivery will cost more, and pricing differs from hub-to-hub. Each food hub is a sales point with independent business operations and logisitics - so variations between hubs are to be expected.
   modal_how_more: Learn more
   modal_how_more_explained: "If you want to learn more about the Open Food Network, how it works, and get involved, check out:"
 
-  modal_producers: "Producers"
-  modal_producers_explained: "Our producers make all the delicious food you can shop for on the Open Food Network."
+  modal_producers: "Productores"
+  modal_producers_explained: "Nuestros productores hacen toda la deliciosa comida que se puede comprar en Open Food Network."
 
-  producers_about: About us
-  producers_buy: Shop for
-  producers_contact: Contact
-  producers_contact_phone: Call
-  producers_contact_social: Follow
+  producers_about: Acerca de nosotros
+  producers_buy: Comprar
+  producers_contact: Contacto
+  producers_contact_phone: Llamar
+  producers_contact_social: Seguir
   producers_buy_at_html: "Shop for %{enterprise} products at:"
-  producers_filter: Filter by
-  producers_filter_type: Type
-  producers_filter_property: Property
-  producers_title: Producers
-  producers_headline: Find local producers
-  producers_signup_title: Sign up as a producer
-  producers_signup_headline: Food producers, empowered.
-  producers_signup_motivation: Sell your food and tell your stories to diverse new markets. Save time and money on every overhead. We support innovation without the risk. We've levelled the playing field.
-  producers_signup_send: Join now
-  producers_signup_enterprise: Enterprise Accounts
-  producers_signup_studies: Stories from our producers.
-  producers_signup_cta_headline: Join now!
-  producers_signup_cta_action: Join now
-  producers_signup_detail: Here's the detail.
-  producer: Producer
+  producers_filter: Filtrar por
+  producers_filter_type: Tipo
+  producers_filter_property: Propiedad
+  producers_title: Productores
+  producers_headline: Encontrar productores locales
+  producers_signup_title: Registrarse como productor
+  producers_signup_headline: Productores, autorizados.
+  producers_signup_motivation: Vende tus alimentos y cuenta tus historias para diversifar nuevos mercados. Ahorra tiempo y dinero. Apoyamos la innovación sin riesgo. Hemos nivelado el campo de juego.
+  producers_signup_send: Únete ahora
+  producers_signup_enterprise: Cuentas de empresas
+  producers_signup_studies: Historias de nuestros productores.
+  producers_signup_cta_headline: ¡Únete ahora!
+  producers_signup_cta_action: Únete ahora
+  producers_signup_detail: Aquí los detalles.
+  producer: Productor
 
-  products_item: Item
-  products_description: Description
-  products_variant: Variant
-  products_quantity: Quantity
-  products_available: Available?
-  products_producer: "Producer"
-  products_price: "Price"
+  products_item: Artículo
+  products_description: Descripción
+  products_variant: Variante
+  products_quantity: Cantidad
+  products_available: ¿Disponible?
+  products_producer: "Productor"
+  products_price: "Precio"
 
-  register_title: Register
+  register_title: Registrarse
 
-  sell_title: "Register"
+  sell_title: "Registrarse"
   sell_headline: "Get on the Open Food Network!"
   sell_motivation: "Showcase your beautiful food."
-  sell_producers: "Producers"
-  sell_hubs: "Hubs"
-  sell_groups: "Groups"
+  sell_producers: "Productores"
+  sell_hubs: "Centros de Acopio"
+  sell_groups: "Grupos"
   sell_producers_detail: "Set up a profile for your business on the OFN in just minutes.  At any time you can upgrade your profile to an online store and sell your products direct to customers."
   sell_hubs_detail: "Set up a profile for your food enterprise or organisation on the OFN. At any time you can upgrade your profile to a multi-producer shop."
   sell_groups_detail: "Set up a tailored directory of enterprises (producers and other food enterprises) for your region or for your organisation."
-  sell_user_guide: "Find out more in our user guide."
+  sell_user_guide: "Descubre más en nuestra guía de usuario."
   sell_listing_price: "Listing on the OFN is free.  Opening and running a shop on OFN is free.  Setting up a group directory on OFN for your organisation or regional network is free."
-  sell_embed: "We can also embed an OFN shop in your own customised website or build a customised local food network website for your region."
-  sell_ask_services: "Ask us about OFN services."
+  sell_embed: "También podemos agregar una tienda OFN en su propio sitio web personalizado o construir un sitio web de la red local de alimentos a medida para su región."
+  sell_ask_services: "Pregúntanos sobre los servicios de OFN."
 
-  shops_title: Shops
-  shops_headline: Shopping, transformed.
-  shops_text: Food grows in cycles, farmers harvest in cycles, and we order food in cycles. If you find an order cycle closed, check back soon.
-  shops_signup_title: Sign up as a hub
-  shops_signup_headline: Food hubs, unlimited.
-  shops_signup_motivation: Whatever your model, we support you. However you change, we're with you. We're non-profit, independent, and open-sourced. We're the software partners you've dreamed of.
-  shops_signup_action: Join now
-  shops_signup_pricing: Enterprise Accounts
-  shops_signup_stories: Stories from our hubs.
-  shops_signup_help: We're ready to help.
+  shops_title: Tiendas
+  shops_headline: Compras, transformadas.
+  shops_text: Los alimentos crecen en ciclos, los agricultores cosechan en ciclos y nosotros ordenamos en ciclos. Si encuentras un ciclo de pedidos cerrado, vuelve a revisarlo pronto.
+  shops_signup_title: Regístrarse como un centro de acopio
+  shops_signup_headline: Centros de Acopio, ilimitados.
+  shops_signup_motivation: Sea cual sea su modelo, los apoyamos. Sin importar el cambio, estamos contigo. Estamos sin fines de lucro, independiente y de código abierto. Somos los socios de software que usted ha soñado.
+  shops_signup_action: Únete ahora
+  shops_signup_pricing: Cuentas de empresas
+  shops_signup_stories: Historias de nuestros centros de acopio.
+  shops_signup_help: Estamos listos para ayudar.
   shops_signup_help_text: You need a better return. You need new buyers and logistics partners. You need your story told across wholesale, retail, and the kitchen table.
-  shops_signup_detail: Here's the detail.
+  shops_signup_detail: Aquí el detalle.
 
   orders_fees: Fees...
-  orders_edit_title: Shopping Cart
-  orders_edit_headline: Your shopping cart
-  orders_edit_time: Order ready for
-  orders_edit_continue: Continue shopping
+  orders_edit_title: Carrito de compras
+  orders_edit_headline: Tu carrito de compras
+  orders_edit_time: Orden lista para
+  orders_edit_continue: Sigue comprando
   orders_edit_checkout: Checkout
-  orders_form_empty_cart: "Empty cart"
-  orders_form_subtotal: Produce subtotal
-  orders_form_admin: Admin and handling
+  orders_form_empty_cart: "Carrito vacío"
+  orders_form_subtotal: Producir subtotal
+  orders_form_admin: Administación y manipulación
   orders_form_total: Total
-  orders_oc_expired_headline: Orders have closed for this order cycle
+  orders_oc_expired_headline: Los pedidos han cerrado durante este ciclo de pedido
   orders_oc_expired_text: "Sorry, orders for this order cycle closed %{time} ago! Please contact your hub directly to see if they can accept late orders."
   orders_oc_expired_text_others_html: "Sorry, orders for this order cycle closed %{time} ago! Please contact your hub directly to see if they can accept late orders <strong>%{link}</strong>."
   orders_oc_expired_text_link: "or see the other order cycles available at this hub"
-  orders_oc_expired_email: "Email:"
-  orders_oc_expired_phone: "Phone:"
-  orders_show_title: Order Confirmation
-  orders_show_time: Order ready on
-  orders_show_number: Order confirmation
+  orders_oc_expired_email: "Correo:"
+  orders_oc_expired_phone: "Teléfono:"
+  orders_show_title: Comfirmación de pedido
+  orders_show_time: Orden lista en
+  orders_show_number: Confirmación de pedido
 
-  products_cart_distributor_choice: "Distributor for your order:"
+  products_cart_distributor_choice: "Distribuidor de su pedido:"
   products_cart_distributor_change: "Your distributor for this order will be changed to %{name} if you add this product to your cart."
   products_cart_distributor_is: "Your distributor for this order is %{name}."
   products_distributor_error: "Please complete your order at %{link} before shopping with another distributor."
-  products_oc: "Order cycle for your order:"
+  products_oc: "Ciclo de pedido para su orden:"
   products_oc_change: "Your order cycle for this order will be changed to %{name} if you add this product to your cart."
   products_oc_is: "Your order cycle for this order is %{name}."
-  products_oc_error: "Please complete your order from %{link} before shopping in a different order cycle."
-  products_oc_current: "your current order cycle"
-  products_max_quantity: Max quantity
-  products_distributor: Distributor
+  products_oc_error: "Por favor complete su pedido en %{link} antes de comprar en un ciclo de pedido diferente."
+  products_oc_current: "ciclo de pedido actual"
+  products_max_quantity: Cantidad máxima
+  products_distributor: Distribuidor
   products_distributor_info: When you select a distributor for your order, their address and pickup times will be displayed here.
 
   shop_trial_length: "Shop Trial Length (Days)"
   shop_trial_expires_in: "Your shopfront trial expires in"
-  shop_trial_expired_notice: "Good news! We have decided to extend shopfront trials until further notice."
+  shop_trial_expired_notice: "¡Buenas noticias! We have decided to extend shopfront trials until further notice."
 
 
   # keys used in javascript
