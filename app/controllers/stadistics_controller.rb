@@ -5,10 +5,9 @@ class StadisticsController < BaseController
   $id = 0;
   $stat = Stats.new([1,2,3,4,5])
   $titles,$values = $stat.get_values
+  
   #Loads the main view of the stadistics module
   def index
-    puts Enterprise.columns.collect { |c| "#{c.name} (#{c.type})" }
-
     if(spree_current_user == nil || !spree_current_user.admin?)
       redirect_to ""
     end
@@ -81,24 +80,39 @@ class StadisticsController < BaseController
     return graphic
 
   end
+  
+  def create_general_chart(params)
+    option = params[:general_option_type]
+    chart_type = params[:general_chart_type]
+    graphic  = GeneralGraphic.new(chart_type,$id)
+    if option == "1"
+      graphic.generate_shipping
+    elsif option == "2"
+      graphic.generate_payment
+    end
+    return graphic
+  end
 
   #Based on the data sent in the index view calls an specific method that creates a specific chart.
   def create_chart  
     tab = params[:modal_tab]
 
+
     if tab == "1"
-      graphic = create_product_chart(params) #Calls the product chart function
+      graphic = create_general_chart(params)
     elsif tab == "2"
-      graphic = create_producer_chart(params) #Calls the producer chart function
+      graphic = create_product_chart(params) #Calls the product chart function
     elsif tab == "3"
-      graphic = create_hub_chart(params) #Calls the hubs chart function
+      graphic = create_producer_chart(params) #Calls the producer chart function
     elsif tab == "4"
+      graphic = create_hub_chart(params) #Calls the hubs chart function
+    elsif tab == "5"
       graphic = create_user_chart(params) #Calls the users chart function
     else
       redirect_to :action => "index" #Reload the page with the updated charts.
+      return 
     end  
     $id +=1
-    
     #Check if a graphic is already in the view, to avoid duplicated graphics
     if(!graphic.includes?($graphics) && $graphics.length<6)
       $graphics.insert(0,graphic)

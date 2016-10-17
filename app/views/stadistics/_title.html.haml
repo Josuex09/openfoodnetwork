@@ -61,4 +61,12 @@
         = t('stadistics.last_connected_month')    
     - elsif actual.tags.include? "week"   
       %h2{:title => t('stadistics.last_connected_week')}
-        = t('stadistics.last_connected_week')    
+        = t('stadistics.last_connected_week')
+- elsif actual.tags.include? "general"
+  - if actual.tags.include? "shipping"
+    %h2{:title => t('stadistics.most_shipping')}
+      = t('stadistics.most_shipping')
+  - elsif actual.tags.include? "payment"
+    %h2{:title => t('stadistics.most_payment')}
+      = t('stadistics.most_payment')  
+        

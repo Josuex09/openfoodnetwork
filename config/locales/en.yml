@@ -1104,6 +1104,7 @@ Please follow the instructions there to make your enterprise visible on the Open
     stadistics: Stadistics
     system: System
     
+    general: General
     products: Products
     producers: Producers
     hubs: Hubs
@@ -1157,4 +1158,7 @@ Please follow the instructions there to make your enterprise visible on the Open
     
     new_users: New users
     users_connected: Users connected
+    
+    most_shipping: Most used shipping methods
+    most_payment: Most used paymenth methods
     
