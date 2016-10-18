@@ -1,6 +1,7 @@
 class StadisticsController < BaseController
   layout 'stadistics'
   
+  $max = 9
   $graphics = [];
   $id = 0;
   $stat = Stats.new([1,2,3,4,5])
@@ -114,7 +115,7 @@ class StadisticsController < BaseController
     end  
     $id +=1
     #Check if a graphic is already in the view, to avoid duplicated graphics
-    if(!graphic.includes?($graphics) && $graphics.length<6)
+    if(!graphic.includes?($graphics) && $graphics.length<$max)
       $graphics.insert(0,graphic)
     end
 

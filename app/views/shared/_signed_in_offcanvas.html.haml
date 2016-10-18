@@ -16,9 +16,10 @@
     %i.ofn-i_015-user
     = t 'label_account'
     
-- if admin_user?
-  %li.li-menu
-    %a{href:"/stadistics/index"}
+- if admin_user? 
+  %li
+    %a{href: "/stadistics/index", target:'_blank'} 
+      %i.fa.fa-bar-chart{ :style => "color: #7a7474" }
       = t 'label_stadistics'
 %li
   %a{title: t('label_logout'), href:'/logout' } 

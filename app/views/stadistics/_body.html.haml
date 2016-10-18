@@ -4,9 +4,9 @@
       .col-md-3.left_col
         .left_col.scroll-view
           .navbar.nav_title{:style => "border: 0;"}
-            %a.site_title{:href => "/"} 
-              = t('stadistics.title')          
-            /%img.titleicon{:src => "/assets/stadistics-logo.svg",:href => "/"}            
+            %a.site_title.logo{:href => "/"}
+              %i.icon-mini 
+              = t('stadistics.title')                   
           .clearfix
           %br/
           / sidebar menu
@@ -18,9 +18,9 @@
                     %i.fa.fa-home
                     = t('stadistics.stadistics')
                     %span.fa.fa-chevron-down
-                  %ul.nav.child_menu
+                  %ul.nav.child_menu.active
                     %li
-                      %a{:href => "index.html"}
+                      %a{:href => ""}
                         = t('stadistics.system')
           / /sidebar menu
       .top_nav
@@ -45,7 +45,8 @@
                 =$values[index]
               -index+=1
           .col-md-2.col-sm-4.col-xs-6.text-center
-            %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} Select data
+            %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} 
+              = t('stadistics.edit_stats')
 
         .row
           -if $graphics != nil

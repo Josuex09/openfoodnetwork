@@ -272,7 +272,7 @@ en:
   label_logout: "Logout"
   label_signup: "Sign up"
   label_administration: "Administration"
-  label_stadistics: "Stadistics"
+  label_stadistics: "  Stadistics"
   label_admin: "Admin"
   label_account: "Account"
   label_more: "Show more"
@@ -1161,4 +1161,6 @@ Please follow the instructions there to make your enterprise visible on the Open
     
     most_shipping: Most used shipping methods
     most_payment: Most used paymenth methods
+    
+    edit_stats: Edit Stats
     
