@@ -45,9 +45,16 @@
 
 .site_title i {
   padding: 5px 6px;
-  border-radius: 50%; 
-  border: 1px solid;
+  border-radius: 50%;  
   }
+  
+.nav_title a{
+	font-size:18px;
+}
+
+.nav_title a:hover{
+	color: #C1122B !important;
+}
 
 .nav-sm .main_container .top_nav {
   display: block;
@@ -553,7 +560,8 @@ a:hover, a:focus {
   padding: 13px 15px 12px; }
 
 .nav.side-menu > li.current-page, .nav.side-menu > li.active {
-  border-right: 5px solid #1ABB9C; }
+  border-right: 5px solid #5A738E; 
+  }
 
 .nav li.current-page {
   background: rgba(255, 255, 255, 0.05); }
@@ -868,6 +876,11 @@ legend {
 
 .demo-placeholder {
   height: 280px; }
+
+
+.thin{
+	font-weight: 200;
+}
 
 /** Contacts **/
 .profile_details:nth-child(3n) {
@@ -1483,6 +1496,14 @@ span.right {
   font-size: 30px;
   line-height: 47px;
   font-weight: 600; }
+  
+.count_top{
+	font-weight: 200 !important;
+	font-size: 18px !important;
+}
+.count{
+	font-weight: 400 !important;
+}
 
 @media (min-width: 768px) {
   .tile_count .tile_stats_count .count {

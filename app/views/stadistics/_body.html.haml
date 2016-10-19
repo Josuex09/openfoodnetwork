@@ -4,8 +4,8 @@
       .col-md-3.left_col
         .left_col.scroll-view
           .navbar.nav_title{:style => "border: 0;"}
-            %a.site_title.logo{:href => "/"}
-              %i.icon-mini 
+            %a.site_title.thin{:href => "/"}
+              %i.fa.fa-bar-chart
               = t('stadistics.title')                   
           .clearfix
           %br/
@@ -29,9 +29,7 @@
             .nav.toggle
               %a#menu_toggle
                 %i.fa.fa-bars
-        
-                    
-                
+          
       / page content
       .right_col{:role => "main"}
         .row.tile_count

@@ -1,72 +1,70 @@
 - if actual.tags.include? "product"
   - if actual.tags.include? "initial_date"
-    %h2{:title => t('stadistics.product_initial_date',initial_date: actual.initial_date)}
+    %h2.thin{:title => t('stadistics.product_initial_date',initial_date: actual.initial_date)}
       = t('stadistics.product_initial_date',initial_date: actual.initial_date)
   - elsif actual.tags.include? "final_date"
-    %h2{:title => t('stadistics.product_final_date',final_date: actual.final_date)}
+    %h2.thin{:title => t('stadistics.product_final_date',final_date: actual.final_date)}
       = t('stadistics.product_final_date',final_date: actual.final_date)  
   - elsif actual.tags.include? "both_dates"
-    %h2{:title => t('stadistics.product_both_dates',initial_date: actual.initial_date, final_date: actual.final_date)}
+    %h2.thin{:title => t('stadistics.product_both_dates',initial_date: actual.initial_date, final_date: actual.final_date)}
       = t('stadistics.product_both_dates',initial_date: actual.initial_date, final_date: actual.final_date)
   - elsif actual.tags.include? "always"
-    %h2{:title => t('stadistics.product_always')}
+    %h2.thin{:title => t('stadistics.product_always')}
       = t('stadistics.product_always')
 - elsif actual.tags.include? "producer"
   - if actual.tags.include? "new"
     - if actual.tags.include? "year"
-      %h2{:title => t('stadistics.new_producers_year')}
+      %h2.thin{:title => t('stadistics.new_producers_year')}
         = t('stadistics.new_producers_year')
     - elsif actual.tags.include? "month"
-      %h2{:title => t('stadistics.new_producers_month')}
+      %h2.thin{:title => t('stadistics.new_producers_month')}
         = t('stadistics.new_producers_month')    
     - elsif actual.tags.include? "week" 
-      %h2{:title => t('stadistics.new_producers_week')}
+      %h2.thin{:title => t('stadistics.new_producers_week')}
         = t('stadistics.new_producers_week')    
   - elsif actual.tags.include? "region"
-    %h2{:title => t('stadistics.producer_region')}
+    %h2.thin{:title => t('stadistics.producer_region')}
       = t('stadistics.producer_region')
-  
 - elsif actual.tags.include? "hub"
   - if actual.tags.include? "new"
     - if actual.tags.include? "year"
-      %h2{:title => t('stadistics.new_hubs_year')}
+      %h2.thin{:title => t('stadistics.new_hubs_year')}
         = t('stadistics.new_hubs_year')
     - elsif actual.tags.include? "month"
-      %h2{:title => t('stadistics.new_hubs_month')}
+      %h2.thin{:title => t('stadistics.new_hubs_month')}
         = t('stadistics.new_hubs_month')    
     - elsif actual.tags.include? "week" 
-      %h2{:title => t('stadistics.new_hubs_week')}
+      %h2.thin{:title => t('stadistics.new_hubs_week')}
         = t('stadistics.new_hubs_week')    
   - elsif actual.tags.include? "region"
-    %h2{:title => t('stadistics.hub_region')}
+    %h2.thin{:title => t('stadistics.hub_region')}
       = t('stadistics.hub_region')
-  
 - elsif actual.tags.include? "user"
   - if actual.tags.include? "new"
     - if actual.tags.include? "year"
-      %h2{:title => t('stadistics.new_users_year')}
+      %h2.thin{:title => t('stadistics.new_users_year')}
         = t('stadistics.new_users_year')
     - elsif actual.tags.include? "month"
-      %h2{:title => t('stadistics.new_users_month')}
+      %h2.thin{:title => t('stadistics.new_users_month')}
         = t('stadistics.new_users_month')    
     - elsif actual.tags.include? "week" 
-      %h2{:title => t('stadistics.new_users_week')}
+      %h2.thin{:title => t('stadistics.new_users_week')}
         = t('stadistics.new_users_week') 
   - elsif actual.tags.include? "connections"
     - if actual.tags.include? "year"
-      %h2{:title => t('stadistics.last_connected_year')}
+      %h2.thin{:title => t('stadistics.last_connected_year')}
         = t('stadistics.last_connected_year')    
     - elsif actual.tags.include? "month"
-      %h2{:title => t('stadistics.last_connected_month')}
+      %h2.thin{:title => t('stadistics.last_connected_month')}
         = t('stadistics.last_connected_month')    
     - elsif actual.tags.include? "week"   
-      %h2{:title => t('stadistics.last_connected_week')}
+      %h2.thin{:title => t('stadistics.last_connected_week')}
         = t('stadistics.last_connected_week')
 - elsif actual.tags.include? "general"
   - if actual.tags.include? "shipping"
-    %h2{:title => t('stadistics.most_shipping')}
+    %h2.thin{:title => t('stadistics.most_shipping')}
       = t('stadistics.most_shipping')
   - elsif actual.tags.include? "payment"
-    %h2{:title => t('stadistics.most_payment')}
+    %h2.thin{:title => t('stadistics.most_payment')}
       = t('stadistics.most_payment')  
         
