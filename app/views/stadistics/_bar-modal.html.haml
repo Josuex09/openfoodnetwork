@@ -61,7 +61,7 @@
         var cnt = $("input[name='data']:checked").length;
         if (cnt > maxAllowed) {
             $(this).prop("checked", "");
-            alert('You can select maximum ' + maxAllowed + ' options');
+            alert('You can select maximum ' + maxAllowed + ' option');
         }
     });
     $("#data-button").click(function(){
@@ -70,7 +70,7 @@
           selected.push($(this).attr('value'));
       });
       if (selected.length != 1){
-        alert("You have to select six options")
+        alert("You have to select one option")
         return false
       }
       $("#bar_data").val(JSON.stringify(selected))
