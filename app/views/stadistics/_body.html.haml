@@ -36,15 +36,16 @@
           -index = 0
           -while index < $titles.size do
             .col-md-2.col-sm-4.col-xs-6.tile_stats_count
-              %span.count_top{:title => $titles[index]}
-                %li.glyphicon.glyphicon-align-right
+              %span.count_top
+                %a{:id =>index,:class => "fa fa-pencil-square-o", "data-target" => "#bar-modal", "data-toggle" => "modal"}
                 =$titles[index]
               .count 
                 =$values[index]
               -index+=1
-          .col-md-2.col-sm-4.col-xs-6.text-center
-            %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"} 
-              = t('stadistics.edit_stats')
+          -#.col-md-2.col-sm-4.col-xs-6.text-center
+          -#  %button#bar-button.btn.btn-default.btn-sm{"data-target" => "#bar-modal", "data-toggle" => "modal", :type => "button"}
+          -#    = t('stadistics.edit_stats')
+
 
         .row
           -if $graphics != nil
@@ -72,4 +73,5 @@
 - content_for :javascripts do
   :javascript
      $('[data-toggle="tooltip"]').tooltip();
+
 
