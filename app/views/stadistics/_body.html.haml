@@ -29,6 +29,7 @@
             .nav.toggle
               %a#menu_toggle
                 %i.fa.fa-bars
+                
           
       / page content
       .right_col{:role => "main"}
@@ -37,7 +38,7 @@
           -while index < $titles.size do
             .col-md-2.col-sm-4.col-xs-6.tile_stats_count
               %span.count_top
-                %a{:id =>index,:class => "fa fa-pencil-square-o", "data-target" => "#bar-modal", "data-toggle" => "modal"}
+                %a{:id =>index,:class => "fa fa-pencil-square-o", "data-target" => "#bar-modal", "data-toggle" => "modal",:style => "cursor: pointer;"}
                 =$titles[index]
               .count 
                 =$values[index]
