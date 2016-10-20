@@ -51,16 +51,17 @@
                         Incompleted order cycles
               .modal-footer
                 =hidden_field_tag :bar_data, "", :id=>"bar_data"
-                =submit_tag "Update", :class => 'btn btn-default pull-right', :id => 'data-button'
+                =hidden_field_tag :del_stat, "", :id=>"del_stat"
+                =submit_tag "Update", :class => 'btn btn-default pull-right', :id => 'data-button', :del_stat => "del-stat"
 
 - content_for :javascripts do
   :javascript
     $("input[name='data']").change(function () {
-        var maxAllowed = 5;
+        var maxAllowed = 1;
         var cnt = $("input[name='data']:checked").length;
         if (cnt > maxAllowed) {
             $(this).prop("checked", "");
-            alert('You can select maximum ' + maxAllowed + ' options');
+            alert('You can select maximum ' + maxAllowed + ' option');
         }
     });
     $("#data-button").click(function(){
@@ -68,9 +69,16 @@
       $('#checkboxes input:checked').each(function() {
           selected.push($(this).attr('value'));
       });
-      if (selected.length != 5){
-        alert("You have to select five options")
+      if (selected.length != 1){
+        alert("You have to select one option")
         return false
       }
       $("#bar_data").val(JSON.stringify(selected))
     });
+    for (i = 0; i < 6; i++) {
+        $("#"+i).click(function() {
+          var selected =  [];
+          selected.push($(this).attr('id'));
+          $("#del_stat").val(JSON.stringify(selected));
+        });
+    }

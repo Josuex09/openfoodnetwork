@@ -4,7 +4,7 @@ class StadisticsController < BaseController
   $max = 9
   $graphics = [];
   $id = 0;
-  $stat = Stats.new([1,2,3,4,5])
+  $stat = Stats.new([1,2,3,4,5,6])
   $titles,$values = $stat.get_values
   
   #Loads the main view of the stadistics module
@@ -98,7 +98,6 @@ class StadisticsController < BaseController
   def create_chart  
     tab = params[:modal_tab]
 
-
     if tab == "1"
       graphic = create_general_chart(params)
     elsif tab == "2"
@@ -135,13 +134,21 @@ class StadisticsController < BaseController
     return result
   end
   
-  
   def generate_stat
-    limit = 5
+    ids = array_to_int(JSON.parse(params[:del_stat]))
+    id_selected = ids[0]
+    $titles.delete_at(id_selected)
+    $values.delete_at(id_selected)
+
     option_values = JSON.parse(params[:bar_data])
-    values = array_to_int( option_values)
+    values = array_to_int(option_values)
+
     stat = Stats.new(values)
-    $titles,$values = stat.get_values
+    title, value =stat.get_values
+
+    $titles.insert(id_selected,title[0])
+    $values.insert(id_selected, value[0])
+
     redirect_to :action =>  "index"
   end
    
