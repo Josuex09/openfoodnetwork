@@ -1,0 +1,20 @@
+.col-sm-3
+  .sidebar-nav
+    .navbar.navbar-default{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".sidebar-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %span.visible-xs.navbar-brand Ayuda
+      .navbar-collapse.collapse.sidebar-navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            %a{:href => "/help/introduction"} Introducción
+          %li
+            %a{:href => "/help/userguide"} Guias de usuario
+          %li
+            %a{:href => "/help/faq"} Preguntas Frecuentes
+          %li
+            %a{:href => "/help/contact"} Contáctenos

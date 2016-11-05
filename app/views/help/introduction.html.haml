@@ -1,0 +1,11 @@
+.container
+  %div
+    %h1#title Ayuda
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1.margin-cero Introducción
+      %p
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "376", :src => "https://www.youtube.com/embed/eA3IcMUnU14?feature=oembed", :width => "669"}
+      %br/
+      %p.p Este video muestra la manera en la que Open Food Network trabaja y cuales pueden ser sus beneficios, tanto para productores como para consumidores

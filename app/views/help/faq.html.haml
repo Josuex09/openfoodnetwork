@@ -1,0 +1,45 @@
+.container
+  %h1#title Ayuda
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1.margin-cero Preguntas Frecuentes
+
+      .container
+        %h4 Seleccione la categoria de preguntas a la que desea accesar:
+        %br/
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse1"} Consumidor ▼
+            #collapse1.panel-collapse.collapse.in
+              .panel-body
+                %p.b ¿Los productos los envian a cualquier parte del país?
+                %p – Eso depende del vendedor, cada uno tiene diferentes tipos de envios.
+                %br/
+                %p.b ¿Solo funciona para Costa Rica?
+                %p –  Sí, esta plataforma esta desarrollada solamente para Costa Rica.
+                %br/
+                %p.b ¿Los productos los envian a cualquier parte del país?
+                %p – Eso depende del vendedor, cada uno tiene diferentes tipos de envios.
+                %br/
+                %p.b ¿Los productos los envian a cualquier parte del país?
+                %p – Eso depende del vendedor, cada uno tiene diferentes tipos de envios.
+                %br/
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse2"} Productor ▼
+            #collapse2.panel-collapse.collapse
+              .panel-body
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3"} Centro de Acopio ▼
+            #collapse3.panel-collapse.collapse
+              .panel-body
+                %br/
+                %p.b ¿Que es un centro de acopio?
+                %p – Un centro de acopio es un lugar donde los productores pueden dejar los productos para que el comprador los recoja, normalmente cada producto dice si puede ser entregado por medio de un centro de acopio.
+                %br/

@@ -14,7 +14,27 @@ class HelpController < BaseController
   def userguide
   end
   
+  def userguide_hub
+    name = params[:name]
+    if !name.nil?
+      if name == "hub-payment-methods"
+        render "hub-payment-methods"
+      elsif name == "hub-set-up-guide"
+        render "hub-set-up-guide"
+      end
+      
+    end
+    
+    
+  end
+    
+  def userguide_producer
+    
+  end
+  
   def contact
   end
+  
+  
   
 end

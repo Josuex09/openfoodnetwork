@@ -12,6 +12,11 @@ class StadisticsController < BaseController
     if(spree_current_user == nil || !spree_current_user.admin?)
       redirect_to ""
     end
+  #user = Spree::User.first
+  #print(user.email)
+  #user.password='spree123'
+  #user.password_confirmation='spree123'
+  #user.save!
   end
 
   #Destroys a chart based on the id 

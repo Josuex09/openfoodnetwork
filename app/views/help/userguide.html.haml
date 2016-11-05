@@ -1,0 +1,12 @@
+.container
+  %div
+    %h1#title Guías de Usuario
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %p.p Seleccione la guía a la que desea accesar:
+      %p.p.glyphicon.glyphicon-arrow-right
+        %a{:href => "/help/userguide/hub"} Centro de acopio
+      %br
+      %p.p.glyphicon.glyphicon-arrow-right
+        %a{:href => "/help/userguide/producer"} Productores              

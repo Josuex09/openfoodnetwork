@@ -10,6 +10,10 @@ Openfoodnetwork::Application.routes.draw do
   get "help/faq", to: "help#faq"
   get "help/contact", to: "help#contact"
   get "help/userguide", to: "help#userguide"
+  get "help/userguide/hub", to: "help#userguide_hub"
+  get "help/userguide/producer", to: "help#userguide_producer"
+  
+  get "help/userguide/hub/:name", to:"help#userguide_hub"
 
   root :to => 'home#index'
 
