@@ -1,0 +1,26 @@
+.container
+  %div
+    %h1#title Ayuda
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Métodos de pago.
+      %p.p * Se necesita tener al menos un método de pago para poder crear un ciclo de pedidos.
+      %h2 Acceder a los métodos de pago.
+      %p.p Dar clic a la pestaña que dice “Enterprises”, en  la barra azul de arriba.
+      %img{:src =>"/assets/help/shared/payment-methods1.jpg"}
+      %p.p Dar clic en el botón azul que dice “Manage” en la “Enterprise” deseada.
+      %img{:src =>"/assets/help/shared/payment-methods2.jpg"}
+      %p.p En la barra de la izquierda, seleccionar la pestaña que dice “Métodos de pago”.
+      %img{:src =>"/assets/help/shared/payment-methods3.jpg"}
+      %h2 Crear un nuevo método de pago.
+      %p.p Clic en el botón “Create new payment method”.
+      %p.p Seleccionar la “Enterprise” en recuadro en la parte derecha de la página. Esto indica que el método de pago que se creará va a funcionar para esa “Enterprise”.
+      %img{:src =>"/assets/help/shared/payment-methods4.jpg"}
+      %p.p Llenar los datos que se piden:
+      %p.p Name: Escoger el nombre para el método de pago que se desea agregar. Por ejemplo: Paypal, efectivo, transferencia bancaria, etc.
+      %p.p Description: Aquí se debe poner detalles del método de pago. Por ejemplo si el método que se desea agregar es una transferencia bancaria, se debe agregar los detalles del banco y cuenta para que los clientes puedan realizar el pago correctamente.
+      %p.p Active: Si se selecciona “Yes” el método de pago va a estar disponible para los clientes, de lo contrario no será visible.
+      %p.p Provider: Seleccionar el proveedor del método de pago que se desea utilizar.
+      %p.p Dar clic al botón “Create”.
+

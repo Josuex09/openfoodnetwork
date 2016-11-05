@@ -64,8 +64,16 @@ class HelpController < BaseController
         render "producer-order-cycles"
       elsif name =="producer-profile"
         render "producer-profile"
+      elsif name == "producer-shipping-methods"  
+        render "producer-shipping-methods"  
+      elsif name == "producer-payment-methods"
+        render "producer-payment-methods"  
+      elsif name == "producer-view-orders"
+        render "producer-view-orders"
       elsif name == "producer-report"
         render "producer-report"
+      elsif name =="producer-enterprise-fees"
+        render "producer-enterprise-fees"  
       end
       
     end
