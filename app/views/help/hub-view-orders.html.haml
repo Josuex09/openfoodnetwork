@@ -1,0 +1,30 @@
+.container
+  %div
+    %h1#title Guías de Centros de Acopio
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Órdenes
+      %p.p Para lograr ver la lista de las órdenes existentes, se debe ingresar a la pestaña llamada Órdenes.
+      %img{:src =>"/assets/help/hub/hub-view-orders1.png"}
+      %p.p Una vez, ingresado en la página, se podrá acceder a las órdenes, además, existen filtros para obtener una lista de órdenes específicas.
+      %img{:src =>"/assets/help/hub/hub-view-orders2.png"}
+      %h2 Como se puede apreciar en la imagen, por orden aparece la siguiente información:
+      %p.p Distributor: Esta es la empresa en la cual se realizó la compra.
+      %p.p Completed at: La fecha en la cual la orden se completó.
+      %p.p Number: Este es el número de orden, es escogido aleatoriamente. Si aparece un símbolo de exclamación, significa que el cliente agregó una nota cuando realizó la compra, esta se puede ver pasando por encima del símbolo.
+      %h3 State
+      %p.p Complete: Si el cliente ya realizó la compra.
+      %p.p Cancelled: Si el administrador decidió cancelar la orden por algún motivo.
+      %p.p Cart: El cliente está realizando una compra pero no ha terminado.
+      %h3 Payment State
+      %p.p Balance Due: Si el pago es por efectivo, o por transferencia bancaria, la orden va a aparecer con este estado por defecto, hasta que el administrador indique que el pago ha sido recibido.
+      %p.p Paid: Si se pagó con paypal, automáticamente aparecerá este estado. Si el pago se ha realizado manualmente, también se indica con este estado.
+      %p.p Credit Owed:  Si el cliente ya ha pagado, pero después se edita la orden y se elimina algún producto, el costo de ese producto se le debe al cliente.
+      %h3 Shipment state
+      %p.p Pending: Cuando el estado de pago es “Balance Due” el estado de envío será este. Esto quiere decir que hasta que no se realice el pago, la orden no será enviada.
+      %p.p Ready: Cuando un pago ha sido recibido, el envío estará en este estado.
+      %p.p Shipped: Cuando la orden ha sido enviada al destino. Este estado no puede aparecer hasta que el estado de pago este como “Paid”.
+      %br/
+      %p.p Customer email: El correo electrónico del cliente.
+      %p.p Customer email: El correo electrónico del cliente.

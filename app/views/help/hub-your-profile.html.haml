@@ -1,0 +1,78 @@
+.container
+  %div
+    %h1#title Guías de Centros de Acopio
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Su Perfil
+      %p.p Si se perfil es “only user”, o tiene la intención de tener una tienda en línea, usted tendrá que llenar su perfil. Completando la información ya añadida durante el proceso de registro, sin embargo, esta página le mostrará cómo acceder y editar su perfil en cualquier momento, y también añadir información adicional si su perfil ya tiene una “shopfront”. Para acceder a la información de su perfil, haga clic sobre “Entreprises” en el banner horizontal azul, y luego seleccione “Edit Profile” (Ver más abajo).
+      %img{:src =>"/assets/help/hub/hub-your-profile1.png"}
+      %p.p Recuerde hacer clic en Actualizar dentro de cada sección para guardar los cambios.
+      %h2 Detalles Primarios
+      %h3 Name:
+      %p.p Este es el nombre de su empresa. Será el título de su perfil y el de la tienda.
+      %h3 Primary Producer:
+      %p.p Seleccione la casilla de productor si su centro tiene que añadir los productos que son "producidos" por su centro de acopio. Si no selecciona esta opción solo será capaz de vender productos que son producidos por otros. Los Centros de acopio  comúnmente necesitan seleccionar esta opción al vender productos en cajas mixtas, que incluyen artículos de múltiples productores
+      %h3 Visible in Search:
+      %p.p Si su perfil está listo para salir al público, seleccione visible. Si usted todavía está haciendo los ajustes, seleccione “not visible”, hasta que ya esté listo.
+      %h3 Permalink:
+      %p.p Puede personalizar parte de la dirección web que acogerá a su tienda.
+      %h3 Link to Shop Front:
+      %p.p Esta es la dirección web de su tienda en la OFN. Se puede personalizar. Se le dará una vista previa de cómo puede ser buscado el perfil.
+      %h2 Usuarios
+      %h3 Owner:
+      %p.p Este es el usuario principal, el responsable de esta empresa.
+      %h3 Notifications:
+      %p.p Esta es la dirección de correo electrónico donde se enviará la correspondencia del sistema OFN, es decir, confirmaciones de pedidos, etc. Si este mensaje se diferencia de su correo electrónico de acceso, deberá confirmar la dirección de correo electrónico. Una vez confirmado este correo electrónico se añadirá como un administrador (véase más adelante).
+      %h3 Manager:
+      %p.p Otros usuarios que se le han concedido permiso para administrar esta cuenta en  OFN. Si es que aún no tienen una cuenta en  OFN, puede escribir en el correo electrónico del nuevo gerente como el correo electrónico de notificación (véase más arriba), Esto hará que ellos puedan conseguir un correo electrónico de confirmación, y después de la confirmación dicho usuario se convertirá en un gerente. Si ya es un usuario OFN, escriba todo su correo electrónico en el campo “manager” (gerente).
+      %h2 Dirección:
+      %p.p Ésta información estará disponible para el público, de la misma forma en que su granja se ubicará en el mapa de OFN.
+      %h2 Contacto:
+      %h3 Contact name:
+      %p.p Este nombre será únicamente almacenado en OFN, no será mostrado al público.
+      %h3 Email, phone y Website:
+      %p.p Esta información será mostrada en su perfil de OFN.
+      %h2 Social:
+      %p.p Facebook address, Instagram, LinkedIn, Twitter: Se crearán enlaces a esas páginas en su perfil.
+      About:
+      %h3 Short description:
+      %p.p Será mostrada en su perfil, deberá ser 1 o 2 oraciones que describan brevemente lo que hace su empresa.
+      %h3 About Us:
+      %p.p Es una descripción más larga de su empresa, deberá ser alrededor de media página de largo, de manera que cubra gran parte en su perfil.
+      %h2 Detalles del negocio:
+      %h3 ABN:
+      %p.p No será mostrado al público.
+      %h3 ACN:
+      %p.p No será mostrado al público.
+      %h3 Charge GST? :
+      %p.p Si desea cargar GST a sus productos seleccione “yes”.
+      %h2 Imágenes:
+      %h3 Logo image:
+      %p.p Se mostrará en su perfil, además se podrá seleccionar y agrandar la imagen. Debe ser cuadrada de lo contrario la aplicación la recortará de manera que calce en el espacio.
+      %h3 Promo image:
+      %p.p Esta imagen será añadida de manera horizontal, en la parte superior de su perfil, la imagen debe tener de tamaño 1200 x 260 pixeles.
+      %h2 Configuración de inventario:
+      %p.p Los usuarios normales pueden usar la configuración recomendada. Los usuarios avanzados que necesitan una mayor flexibilidad en la gestión de productos deben consultar la página de inventario de esta guía antes de cambiar el ajuste.
+      %h2 Métodos de envío, métodos de pago y tarifas de la empresa:
+      %p.p *no visible para usuarios de tipo  “profile-only”
+      %p.p Los métodos de envío y de pago junto con las tarifas de la empresa se tratan con mayor detalle en los capítulos posteriores de este manual del usuario.
+      %h2 Tag Rules:
+      %p.p *no visible para usuarios de tipo “profile-only”
+      %p.p Puede controlar la configuración de las etiquetas de los clientes creando “Tag Rules”. Para obtener más información al respecto, vea las cuentas de clientes y etiquetado
+      %h2 Shop preferences:
+      %p.p *no visible para usuarios de tipo “profile-only”
+      %h3 Shopfront Message:
+      %p.p Este mensaje es opcional, será mostrado en la parte superior de su tienda en línea, sobre la lista de productos. Es una oportunidad de proporcionar información básica para los clientes de cómo trabaja su tienda. Por ejemplo, explicar cómo funcionan los ciclos de pedidos, cómo están estructurados o algo por el estilo, a continuación una imagen de ejemplo:
+      %img{:src =>"/assets/help/hub/hub-your-profile2.png"}
+      %h3 Shopfront Closed Message:
+      %p.p Éste mensaje será mostrado cuando su tienda cierre (es decir, no tiene ciclos de pedidos activos). Es una oportunidad para decirle a los clientes cómo funcionan las órdenes, cuándo estará nuevamente abierta la tienda y cosas por el estilo
+      %img{:src =>"/assets/help/hub/hub-your-profile3.png"}
+      %h3 Publicly visible shopfront?:
+      %p.p Si selecciona “public”, cualquier comprador será capaz de ver su tienda. Si selecciona “visible to registered customers only”, los compradores que visiten su tienda se verán obligados a iniciar sesión y sólo los usuarios que se encuentren en su lista de clientes tendrán acceso a su tienda.
+      %h3 Guest Orders?:
+      %p.p Si selecciona “allow guest checkout”' (permitir la compra de clientes), los compradores no necesitarán acceder a OFN para comprar con usted. Si desea que los compradores inicien sesión antes de que puedan realizar su pedido, seleccione “require login to order”. Tenga en cuenta que la opción “Guest Orders” no es aplicable si ha elegido “visible to registered customers only” ('visible sólo para clientes registrados) en la configuración anterior.
+      %h3 Shopfront Category Ordering:
+      %p.p Los productos dentro de su tienda están ordenados alfabéticamente, dentro de la categoría del producto. Puedes ordenar las categorías como desees.
+      %h3 Sort order cycles on shopfront by:
+      %p.p Si su tienda tiene más de un ciclo de pedido abierto al mismo tiempo, puede seleccionar qué órdenes aparezcan en la tienda. Usted puede clasificarlos por la fecha de cierre (el cierre más cercano primero) o por la fecha de la apertura (el más cercano a comenzar primero).

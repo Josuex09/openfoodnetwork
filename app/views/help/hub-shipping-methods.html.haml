@@ -1,0 +1,31 @@
+.container
+  %div
+    %h1#title Guías de Centros de Acopio
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Métodos de envío.
+      %p.p Se necesita tener al menos un método de envío para poder crear un ciclo de pedidos.
+      %h2 Acceder a los métodos de envío.
+      %p.p Dar clic a la pestaña que dice “Enterprises”, en  la barra azul de arriba
+      %img{:src =>"/assets/help/hub/hub-payment-methods1.jpg"}
+      %p.p Dar clic en el botón azul que dice “Manage” en la “Enterprise” deseada.
+      %img{:src =>"/assets/help/hub/hub-payment-methods2.jpg"}
+      %p.p En la barra de la izquierda, seleccionar la pestaña que dice “Métodos de envío”.
+      %img{:src =>"/assets/help/hub/hub-shipping-methods3.jpg"}
+      %h2 Crear un nuevo método de envío.
+      %p.p Clic en el botón “Create new shipping method”.
+      %p.p Seleccionar la “Enterprise” en recuadro en la parte derecha de la página. Esto indica que el método de envío que se creará va a funcionar para esa “Enterprise”.
+      %img{:src =>"/assets/help/hub/hub-payment-methods4.jpg"}
+      %p.p Llenar los datos que se piden:
+      %h4 Name:
+      %p.p Escoger el nombre para el método de envío que se desea agregar. Por ejemplo: Entrega, recoger en dirección, envío por correo, etc.
+      %h4 Description:
+      %p.p Aquí se debe poner detalles del método de envío. Por ejemplo si el método que se desea agregar es recoger en alguna dirección, se debería poner los datos de la dirección y el horario de atención.
+      %h4 Zone:
+      %p.p Seleccionar la zona adecuada.
+      %h4 Categoría:
+      %p.p Seleccionar la categoría adecuada.
+      %h4 Calculator:
+      %p.p Seleccionar el tipo de cargo extra que se aplicará por el método de envío.
+      %p.p Dar clic al botón “Create”.

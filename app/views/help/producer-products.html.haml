@@ -1,0 +1,46 @@
+.container
+  %div
+    %h1#title Guías de Productores
+  .row
+    = render 'sidebar'
+    .col-sm-9     
+      %h1 Productos
+      %p.p Para acceder a la base de datos de productos, haga clic en "Products" en el menú horizontal azul y, a continuación, haga clic en "+ New product" para comenzar a agregar productos.
+      %img{:src => "/assets/help/producer/producers-products1.png"}/
+      %p.p Luego dar clic en “New Product”, será redirigido a la página de “New Product”.
+      %img{:src => "/assets/help/producer/producers-products2.png"}
+      %h3 Supplier:
+      %p.p Selecciona su empresa.
+      %h3 Product name:
+      %p.p Éste será el nombre que se mostrará en su tienda.
+      %h3 Units:
+      %p.p ¿En qué unidades se vende el producto? (g, kg, L… o artículos)
+      %h3 Value:
+      %p.p ¿Qué valor de las unidades de arriba se vende el producto? (por ejemplo, 100g, 2L)
+      %h3 Display As:
+      %p.p Este campo le mostrará automáticamente cómo las unidades y valores serán mostrados una vez que tenga esos campos llenos (por ejemplo. units = kg, value = 2, Display as = 2kg)
+      %p.p Si seleccionastes “items” como su unidad, entonces el campo de “display” cambiará a “item name”. Llénalo con el tipo de artículo que es, por ejemplo, botella, jarra.
+      %h3 Product category:
+      %p.p Seleccione la categoría más apropiada para su producto.
+      %h3 Price:
+      %p.p Ingrese el precio del producto asociado al valor.
+      %h3 On hand:
+      %p.p Describe cuántos productos tienes a disponibilidad actualmente.
+      %h3 On demand:
+      %p.p Si seleccionas este campo, se le indicará a los consumidores que el producto siempre está disponible, esto hace que el sistema deje de hacer un seguimiento del inventario y en lugar de esto se mostrará que siempre hay productos disponibles.
+      %h3 Product description:
+      %p.p Le permite explicarle a los clientes un poco de su producto.
+      %h3 Photo:
+      %p.p Sube una foto de este producto.
+      %h3 Tax category:
+      %p.p Si quiere que este producto tenga incluído GST, seleccione GST en el menú desplegable.  Si lo dejas en blanco o no selecciona ninguno, el precio no tendrá el GST incluido.
+      %h3 Shipping Category:
+      %p.p Este campo puede quedar en blanco, a menos que quieras elegir una categoría de envío
+      %p.p Algunos ejemplos de cómo serás enlistados los productos en su tienda en línea serán mostrados a continuación.
+      %img{:src => "/assets/help/producer/producers-products3.png"}/
+      %img{:src => "/assets/help/producer/producers-products4.png"}/
+      %img{:src => "/assets/help/producer/producers-products5.png"}/
+      %h2 Product Variants (Variantes de producto)
+      %p.p Nota: Si estás listando dos productos muy similares, pero que sólo varían en precio, tamaño, sabor, es mejor crear un “variant” para ese producto, en lugar de crear múltiples productos similares pero separados. Por ejemplo, si vende limones a 60 colones cada uno, o 5 por 250 colones, puedes crear 2 variantes del producto, uno para una mezcla entre precio/cantidad.
+      %p.p Una vez haya completado un producto, haga clic en create, o si quieres agregar más haga clic en create and add another.
+      %p.p Cuando das clic en create, serás redirigido a la página Bulk Edit Product, donde podrás ver una resumen de todos sus productos.

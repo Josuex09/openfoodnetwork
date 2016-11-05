@@ -14,7 +14,8 @@ Openfoodnetwork::Application.routes.draw do
   get "help/userguide/producer", to: "help#userguide_producer"
   
   get "help/userguide/hub/:name", to:"help#userguide_hub"
-
+  get "help/userguide/producer/:name", to:"help#userguide_producer"
+  
   root :to => 'home#index'
 
   # Redirects from old URLs avoid server errors and helps search engines
