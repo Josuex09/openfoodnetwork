@@ -1,14 +1,22 @@
 .container
   %div
-    %h1#title Guías de Productores
+    %h1#title Guías de Centros de Acopio
   .row
     = render 'sidebar'
-    .col-sm-9     
+    .col-sm-9
       %h1 Productos
+      %p.p Debe crear o conectarse con los perfiles de los productores de suministro antes de poder agregar productos.
+      %p.p Las siguientes instrucciones para administrar los productos se desglosan según si usted tiene: 1) creado un perfil para su productor proveedor; O 2) ya está conectado con un perfil de productor suministrador preexistente.
+      %h3 He creado un perfil para mi productor proveedor
+      %p.p Si en el paso anterior creó un perfil para su proveedor (ya que no estaban en OFN), también tendrá que agregar sus productos a ese perfil antes de poder almacenarlos en su tienda. Las instrucciones para hacerlo están a continuación, en "Adding products".
+      %h3 Me conecté con un perfil preexistente de productor proveedor.
+      %p.p Si su productor proveedor ya tenía un perfil, puede o no necesitar agregar su gama de productos. Si ese productor ya ha añadido sus productos, no es necesario que los vuelva a agregar, en su lugar sólo necesita obtener su permiso para almacenar sus productos en su tienda (consulte el paso anterior). Entonces serán visibles cuando usted va a almacenar su tienda (en los ciclos de orden)
+      %p.p Si su productor proveedor tiene un perfil, pero no ha añadido su gama de productos, primero tendrá que obtener su permiso para administrar sus productos y almacenarlos en su tienda. Entonces, usted puede agregar sus productos según el proceso de abajo.
+      %h2 Añadir Productos
       %p.p Para acceder a la base de datos de productos, haga clic en "Products" en el menú horizontal azul y, a continuación, haga clic en "+ New product" para comenzar a agregar productos.
       %img{:src => "/assets/help/shared/products1.png"}/
       %p.p Luego dar clic en “New Product”, será redirigido a la página de “New Product”.
-      %img{:src => "/assets/help/shared/products2.png"}
+      %img{:src => "/assets/help/shared/products2.png"}/
       %h3 Supplier:
       %p.p Selecciona su empresa.
       %h3 Product name:
@@ -44,3 +52,4 @@
       %p.p Nota: Si estás listando dos productos muy similares, pero que sólo varían en precio, tamaño, sabor, es mejor crear un “variant” para ese producto, en lugar de crear múltiples productos similares pero separados. Por ejemplo, si vende limones a 60 colones cada uno, o 5 por 250 colones, puedes crear 2 variantes del producto, uno para una mezcla entre precio/cantidad.
       %p.p Una vez haya completado un producto, haga clic en create, o si quieres agregar más haga clic en create and add another.
       %p.p Cuando das clic en create, serás redirigido a la página Bulk Edit Product, donde podrás ver una resumen de todos sus productos.
+      %img{:src => "/assets/help/shared/products6.png"}/
