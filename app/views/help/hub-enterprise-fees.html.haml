@@ -1,0 +1,75 @@
+.container
+  %div
+    %h1#title Guías de Centros de Acopio
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Enterprise fees
+      = succeed "." do
+        %p.p 
+          Los honorarios de la empresa son más relevantes para los productores y los centros que están trabajando juntos en las actividades de venta y distribución. Permite que los costos asociados con la administración, embalaje, transporte, ventas y lo recaudado deben asignarse a diferentes partes. Para los productores individuales, vendiendo solamente sus propios productos, estos costos se incorporan en el precio de los bienes y el transporte, por lo que la aplicación de las tarifas de la empresa por lo general no es necesario.
+          Cuando se aplica una tarifa de empresa, que se añadirá al precio total del producto, y los clientes podrán ver qué porcentaje del precio es atribuible a los honorarios de la empresa. Se puede hacer esto en la tienda haciendo clic en el icono de gráfico circular, al lado de cada producto. Vea a continuación un ejemplo.
+      %img{:src => "/assets/help/hub/hubs-enterprise-fees1.png"}/
+      %h2 Accessing Enterprise Fees
+      %p.p 
+        Haga clic en  
+        %strong> Enterprises 
+        en el menú de la barra horizontal, luego haga clic en  
+        %strong> Manage 
+        junto a su empresa. Luego, clickea Enterprise Fees en el menú al lado izquierdo.
+      %img{:src => "/assets/help/hub/hubs-enterprise-fees2.png"}/
+      %h2 Adding Enterprise Fees
+      %p.p  Debe dirigirse a la barra superior azul, dar clic en “Enterprises”, luego dar clic en “Magane” el botón que está junto a la empresa que desea seleccionar.
+      %img{:src => "/assets/help/hub/hubs-enterprise-fees3.png"}/
+      %p.p  Para añadir honorarios (entreprise fees) debe llenar los datos que se muestran a continuación
+      %img{:src => ""}/
+      %p.p 
+        %strong> Enterprise
+        \: En la primera columna, seleccione la empresa que recibirá éste honorario.
+      %p.p 
+        %strong> Fee Type
+        \: Seleccione el servicio a la que este honorario es aplicado.
+      %p.p 
+        %strong> Name
+        \: Seleccione un nombre para el honorario.
+      %p.p 
+        %strong> Tax Category
+        \: Seleccione la tarifa de impuestos apropiada.
+      %p.p 
+        %strong> Calculator
+        \: El honorario puede calcularse de mucha maneras. Seleccione la calculadora que mejor lo aplica
+      %p.p 
+        Haga clic en
+        = succeed "," do
+          %strong “Update”
+      %h2 Fee Calculators (Calculadores de honorarios)
+      %img{:src => "/assets/help/hub/hubs-enterprise-fees4.png"}/
+      %p.p  Existen distintas formas para calcular los honorarios, a continuación una explicación de ellos:
+      %p.p 
+        %strong Weight (per kg)
+        \: Calcula el honorario basado en el peso del producto. Únicamente será aplicado a los productos que tienen el precio basado en los kg de peso.
+      %p.p 
+        %strong Flat Percent
+        \: Esta cuota u honorario se carga como un porcentaje del total del precio de la orden.
+      %p.p 
+        %strong> Flat Rate (per order)
+        \:  Se aplica de una manera estándar a todas las órdenes, independientemente del tamaño de la orden.
+      %p.p 
+        %strong> Flexible Rate
+        \: Ésta calculadora típicamente se utiliza para descuentos promocionales donde lo que hace es agregar una cuota reducida de manera que el cliente compre más ese artículo.
+      El
+      %strong Flexible Rate
+      contiene:
+      %p.p 
+        %strong ‘First Item Cost’
+        \:La cuota cargada al primer artículo/producto de la orden.
+      %p.p 
+        %strong ‘Additional Item Cost’
+        \: La cuota cargada para los artículos/productos dejando de lado el primer item.
+      %p.p 
+        %strong ‘Max Items’
+        \: El número máximo de artículos en los que la cuota será aplicada. Una vez se haya llegado a ese límite se le deja de cobrar la cuota.
+      Ahora por último:
+      %p.p 
+        %strong Flat Rate (per item)
+        \:  Esta cuota es constante, y se le aplica a los artículos que están listados como ‘items’. (No será aplicado a productos que están enlistados por kg o por L.)

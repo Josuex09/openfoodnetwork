@@ -1,0 +1,97 @@
+.container
+  %div
+    %h1#title Guías de Productores
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Su perfil
+      %p.p  Si usted posee un único perfil de usuario, o la intención de tener una tienda en línea, usted tendrá que llenar su perfil. Probablemente ya haya añadido información a su perfil durante el proceso de registro en el sistema, de cualquier manera esta página le mostrará cómo acceder y editar su perfil en cualquier momento, incluso agregar información adicional si tienes una tienda. Para acceder a la información del perfil deberá realizar lo siguiente:
+      %p.p 
+        Una vez que haya seleccionado la configuración del perfil de productor que desea, puede que resulte necesario cambiarlos
+        luego, para ello debe realizar lo siguiente:
+      %img{:src => "/assets/help/producer/producer-profile1.png"}/
+      %p.p 
+        Dirigirse a la parte superior derecha de la pantalla y dar clic en el engranaje
+        = succeed "," do
+          %img{:src => "/assets/help/producer/producer-profile2.png"}/
+      %p.p  Se abrirá otra página, la cual se verá como la siguiente imagen
+      %img{:src => "/assets/help/producer/producer-profile3.png"}/
+      %p.p  Una vez ahí, deberá dar clic en la opción Manage (Nombre de granja, empresa).
+      %img{:src => "/assets/help/producer/producer-profile4.png"}/
+      %p.p  Será redirigido a la configuración de la cuenta. La información que podrá editar se explicará acontinuación:
+      %h4 Información personal
+      %p.p 
+        %strong> Name
+        \: Este es el nombre de la comunidad o de la empresa. Será el título de su perfil y tienda.
+      %p.p 
+        %strong> Primary Producer
+        \: Seleccionar "Producer" si usted es un productor primario de alimentos.
+      %p.p 
+        %strong> Visible in search
+        \: Si su perfil está listo para salir al público, seleccione visible. Si usted todavía está haciendo los ajustes, seleccione no es visible, hasta que esté listo.
+      %p.p 
+        %strong> Permalink
+        \: Puede personalizar parte de la dirección web que acogerá a su tienda.
+      %p.p 
+        %strong> Link to shop front
+        \:Esta es la dirección web de su tienda en la OFN. Se puede personalizar. Se le dará una vista previa del perfil.
+      %h4 Usuario
+      %p.p 
+        %strong> Owner
+        \: Este es el usuario principal responsable de esta empresa.
+      %p.p 
+        %strong> Manager
+        \: Otros usuarios OFN que se ha concedido permiso para administrar esta cuenta. Si es que aún no tienen una cuenta OFN, puede escribir en el correo electrónico del nuevo gerente como el correo electrónico de notificación. Esto hará que ellos le envíen un correo electrónico de confirmación, y después de la confirmación de que va a convertirse en un gerente. Si ya es un usuario OFN, escriba todo su correo electrónico en el campo gerente.
+      %h4 Dirección
+      %p.p  Ésta información estará disponible para el público, de la misma forma en que su granja se ubicará en el mapa de OFN.
+      %h4 Contacto
+      %p.p 
+        %strong> Contact name
+        \: Este nombre será únicamente almacenado en OFN, no será mostrado al público.
+      %p.p 
+        %strong> Email, phone y Website
+        \: Esta información será mostrada en su perfil de OFN.
+      %h4 Social
+      %p.p 
+        %strong> Facebook address, Instagram, LinkedIn, Twitter
+        \: Se crearán enlaces a esas páginas en su perfil.
+      %h4 About
+      %p.p 
+        %strong> Short description
+        \: Será mostrada en su perfil, deberá ser 1 o 2 oraciones que describan brevemente lo que hace su empresa.
+      %p.p 
+        %strong> About Us
+        \: Es una descripción más larga de su empresa, deberá ser alrededor de media página de largo, de manera que cubra gran parte en su perfil.
+      %h4 Detalles del negocio
+      %p.p 
+        %strong> ABN
+        \: No será mostrado al público.
+      %p.p 
+        %strong> ACN
+        \: No será mostrado al público.
+      %p.p 
+        %strong> Change GST?
+        \: Si desea cargar GST a sus productos seleccione “yes”.
+      %h4 Imágenes
+      %p.p 
+        %strong> Logo image
+        \: Se mostrará en su perfil, además se podrá seleccionar y agrandar la imagen. Debe ser cuadrada de lo contrario la aplicación la recortará de manera que calce en el espacio.
+      %p.p 
+        %strong> Promo image
+        \: Esta imagen será añadida de manera horizontal, en la parte superior de su perfil, la imagen debe tener de tamaño 1200 x 260 pixeles.
+      %h4 Propiedades
+      %p.p  Puede aplicar propiedades (como  certificado orgánico) para su empresa. Estas propiedades se aplicarán después automáticamente a todos sus productos.
+      %h4 Configuración de inventario
+      %p.p  Los usuarios normales pueden usar la configuración recomendada. Los usuarios avanzados que necesitan una mayor flexibilidad en la gestión de productos deben consultar la página de inventario de esta guía antes de cambiar el ajuste.
+      %h4 Shop preferences (Preferencia de la tienda)
+      %p.p 
+        %strong> Shopfront Message
+        \: Este mensaje es opcional, será mostrado en la parte superior de su tienda en línea, sobre la lista de productos. Es una oportunidad de proporcionar información básica para los clientes de cómo trabaja su tienda. Por ejemplo, explicar cómo funcionan los ciclos de pedidos, cómo están estructurados o algo por el estilo, a continuación una imagen de ejemplo:
+      %img{:src => "/assets/help/producer/producer-profile5.png"}/
+      %p.p 
+        %strong> Shopfront Closed Message
+        \:  Éste mensaje será mostrado cuando su tienda cierre (es decir, no tiene ciclos de pedidos activos). Es una oportunidad para decirle a los clientes cómo funcionan las órdenes, cuándo estará nuevamente abierta la tienda y cosas por el estilo.
+      %img{:src => "/assets/help/producer/producer-profile6.png"}/
+      %p.p 
+        %strong> Shopfront Category Ordering
+        \: Los productos dentro de su tienda están ordenados alfabéticamente, dentro de la categoría del producto. Puedes ordenarlos como desees.

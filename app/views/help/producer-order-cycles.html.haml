@@ -1,0 +1,53 @@
+.container
+  %div
+    %h1#title Guías de Productores
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Ciclos de pedido
+      %p.p En OFN, puedes crear y activar tiendas en línea dentro de la funcionalidad de “order cycle” o ciclo de pedido. Un ciclo de pedido es la duración desde que la tienda en línea está abierta, es visible y puede aceptar órdenes. Cada vez que un “order cycle” es creado, el dueño de la tienda puede seleccionar cuáles productos van a estar disponibles.
+      %p.p Algunos centros de acopio desearía tener una tienda en línea abierta permanentemente, esto para cumplir con los pedidos en una relación uno a uno, a medida que se reciben. Sin embargo, muchos centros operan con un sistema de pedidos periódico, lo que les permite procesar los pedidos a granel, por lo que sus actividades de embalaje y distribución sean más eficiente. Usemos un ejemplo para ilustrar una estructura de ciclo de pedido periódica común.
+      %p.p
+        Por ejemplo, cada lunes por la mañana un centro podría evaluar la disponibilidad de sus acciones para la semana. Con base en esta información se va a crear un ciclo para el lunes por la tarde y abrir su tienda. Después, los clientes pueden hacer pedidos en su tienda, hasta que el ciclo se cierra para el miércoles a la medianoche. El jueves todos los pedidos se pueden embalar por el centro y se prepararon para la entrega el viernes. La semana siguiente, el ciclo comenzará de nuevo, y con la creación de un nuevo ciclo de pedido. Al estructurar ciclos de pedido de esta manera, y hacer frente a los pedidos a granel, los centros pueden realizar sus actividades de ordenación, clasificación, embalaje y transporte mucho más eficiente que si se procesan solicitudes de manera individual a medida que se colocan.
+      %h4 Acceder a los ciclos de pedido
+      %p.p Para administrar todos los ciclos de pedidos deberá realizar lo siguiente
+      %img{:src => "/assets/help/producer/producer-profile1.png"}/
+      %p.p
+        Dirigirse a la parte superior derecha de la pantalla y dar clic en el engranaje
+        = succeed "," do
+          %img{:src => "/assets/help/producer/producer-profile2.png"}/
+      %img{:src => "/assets/help/producer/producer-profile3.png"}/
+      %p.p Dar clic en “Manage Order Cycles”.
+      %img{:src => "/assets/help/producer/producer-order-cycle1.png"}/
+      %p.p O desde la barra superior azul, dar clic en “Order Cycle"
+      %img{:src => "/assets/help/producer/producer-order-cycle2.png"}/
+      %p.p Dar clic en “New Order Cycle”.
+      %p.p Ahora para crear un order cycle deberá antes haber configurado los métodos de pago y envío.
+      %p.p Seleccionar el coordinador de su ciclo de pedido.
+      %img{:src => "/assets/help/producer/producer-order-cycle3.png"}/
+      %p.p Una vez haya seleccionado el coordinador, dar clic en “Continue”, se le mostrará una pantalla como la siguiente:
+      %img{:src => "producer-order-cycle4.png"}/
+      %p.p Deberá llenar los siguientes espacios:
+      %p.p
+        %strong> Name
+        \: Añadir un nombre que sea significativo para el ciclo de pedidos. Además le recomendamos que incluyas el nombre del centro de acopio en su ciclo de pedido.
+      %p.p
+        %strong> Orders Open
+        \: Es la fecha en que el ciclo de pedido abre, está visible y permite aceptar órdenes de los clientes.
+      %p.p
+        %strong> Order Close
+        \: Es la fecha en la que el ciclo de pedido cierra y deja de aceptar órdenes.
+      %p.p
+        %strong> Add Coordinator Fee
+        \: Como centro de acopio, el coordinador es más que todo usted. Aquí puede solicitar su cuota de la empresa que actúa como el marcado. La tarifa se calcula de acuerdo con la calculadora seleccionada en cargos de la empresa. Sólo se puede aplicar un cargo de la empresa que ha sido previamente creado.
+      %p.p A continuación se muestran las secciones de Incoming y Outgoing y su información, una vez haya llenado lo necesario, deberá dar clic en “Create Order Cycle”.
+      %h4 Incoming
+      %p.p La sección de “incoming” es donde puedes seleccionar los productores y sus productos, que estarán disponible en este ciclo de pedido. En el menú desplegable verá todos los productores que le hayan concedido permiso para agregar sus productos al fin de su ciclo . Después de seleccionar un proveedor y haciendo clic en “Add Supplier” todos los productos asociados a dicho proveedor será visible. Elija los productos que desea añadir a la tienda, o haga clic en Seleccionar todo.
+      %img{:src => "producer-order-cycle5.png"}/
+      %h4 Outgoing
+      %p.p El o los distribuidor (s) seleccionados en la sección de “outgoing”, tendrán un escaparate creado a partir de este ciclo orden. En los modelos de cubo simples, sólo hay un distribuidor, el cubo. Así que seleccione el cubo en la columna de la distribuidora, a continuación, seleccione todos los productos que deben estar visibles en la tienda en línea durante este ciclo de pedido. Más concentradores complejos podrían tener grupos, en cuyo caso se selecciona cada uno como distribuidor de comprar, y por lo tanto tendrán su propio escaparate creado. A continuación, tiene la capacidad de seleccionar productos específicos para estar disponible en la tienda de compra de cada grupo.
+      %img{:src => "producer-order-cycle6.png"}/
+      %p.p La columna tag es donde puede etiquetar su ciclo de orden. La opción de ‘ready for (ie Date/Time)’  le dice al cliente cuando sus órdenes van a estar listas para que las recogan o para ser enviadas. Si quisiera que su ciclo de orden sea permanente, que cumple las órdenes de forma individual en lugar de a granel, usted debe entrar algo como 'Dos días después de la orden se recibe’. El siguiente ejemplo muestra cómo se visualiza 'Viernes 9' en una tienda.
+      %img{:src => "producer-order-cycle7.png"}/
+      %p.p La nota también se muestra en “check out”, cuando un cliente selecciona el método de envío además está incluída en el correo de confirmación.
+      %img{:src => "producer-order-cycle8.png"}/

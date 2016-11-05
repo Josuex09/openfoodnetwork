@@ -1,0 +1,62 @@
+.container
+  %div
+    %h1#title Guías de Productores
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      %h1 Reports
+      %p.p 
+        Accesa a los reportes dando clic en  
+        %strong> Reports 
+        en la barra horizontal.
+      %img{:src => "/assets/help/producer/producer-report1.png"}/
+      %p.p  Será redirigido a una página donde se mostrará una tabla con todas las opciones de reportes posibles, como se muestra en la siguiente imagen.
+      %img{:src => "/assets/help/producer/producer-report2.png"}/
+      %p.p 
+        Los dos reportes más comunes y utilizados son
+        %strong “Order Cycle Supplier Totals”
+        y
+        = succeed "." do
+          %strong “Order Cycle Customer Totals”
+        %strong (Mailing List)
+        y direcciones
+        = succeed "tambi\u{e9}n" do
+          %strong Addreses
+        %strong Sales Tax
+        es útil para las empresas que se ocupan de la presentación de informes sobre GST.
+      %h3 Order Cycle Customer Totals
+      %p.p 
+        La imagen que se mostrará a continuación muestra la información contenida en un reporte de “Order Cycle Customer”. Este reporte puede generarse para reflejar un ciclo de pedido específico. Como puede ver, también puede seleccionar descargar una copia como CSV, un archivo de excel.El reporte muestra las órdenes de cada cliente, incluyendo su correo electrónico y la información de contacto, los
+        %strong productos
+        que ordenaron, la
+        = succeed "," do
+          %strong cantidad
+        %strong artículo
+        y el
+        = succeed "." do
+          %strong total
+      %img{:src => "/assets/help/producer/producer-report3.png"}/
+      %h3 Order Cycle Supplier Totals
+      %p.p 
+        La imagen que se mostrará a continuación muestra la información contenida en un reporte de “Order Cycle Supplier Totals”. De igual manera que el reporte anterior, este reporte puede reflejar únicamente una ciclo de pedido, seleccionandolo en el menú desplegable. Como puede ver, también puede seleccionar descargar una copia como CSV, un archivo de excel. En el reporte, el proveedor se encuentra en la parte izquierda. Luego, se encuentran enlistados todos los
+        %strong productos
+        y sus
+        = succeed "," do
+          %strong variantes
+      %img{:src => "/assets/help/producer/producer-report4.png"}/
+      %h3 Mailing List
+      %p.p 
+        El reporte de la lista de correos, muestra los nombres y las direcciones de correo electrónico de los clientes que han comprado en su tienda. Puedes filtrarlos de acuerdo a un ciclo de pedido, permitiendo esto que le pueda alertar a los clientes si le quedan o no productos aún en la tienda, además ésta lista la puede descargar como un archivo CSV.
+      %img{:src => "/assets/help/producer/producer-report5.png"}/
+      %h3 Addresses
+      %p.p  El reporte de direcciones detalla, el nombre, dirección, correo, números de teléfono, además se pueden filtrar por ciclos de pedidos.
+      %img{:src => "/assets/help/producer/producer-report6.png"}/
+      %h3 All Products and Inventory (on hand)
+      %p.p 
+        Este participante, puede ser utilizado como una copia de las órdenes, para cualquier cliente que prefiere ordenar presente y en papel. Listo todos los productos y sus respectivos precios. Para éste reporte se enlistan todos los productos que a mano tiene más de 0.
+        %img{:src => "/assets/help/producer/producer-report7.png"}/
+      %h3 Sales Tax
+      %p.p  Este reporte es útil para separar los componentes de impuestos de las ventas, entrega y cargos.
+      %img{:src => "/assets/help/producer/producer-report8.png"}/
+      %br
+      %p.p

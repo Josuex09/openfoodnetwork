@@ -1128,9 +1128,9 @@ Please follow the instructions there to make your enterprise visible on the Open
     create_chart: Create chart
     
     product_initial_date: Product types sold since %{initial_date}
-    product_final_date: Product types sold untill %{final_date}
+    product_final_date: Product types sold until %{final_date}
     product_always: Total product types sold 
-    product_both_dates: Product types sold since %{initial_date} untill %{final_date}
+    product_both_dates: Product types sold since %{initial_date} until %{final_date}
      
     new_producers_year: New producers in last 12 months
     new_producers_month: New producers in last 30 days

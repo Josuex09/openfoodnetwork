@@ -33,6 +33,10 @@ class HelpController < BaseController
         render "hub-shipping-methods"
       elsif name == "hub-create-account"
         render "hub-create-account"
+      elsif name == "hub-dashboard"
+        render "hub-dashboard"
+      elsif name =="hub-enterprise-fees"
+        render "hub-enterprise-fees"
       end
       
     end
@@ -50,6 +54,12 @@ class HelpController < BaseController
         render  "producer-profile-types"
       elsif name == "producer-products"
         render "producer-products"
+      elsif name == "producer-order-cycles"
+        render "producer-order-cycles"
+      elsif name =="producer-profile"
+        render "producer-profile"
+      elsif name == "producer-report"
+        render "producer-report"
       end
       
     end
