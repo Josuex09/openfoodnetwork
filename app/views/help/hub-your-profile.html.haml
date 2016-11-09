@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-your-profile"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Su Perfil
       %p.p Si se perfil es “only user”, o tiene la intención de tener una tienda en línea, usted tendrá que llenar su perfil. Completando la información ya añadida durante el proceso de registro, sin embargo, esta página le mostrará cómo acceder y editar su perfil en cualquier momento, y también añadir información adicional si su perfil ya tiene una “shopfront”. Para acceder a la información de su perfil, haga clic sobre “Entreprises” en el banner horizontal azul, y luego seleccione “Edit Profile” (Ver más abajo).
       %img{:src =>"/assets/help/hub/hub-your-profile1.png"}

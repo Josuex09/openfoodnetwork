@@ -1,24 +1,28 @@
 .container
-	%div
-		%h1#title Ayuda
-	.row
-		= render 'sidebar'
-		.col-sm-9
-			%h1 Guía de inicio para centros de acopio
-			%h2 Pasos para la creación y edición de un perfil para un centro de acopio:
-			%p.p Crea una cuenta.
-			%p.p Seleccionar el "tipo" de perfil que desea.
-			%p.p Diríjase a su "tablero" o  “Dashboard” (la parte de administración de tu cuenta).
-			%p.p Actualizar el perfil de su centro de acopio en OFN con su información, detalles y fotos de contacto básicos.
-			%h2 Pasos Para establecer un centro de acopio como tienda.
-			%p.p Los siguientes pasos son sólo relevantes a los centros que deseen establecer una tienda en línea. Si solo se desea la creación del perfil se puede detener en el paso 4.
-			%p.p Crear perfiles para conectarse con sus fabricantes proveedores. Es necesario hacer esto antes de que pueda añadir sus productos.
-			%p.p Añadir productos.
-			%p.p Definir y configurar sus métodos de pago.
-			%p.p Definir los métodos de envío.
-			%p.p Añadir cuotas empresariales.
-			%p.p Crear un ciclo de orden.
-			%p.p Ahora está listo para abrir las puertas de su tienda, y empezar a operar!
-			%p.p Ver pedidos que se han colocado en su tienda.
-			%p.p ¡Ver y usar los informes generados por OFN para seguimiento de pedidos, ver  cuentas por pagar y por cobrar y más!
-			%p.p Bien hecho, ya está todo listo. Ahora echa un vistazo a las características avanzadas para ver cómo se puede utilizar OFN para atender las necesidades de su negocio.
+  %div
+    %h1#title Ayuda
+  .row
+    = render 'sidebar'
+    .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-set-up-guide"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
+      %h1 Guía de inicio para centros de acopio
+      %h2 Pasos para la creación y edición de un perfil para un centro de acopio:
+      %p.p Crea una cuenta.
+      %p.p Seleccionar el "tipo" de perfil que desea.
+      %p.p Diríjase a su "tablero" o  “Dashboard” (la parte de administración de tu cuenta).
+      %p.p Actualizar el perfil de su centro de acopio en OFN con su información, detalles y fotos de contacto básicos.
+      %h2 Pasos Para establecer un centro de acopio como tienda.
+      %p.p Los siguientes pasos son sólo relevantes a los centros que deseen establecer una tienda en línea. Si solo se desea la creación del perfil se puede detener en el paso 4.
+      %p.p Crear perfiles para conectarse con sus fabricantes proveedores. Es necesario hacer esto antes de que pueda añadir sus productos.
+      %p.p Añadir productos.
+      %p.p Definir y configurar sus métodos de pago.
+      %p.p Definir los métodos de envío.
+      %p.p Añadir cuotas empresariales.
+      %p.p Crear un ciclo de orden.
+      %p.p Ahora está listo para abrir las puertas de su tienda, y empezar a operar!
+      %p.p Ver pedidos que se han colocado en su tienda.
+      %p.p ¡Ver y usar los informes generados por OFN para seguimiento de pedidos, ver  cuentas por pagar y por cobrar y más!
+      %p.p Bien hecho, ya está todo listo. Ahora echa un vistazo a las características avanzadas para ver cómo se puede utilizar OFN para atender las necesidades de su negocio.
+
+

@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "producer-payment-methods"}, :class=>'glyphicon glyphicon-download-alt pull-right'   
       %h1 Métodos de pago.
       %p.p * Se necesita tener al menos un método de pago para poder crear un ciclo de pedidos.
       %h2 Acceder a los métodos de pago.

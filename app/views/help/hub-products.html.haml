@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-products"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Productos
       %p.p Debe crear o conectarse con los perfiles de los productores de suministro antes de poder agregar productos.
       %p.p Las siguientes instrucciones para administrar los productos se desglosan según si usted tiene: 1) creado un perfil para su productor proveedor; O 2) ya está conectado con un perfil de productor suministrador preexistente.

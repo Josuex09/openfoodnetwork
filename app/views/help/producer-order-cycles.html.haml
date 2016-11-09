@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "producer-order-cycles"}, :class=>'glyphicon glyphicon-download-alt pull-right'   
       %h1 Ciclos de pedido
       %p.p En OFN, puedes crear y activar tiendas en línea dentro de la funcionalidad de “order cycle” o ciclo de pedido. Un ciclo de pedido es la duración desde que la tienda en línea está abierta, es visible y puede aceptar órdenes. Cada vez que un “order cycle” es creado, el dueño de la tienda puede seleccionar cuáles productos van a estar disponibles.
       %p.p Algunos centros de acopio desearía tener una tienda en línea abierta permanentemente, esto para cumplir con los pedidos en una relación uno a uno, a medida que se reciben. Sin embargo, muchos centros operan con un sistema de pedidos periódico, lo que les permite procesar los pedidos a granel, por lo que sus actividades de embalaje y distribución sean más eficiente. Usemos un ejemplo para ilustrar una estructura de ciclo de pedido periódica común.

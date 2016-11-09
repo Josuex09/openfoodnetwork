@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-view-orders"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Órdenes
       %p.p Para lograr ver la lista de las órdenes existentes, se debe ingresar a la pestaña llamada Órdenes.
       %img{:src =>"/assets/help/shared/view-orders1.png"}

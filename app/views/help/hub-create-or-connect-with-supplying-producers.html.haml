@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-create-or-connect-with-supplying-producers"}, :class=>'glyphicon glyphicon-download-alt pull-right'
       %h1 Crear o conectarse con sus  proveedores
       %p.p Este es un paso necesario para agregar sus productos a su tienda.
       %p.p Todos los productos de OFN deben pertenecer a un perfil de un productor de OFN. Esta es una característica importante de OFN, ya que permite a los clientes rastrear el origen de los productos. A continuación se muestra un ejemplo de cómo se muestra en una tienda.

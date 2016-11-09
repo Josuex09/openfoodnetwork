@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "producer-profile"}, :class=>'glyphicon glyphicon-download-alt pull-right'   
       %h1 Su perfil
       %p.p  Si usted posee un único perfil de usuario, o la intención de tener una tienda en línea, usted tendrá que llenar su perfil. Probablemente ya haya añadido información a su perfil durante el proceso de registro en el sistema, de cualquier manera esta página le mostrará cómo acceder y editar su perfil en cualquier momento, incluso agregar información adicional si tienes una tienda. Para acceder a la información del perfil deberá realizar lo siguiente:
       %p.p 

@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9     
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "producer-products"}, :class=>'glyphicon glyphicon-download-alt pull-right'   
       %h1 Productos
       %p.p Para acceder a la base de datos de productos, haga clic en "Products" en el menú horizontal azul y, a continuación, haga clic en "+ New product" para comenzar a agregar productos.
       %img{:src => "/assets/help/shared/products1.png"}/

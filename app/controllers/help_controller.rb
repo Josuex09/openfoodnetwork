@@ -5,13 +5,10 @@ class HelpController < BaseController
     redirect_to :action =>  "introduction"
   end
   
-  def introduction
-  end
-  
-  def faq
-  end
-  
-  def userguide
+  def download
+    file = params[:file_name]
+    send_file "#{Rails.root}/app/assets/guides/"+file+".pdf", :type=>"application/pdf", :x_sendfile=>true
+    
   end
   
   def userguide_hub
@@ -52,7 +49,6 @@ class HelpController < BaseController
     
   def userguide_producer
     name = params[:name]
-    print(name)
     if !name.nil?
       if name == "producer-create-account"
         render "producer-create-account"

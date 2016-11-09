@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-profile-type"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Tipos de perfil para los Centros de Acopio
       %p.p Al crear su perfil, se le pedirá que seleccione el "tipo" de perfil que desea. Su selección determinará la funcionalidad que su perfil tendrá.
       %img{:src => "/assets/help/hub/hub-profile-type1.png"}

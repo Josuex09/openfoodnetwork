@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-create-account"}, :class=>'glyphicon glyphicon-download-alt pull-right'
       %h1 Crear cuenta
       %p.p
         Para crear una cuenta dirigirse al siguiente link www.openfoodnetwork.org.cr/register.

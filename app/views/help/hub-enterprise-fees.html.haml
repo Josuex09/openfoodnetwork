@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-enterprise-fees"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Enterprise fees
       = succeed "." do
         %p.p 

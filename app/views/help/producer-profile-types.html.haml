@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9        
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "producer-profile-types"}, :class=>'glyphicon glyphicon-download-alt pull-right'   
       %h1 Tipos de perfiles de Productor
       %p.p Al crear su perfil, se le pedirá que seleccione el "tipo" de perfil que desea. Su selección aquí determina la funcionalidad que su perfil tendrá.
       %img{:src =>"/assets/help/producer/producer-profile-types1.png"}

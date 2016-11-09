@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-dashboard"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 El dashboard
       %p.p  El 'Dashboard' es el detrás de las escenas es donde se puede controlar su cuenta, podrá gestionar todos los componentes de su centro de acopio ya sea profile/shop (perfil o tienda).
       %p.p 

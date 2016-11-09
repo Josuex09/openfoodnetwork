@@ -4,6 +4,8 @@
   .row
     = render 'sidebar'
     .col-sm-9
+      .col-sm-12
+        = link_to '',{:action=>"download", :file_name => "hub-shipping-methods"}, :class=>'glyphicon glyphicon-download-alt pull-right'    
       %h1 Métodos de envío.
       %p.p Se necesita tener al menos un método de envío para poder crear un ciclo de pedidos.
       %h2 Acceder a los métodos de envío.

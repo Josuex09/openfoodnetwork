@@ -16,6 +16,33 @@ Openfoodnetwork::Application.routes.draw do
   get "help/userguide/hub/:name", to:"help#userguide_hub"
   get "help/userguide/producer/:name", to:"help#userguide_producer"
   
+  
+  # Download guides
+  get "help/userguide/hub/hub-create-account/:file_name", to: "help#download"
+  get "help/userguide/hub/hub/hub-create-or-connect-with-supplying-producers/:file_name", to: "help#download"
+  get "help/userguide/hub/dashboard/:file_name", to: "help#download"
+  get "help/userguide/hub/enterprise-fees/:file_name", to: "help#download"
+  get "help/userguide/hub/order-cycles/:file_name", to: "help#download"
+  get "help/userguide/hub/payment-methods/:file_name", to: "help#download"
+  get "help/userguide/hub/products/:file_name", to: "help#download"
+  get "help/userguide/hub/profile-type/:file_name", to: "help#download"
+  get "help/userguide/hub/reports/:file_name", to: "help#download"
+  get "help/userguide/hub/set-up-guide/:file_name", to: "help#download"
+  get "help/userguide/hub/shipping-methods/:file_name", to: "help#download"
+  get "help/userguide/hub/view-orders/:file_name", to: "help#download"
+  get "help/userguide/hub/your-profile/:file_name", to: "help#download"
+  
+  get "help/userguide/producer/hub-create-account/:file_name", to: "help#download"
+  get "help/userguide/producer/enterprise-fees/:file_name", to: "help#download"
+  get "help/userguide/producer/order-cycles/:file_name", to: "help#download"
+  get "help/userguide/producer/payment-methods/:file_name", to: "help#download"
+  get "help/userguide/producer/products/:file_name", to: "help#download"
+  get "help/userguide/producer/profile-type/:file_name", to: "help#download"
+  get "help/userguide/producer/report/:file_name", to: "help#download"
+  get "help/userguide/producer/shipping-methods/:file_name", to: "help#download"
+  get "help/userguide/producer/view-orders/:file_name", to: "help#download"
+  get "help/userguide/producer/profile/:file_name", to: "help#download"
+  
   root :to => 'home#index'
 
   # Redirects from old URLs avoid server errors and helps search engines
