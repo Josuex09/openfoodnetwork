@@ -105,7 +105,6 @@ class StadisticsController < BaseController
       redirect_to :action => "index" #Reload the page with the updated charts.
       return 
     end  
-    $id +=1
     #Check if a graphic is already in the view, to avoid duplicated graphics
     if(!graphic.includes?($graphics) && $graphics.length<$max)
       $graphics.insert(0,graphic)
