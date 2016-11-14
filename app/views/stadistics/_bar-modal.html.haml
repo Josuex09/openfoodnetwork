@@ -62,7 +62,7 @@
               .modal-footer
                 =hidden_field_tag :bar_data, "", :id=>"bar_data"
                 =hidden_field_tag :del_stat, "", :id=>"del_stat"
-                =submit_tag "Update", :class => 'btn btn-default pull-right', :id => 'data-button', :del_stat => "del-stat"
+                =submit_tag t('stadistics.update'), :class => 'btn btn-default pull-right', :id => 'data-button', :del_stat => "del-stat"
 
 - content_for :javascripts do
   :javascript

@@ -99,7 +99,8 @@
               .container.producer-period-container  
                 .row
                   .col-md-8.col-sm-10.col-xs-12.col-md-offset-2.col-sm-offset-1.text-center.producer_period-container
-                    %h4 Period
+                    %h4
+                      = t('stadistics.period')
                     =select_tag :producer_period ,options_for_select([[t('stadistics.year') , "Year" ], [t('stadistics.month') , "Month" ],[t('stadistics.week') , "Week" ]]), :class => 'selectpicker btn col-md-4 col-md-offset-4 col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4'
               .container  
                 .row

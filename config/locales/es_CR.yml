@@ -782,7 +782,7 @@ Ver el %{link} para encontrar más de las características de  %{sitename} y par
   enterprise_final_step: "¡Último paso!"
   enterprise_social_text: "¿Cómo se puede encontrar la %{enterprise} en línea?"
   website: "Sitio web"
-  website_placeholder: "ej. openfoodnetwork.org.au"
+  website_placeholder: "ej. openfoodnetwork.org.cr"
   facebook: "Facebook"
   facebook_placeholder: "ej. www.facebook.com/NombreDePáginaAquí"
   linkedin: "LinkedIn"
@@ -803,16 +803,15 @@ Ver el %{link} para encontrar más de las características de  %{sitename} y par
   registration_about_us: " texto 'Sobre Nosotros'"
   registration_outcome_headline: "¿Qué obtengo?"
   registration_outcome1_html: "Ayuda a las personas a <strong>encontrar</strong> y <strong>contactar</strong> en Open Food Network."
-  registration_outcome2: "
-Utiliza este espacio para contar la historia de su empresa, para ayudar a conectar a tu unidad con la presencia en línea. "
+  registration_outcome2: "Utiliza este espacio para contar la historia de su empresa, para ayudar a conectar a tu unidad con la presencia en línea. "
   registration_outcome3: "Es también el primer paso hacia la negociación en Open Food Network, o la apertura de una tienda en línea."
   registration_finished_headline: "¡Terminado!"
-  registration_finished_thanks: "Thanks for filling out the details for %{enterprise}."
-  registration_finished_login: "You can change or update your enterprise at any stage by logging into Open Food Network and going to Admin."
+  registration_finished_thanks: "Gracias por completar los detalles para %{enterprise}."
+  registration_finished_login: "Puede cambiar o actualizar su empresa en cualquier momento iniciando sesión en Open Food Network y accediendo a Admin."
   registration_finished_activate: "Activar %{enterprise}."
   registration_finished_activate_instruction_html: "Hemos enviado un correo electrónico de confirmación a <strong>%{email}</strong> si no se ha activado antes.<br/>
 Por favor, siga las instrucciones para hacer visible su empresa en Open Food Network."
-  registration_finished_action: "Open Food Network home"
+  registration_finished_action: "Open Food Network"
   registration_type_headline: "Último paso para añadir %{enterprise}!"
   registration_type_question: "¿Usted es productor?"
   registration_type_producer: "Sí, soy un productor"
@@ -825,21 +824,21 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   registration_images_description: "Vamos a subir algunas fotos bonitas para que su perfil se vea muy bien! :)"
   registration_detail_headline: "Empecemos"
   registration_detail_enterprise: " En primer lugar tenemos que saber un poco acerca de su empresa:"
-  registration_detail_producer: " En primer lugar tenemos que saber un poco acerca de su marca:"
+  registration_detail_producer: "En primer lugar tenemos que saber un poco acerca de su granja:"
   registration_detail_name_enterprise: "Nombre de la Empresa:"
   registration_detail_name_producer: "Nombre de la Granja:"
-  registration_detail_name_placeholder: "e.g. Charlie's Awesome Farm"
+  registration_detail_name_placeholder: "ej. La increíble granja de Charlie"
   registration_detail_name_error: "Por favor elija un nombre exclusivo para su empresa"
   registration_detail_address1: "Dirección 1:"
   registration_detail_address1_placeholder: "ej. Guadalupe, San José"
   registration_detail_address1_error: "Por favor ingrese una dirección"
   registration_detail_address2: "Dirección 2:"
   registration_detail_suburb: "Barrio:"
-  registration_detail_suburb_placeholder: "ej. Northcote"
+  registration_detail_suburb_placeholder: "ej. Amón"
   registration_detail_suburb_error: "Por favor ingrese un barrio"
   registration_detail_postcode: "Código postal:"
   registration_detail_postcode_placeholder: "ej. 3070"
-  registration_detail_postcode_error: "Se reuqiere de código postal"
+  registration_detail_postcode_error: "Se requiere de código postal"
   registration_detail_state: "Provincia:"
   registration_detail_state_error: "Se requiere de Provincia"
   registration_detail_country: "Cuidad:"
@@ -866,10 +865,10 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   balance: "Balance"
   transaction: "Transacción"
   transaction_date: "Fecha" #Transaction is only in key to avoid conflict with :date
-  payment_state: "Payment status"
-  shipping_state: "Shipping status"
+  payment_state: "Estado de pago"
+  shipping_state: "Estado de envío"
   value: "Valor"
-  balance_due: "saldo adeudado"
+  balance_due: "Saldo adeudado"
   credit: "Credito"
   Paid: "Pago"
   Ready: "Listo"
@@ -884,16 +883,16 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   admin_entreprise_groups: "Grupo de Empresas"
   admin_entreprise_groups_name: "Nombre"
   admin_entreprise_groups_owner: "Propietario"
-  admin_entreprise_groups_on_front_page: "¿EN la página principal?"
+  admin_entreprise_groups_on_front_page: "¿En la página principal?"
   admin_entreprise_groups_entreprise: "Empresas"
   admin_entreprise_groups_data_powertip: "El usuario principal responsable de este grupo"
   admin_entreprise_groups_data_powertip_logo: "Este es el logotipo para el grupo"
   admin_entreprise_groups_data_powertip_promo_image: "Esta imagen se visualiza en la parte superior del perfil de grupo"
   admin_entreprise_groups_contact: "Contacto"
   admin_entreprise_groups_contact_phone_placeholder: "ej. 2495-67-89"
-  admin_entreprise_groups_contact_address1_placeholder: "ej. 123 High Street"
-  admin_entreprise_groups_contact_city: "Suburb"
-  admin_entreprise_groups_contact_city_placeholder: "eg. Northcote"
+  admin_entreprise_groups_contact_address1_placeholder: "ej. San José centro"
+  admin_entreprise_groups_contact_city: "Barrio"
+  admin_entreprise_groups_contact_city_placeholder: "ej. Amón"
   admin_entreprise_groups_contact_zipcode: "Código Postal"
   admin_entreprise_groups_contact_zipcode_placeholder: "ej. 3070"
   admin_entreprise_groups_contact_state_id: "Provincia"
@@ -914,7 +913,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   calculator: "Calculadora"
   calculator_values: "Valores de la calculadora"
   flat_percent_per_item: "Porcentaje plano (por artículo)"
-  new_order_cycles: "Nuevo Ciclo de ordenes"
+  new_order_cycles: "Nuevo Ciclo de Órdenes"
   select_a_coordinator_for_your_order_cycle: "Seleccione un coordinador para su ciclo de ordenes"
   edit_order_cycle: "Editar Ciclo de ordenes"
   roles: "Roles"
@@ -925,7 +924,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   finalise_invoice: "Finalizar Facturas"
   finalise_user_invoices: "Finalizar las facturas del usuario"
   finalise_user_invoice_explained: "Utilice este botón para finalizar todas las facturas en el sistema durante el mes anterior. Esta tarea se puede configurar para que se ejecute automáticamente una vez al mes."
-  manually_run_task: "Ejecutar tarea de forma manual "
+  manually_run_task: "Ejecutar tarea de forma manual"
   update_user_invoices: "Actualización de facturas de los usuarios"
   update_user_invoice_explained: "Utilice este botón para actualizar de inmediato las facturas correspondientes al mes hasta la fecha para cada usuario de la empresa en el sistema. Esta tarea se puede configurar para ejecutarse automáticamente cada noche."
   auto_finalise_invoices: "Finalizacion automática de facturas mensuales a la 1:30am"
@@ -954,7 +953,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   spree_admin_enterprises_shipping_methods: "Métodos de envío"
   spree_admin_enterprises_fees: "Tarifas para empresas"
   spree_admin_enterprises_none_create_a_new_enterprise: "CREAR UNA NUEVA EMPRESA"
-  spree_admin_enterprises_none_text: "You don't have any enterprises yet"
+  spree_admin_enterprises_none_text: "Todavía no tienes ninguna empresa"
   spree_admin_enterprises_producers_name: "Nombre"
   spree_admin_enterprises_producers_total_products: "Productos totales"
   spree_admin_enterprises_producers_active_products: "Productos activos"
@@ -975,7 +974,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   spree_admin_overview_action_required: "Acción requerida"
   spree_admin_overview_check_your_inbox: "Por favor, compruebe su bandeja de entrada para obtener más instrucciones. ¡Gracias!"
   change_package: "Paquete de cambio"
-  spree_admin_single_enterprise_hint: "Sugerencia: Para permitir que la gente te encuentre, encienda su visibilidad bajo"
+  spree_admin_single_enterprise_hint: "Sugerencia: Para permitir que la gente te encuentre, encienda su visibilidad"
   your_profil_live: "Su perfil en directo"
   on_ofn_map: "en el mapa de Open Food Network"
   see: "Ver"
@@ -984,7 +983,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   resend: "Reenviar"
   add_and_manage_products: "Añadir y gestionar los productos"
   add_and_manage_order_cycles: "Añadir y gestionar los ciclos de ordenes"
-  manage_order_cycles: "Gestionar ciclos de ordenes"
+  manage_order_cycles: "Gestionar ciclos de órdenes"
   manage_products: "Gestionar productos"
   edit_profile_details: "Editar detalles del perfil"
   edit_profile_details_etc: "Cambiar la descripción del perfile, imágenes, etc.."
@@ -1005,7 +1004,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   hub_sidebar_blue: "azul"
   hub_sidebar_red: "rojo"
   shop_trial_in_progress: "Tu tienda de prueba expira en %{days}."
-  shop_trial_expired: "¡Buenas noticias! Hemos decidido ampliar tienda de prueba hasta nuevo aviso." #FIXME
+  shop_trial_expired: "¡Buenas noticias! Hemos decidido ampliar el tiempo de prueba de la tienda hasta nuevo aviso." #FIXME
   report_customers_distributor: "Distribuidor"
   report_customers_supplier: "Proveedor"
   report_customers_cycle: "Ciclo de Ordenes"
@@ -1016,11 +1015,11 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   report_hubs: "Centros de Acopio: "
   report_payment: "Métodos de pago: "
   report_distributor: "Distribuidor: "
-  report_payment_by: 'Pagos por tiop'
-  report_itemised_payment: 'Detallado de Pagos Totales'
-  report_payment_totals: 'Total de Pagos'
-  report_all: 'todos'
-  report_order_cycle: "Ciclos de Ordenes: "
+  report_payment_by: "Pagos por tipo"
+  report_itemised_payment: "Detallado de Pagos Totales"
+  report_payment_totals: "Total de Pagos"
+  report_all: "todos"
+  report_order_cycle: "Ciclos de Órdenes: "
   report_entreprises: "Empresas: "
   report_users: "Usuarios: "
   initial_invoice_number: "Número de factura inicial:"
@@ -1040,7 +1039,7 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   one_product_unsaved: "Los cambios en un producto permanecen sin guardar."
   products_unsaved: "Cambios para %{n} productos no han sido guardados."
   add_manager: "Agregar administrador"
-  is_already_manager: "¡es ya un administrador!"
+  is_already_manager: "¡Ya es un administrador!"
   no_change_to_save: " No hay cabios para guardar"
   add_manager: "Agregar administrador"
   users:  "Usuarios"
@@ -1056,16 +1055,16 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
   properties: "Propiedades"
   shipping_methods: "Métodos de Envío"
   payment_methods: "Métodos de pago"
-  payment_method_fee: "Transaction fee"
+  payment_method_fee: "Tarifa de transacción"
   enterprise_fees: "Tarifas para empresas"
   inventory_settings: "Configuraciones de Inventario"
   tag_rules: "Reglas de etiqueta"
-  shop_preferences: "Preferencias de Tienda"
-  validation_msg_relationship_already_established: "^La relación ha sido establecida."
-  validation_msg_at_least_one_hub: "^Al menos un centro de acopio debe de seleccionarse"
-  validation_msg_product_category_cant_be_blank: "^La categoría del producto no puede estar en blanco"
-  validation_msg_tax_category_cant_be_blank: "^La categoría de impuestos no puede estar en blanco"
-  validation_msg_is_associated_with_an_exising_customer: "se asocia a un cliente existente"
+  shop_preferences: "Preferencias de la Tienda"
+  validation_msg_relationship_already_established: "La relación ha sido establecida."
+  validation_msg_at_least_one_hub: "Al menos un centro de acopio debe de seleccionarse"
+  validation_msg_product_category_cant_be_blank: "La categoría del producto no puede estar en blanco"
+  validation_msg_tax_category_cant_be_blank: "La categoría de impuestos no puede estar en blanco"
+  validation_msg_is_associated_with_an_exising_customer: "Se asocia a un cliente ya existente"
 
   spree:
     shipment_states:
@@ -1101,60 +1100,80 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
       
   stadistics:
     title: Open Food Network
-    stadistics: Stadistics
-    system: System
+    stadistics: Estadístícas
+    system: Sistema
     
-    products: Products
-    producers: Producers
-    hubs: Hubs
-    users: Users
+    products: Productos
+    producers: Productores
+    hubs: Centros de Acopio
+    users: Usuarios
 
-    bar: Bar
-    line: Line
-    donut: Donut
+    bar: Barras
+    line: Lineas
+    donut: Donas
     pie: Pie
     radar: Radar
             
-    initial_date: Initial date
-    final_date: Final date
-    filter_option: Filter option
-    period: Period
-    year: Year
-    month: Month
-    week: Week
-    new_chart: Create new chart
-    chart_type: Chart type
-    create_chart: Create chart
+    initial_date: Fecha Inicial
+    final_date: Fecha final
+    filter_option: Opciones de filtro
+    period: Periodo
+    year: Año
+    month: Mes
+    week: Semana
+    new_chart: Crear nuevo gráfico
+    chart_type: Tipo de gráfico
+    create_chart: Crear gráfico
     
-    product_initial_date: Product types sold since %{initial_date}
-    product_final_date: Product types sold untill %{final_date}
-    product_always: Total product types sold 
-    product_both_dates: Product types sold since %{initial_date} untill %{final_date}
+    product_initial_date: Tipo de productos vendidos desde %{initial_date}
+    product_final_date: Tipo de productos vendidos hasta %{final_date}
+    product_always: Total de productos vendidos
+    product_both_dates: Tipos de productos vendidos desde %{initial_date} hasta %{final_date}
      
-    new_producers_year: New producers in last 12 months
-    new_producers_month: New producers in last 30 days
-    new_producers_week: New producers in last 7 days
-    producer_region: Producers per region
+    new_producers_year: Productores nuevos en los últimos 12 meses
+    new_producers_month: Productores nuevos en los últimos 30 días
+    new_producers_week: Productores nuevos en los últimos 7 días
+    producer_region: Productores por región
     
-    new_hubs_year: New hubs in last 12 months
-    new_hubs_month: New hubs in last 30 days
-    new_hubs_week: New hubs in last 7 days
-    hub_region: hubs per region
+    new_hubs_year: Centros de Acopio nuevos en los últimos 12 meses
+    new_hubs_month: Centros de Acopio nuevos en los últimos 30 días
+    new_hubs_week: Centros de Acopio nuevos en los últimos 7 días
+    hub_region: centros de acopio por región
     
     
-    new_users_year: New users in last 12 months
-    new_users_month: New users in last 30 days
-    new_users_week: New users in last 7 days
-    last_connected_year: Users connected in last 12 months
-    last_connected_month: Users connected in last 30 days
-    last_connected_week: Users connected in last 7 days
+    
+    new_users_year: Usuarios nuevos en los últimos 12 meses
+    new_users_month: Usuarios nuevos en los últimos 30 días
+    new_users_week: Usuarios nuevos en los últimos 7 días
+    last_connected_year: Usuarios conectados en los últimos 12 meses
+    last_connected_month: Usuarios conectados en los últimos 30 días
+    last_connected_week: Usuarios conectados en los últimos 7 días
         
-    new_producers: New producers
-    producers_per_region: Producers per region
+    new_producers: Nuevos Productores 
+    producers_per_region: Productores por región
     
-    new_hubs: New hubs
+    new_hubs: Nuevos Centros de Acopio
     hubs_per_region: Hubs per region
     
-    new_users: New users
-    users_connected: Users connected
+    new_users: Nuevos Usuarios
+    users_connected: Usuarios conectados
+    
+    most_shipping: Métodos de envío más utilizados
+    most_payment: Métodos de pago más utilizados
+    
+    
+    select_stat: Seleccione una estadística
+    
+    total_users: Usuarios
+    total_producers: Productores
+    total_products: Productos
+    total_orders: Órdenes
+    total_hubs: Centros de Acopio
+    total_completed_orders: Órdenes completas
+    total_incompleted_orders: Órdenes incompletas
+    completed_order_cycles: Ciclos de Órdenes completos
+    incompleted_order_cycles: Ciclos de Órdenes incompletos
+    update : Actualizar
+    
+
     
