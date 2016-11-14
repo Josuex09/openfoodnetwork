@@ -1,14 +1,13 @@
 class ProductGraphic
-  attr_accessor :value,:labels,:initial_date,:final_date,:id,:chart,:tags
+  attr_accessor :value,:labels,:initial_date,:final_date,:chart,:tags
   @@product_types = ["Vegetables","Fruit","Oils","Preserves and Sauces","Dairy","Meat and Fish"];
   @@hash = Hash[@@product_types.map.with_index.to_a];
 
   #Constructor, recieving the staring date, end date, chart type and id respectively
-  def initialize(initial_date,final_date,chart,id)
+  def initialize(initial_date,final_date,chart)
     @initial_date = initial_date
     @final_date = final_date
     @chart = chart
-    @id=id
     @tags = "product"
   end
 
@@ -49,7 +48,9 @@ class ProductGraphic
     @value = values.to_s
   end
 
-#Checks if a chart is already in the array
+  #Check if an array has this graphics inside
+  #@param arr the array with graphics
+  #@return true if the array contains this graphics, and false otherwise
   def includes?(arr)
     for i in arr
       if @chart == i.chart && @tags == i.tags

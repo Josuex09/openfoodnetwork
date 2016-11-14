@@ -3,25 +3,25 @@
     .x_title
       %ul.nav.navbar-right.panel_toolbox
         %li.pull-right
-          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
+          = link_to '', { :action => :destroy, :id_del => index }, :class => 'fa fa-close'
         %li.pull-right
-          %a{:class => 'fa fa-cloud-download', :id =>"#{actual.id}-save"}
+          %a{:class => 'fa fa-cloud-download', :id =>"#{index}-save"}
       = render "stadistics/title", actual:actual
       .clearfix
     .x_content
-      %canvas{:id =>"#{actual.id}-radar"}
+      %canvas{:id =>"#{index}-radar"}
 
 - content_for :javascripts do
   :javascript
     Chart.defaults.global.legend = {
     enabled: false
     };
-    $("##{actual.id}-save").click(function() {
-      document.getElementById("#{actual.id}-radar").toBlob(function(blob) {
-          saveAs(blob, "chart_#{actual.id}.png");
+    $("##{index}-save").click(function() {
+      document.getElementById("#{index}-radar").toBlob(function(blob) {
+          saveAs(blob, "chart_#{index}.png");
       });
     });
-    var ctx = document.getElementById("#{actual.id}-radar");
+    var ctx = document.getElementById("#{index}-radar");
     var data = {
       labels: JSON.parse('#{actual.labels}'),
       datasets: [{

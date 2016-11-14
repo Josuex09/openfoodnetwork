@@ -37,8 +37,8 @@
       %h2.thin{:title => t('stadistics.new_hubs_week')}
         = t('stadistics.new_hubs_week')    
   - elsif actual.tags.include? "region"
-    %h2.thin{:title => t('stadistics.hub_region')}
-      = t('stadistics.hub_region')
+    %h2.thin{:title => t('stadistics.hubs_per_region')}
+      = t('stadistics.hubs_per_region')
 - elsif actual.tags.include? "user"
   - if actual.tags.include? "new"
     - if actual.tags.include? "year"

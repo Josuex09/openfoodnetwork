@@ -3,26 +3,26 @@
     .x_title
       %ul.nav.navbar-right.panel_toolbox
         %li.pull-right
-          = link_to '', { :action => :destroy, :id_del => actual.id }, :class => 'fa fa-close'
+          = link_to '', { :action => :destroy, :id_del => index }, :class => 'fa fa-close'
         %li.pull-right
-          %a{:class => 'fa fa-cloud-download', :id =>"#{actual.id}-save"}
+          %a{:class => 'fa fa-cloud-download', :id =>"#{index}-save"}
       = render "stadistics/title", actual:actual
       .clearfix
     .x_content
       /Crear un id nuevo por cada grafico para que cargue los nuevos y cargarlo
-      %canvas{:id =>"#{actual.id}-bar"}
+      %canvas{:id =>"#{index}-bar"}
 
 - content_for :javascripts do
   :javascript
     Chart.defaults.global.legend = {
         enabled: false
       };
-    $("##{actual.id}-save").click(function() {
-      document.getElementById("#{actual.id}-bar").toBlob(function(blob) {
-          saveAs(blob, "chart_#{actual.id}.png");
+    $("##{index}-save").click(function() {
+      document.getElementById("#{index}-bar").toBlob(function(blob) {
+          saveAs(blob, "chart_#{index}.png");
       });
     });
-    var ctx = document.getElementById("#{actual.id}-bar").getContext("2d");
+    var ctx = document.getElementById("#{index}-bar").getContext("2d");
       var mybarChart = new Chart(ctx, {
         type: 'bar',
         data: {

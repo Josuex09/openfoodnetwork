@@ -1,13 +1,18 @@
 class Stats
   
+  #Maximum stats allowed to chose
+  $max = 9
+  #Initialize array with the indexes
+  $option_titles = Array(0..$max)
   
-  #Constructor
+  #Initial values added into the stats bar
   def initialize(option_values)
     @option_values = option_values
-    @option_titles = ["Total users", "Total producers","Total products", "Total orders", "Total hubs", "Total completed orders", "Total incompleted orders", "Completed order cycles", "Incompleted order cycles"]
   end
   
   
+  #This method generates the queries allowing get the stats
+  #@return [Array] with the queries values in real time
   def generate_queries
     @queries = []
     total_users = Spree::User.all.count
@@ -31,14 +36,16 @@ class Stats
     return @queries
   end
   
+  #This method return the selected queries and values
+  #@return [Array,Array] first one with the indexes, and the second one with the values of executing the query
   def get_values
     @result = []
     @result_titles = []
     queries = generate_queries
     index = 0
     while index < @option_values.length
-      @result.push(queries[@option_values[index]-1])
-      @result_titles.push(@option_titles[@option_values[index]-1])
+      @result.push(queries[@option_values[index]])
+      @result_titles.push($option_titles[@option_values[index]])
       index+=1
     end
     return @result_titles,@result

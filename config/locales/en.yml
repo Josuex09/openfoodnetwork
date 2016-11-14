@@ -1162,5 +1162,18 @@ Please follow the instructions there to make your enterprise visible on the Open
     most_shipping: Most used shipping methods
     most_payment: Most used paymenth methods
     
-    edit_stats: Edit Stats
+    
+    select_stat: Select one stat
+    
+    total_users: Users
+    total_producers: Producers
+    total_products: Products
+    total_orders: Orders
+    total_hubs: Hubs
+    total_completed_orders: Completed orders
+    total_incompleted_orders: Incompleted orders
+    completed_order_cycles: Completed Order cycles
+    incompleted_order_cycles: Incompleted Order cycles
+    
+    
     

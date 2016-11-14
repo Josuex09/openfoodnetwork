@@ -2,12 +2,11 @@ require 'date'
 require 'time'
 class HubGraphic
 
-  attr_accessor :value,:labels,:id,:chart,:option,:tags
+  attr_accessor :value,:labels,:chart,:option,:tags
   #Constructor
-  def initialize(chart,id)
+  def initialize(chart)
     @chart = chart
     @tags = "hub"
-    @id=id
   end
 
   def generate_per_year
@@ -118,8 +117,10 @@ class HubGraphic
 
   end
   
-#Checks if a chart is already in the array
-  def includes?(arr)
+  #Check if an array has this graphics inside
+  #@param arr the array with graphics
+  #@return true if the array contains this graphics, and false otherwise  def includes?(arr)
+  def includes?(arr)  
     for i in arr
       if @chart == i.chart && @tags == i.tags
         return true

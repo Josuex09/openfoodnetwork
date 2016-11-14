@@ -1,0 +1,27 @@
+- if value.equal? 0
+  %text{:title => t('stadistics.total_users')}
+    = t('stadistics.total_users')
+- elsif value.equal? 1
+  %text{:title => t('stadistics.total_producers')}
+    = t('stadistics.total_producers')
+- elsif value.equal? 2
+  %text{:title => t('stadistics.total_products')}
+    = t('stadistics.total_products')
+- elsif value.equal? 3
+  %text{:title => t('stadistics.total_orders')}
+    = t('stadistics.total_orders')
+- elsif value.equal? 4
+  %text{:title => t('stadistics.total_hubs')}
+    = t('stadistics.total_hubs')
+- elsif value.equal? 5
+  %text{:title => t('stadistics.total_completed_orders')}
+    = t('stadistics.total_completed_orders')
+- elsif value.equal? 6
+  %text{:title => t('stadistics.total_incompleted_orders')}
+    = t('stadistics.total_incompleted_orders')
+- elsif value.equal? 7
+  %text{:title => t('stadistics.completed_order_cycles')}
+    = t('stadistics.completed_order_cycles')
+- elsif value.equal? 8
+  %text{:title => t('stadistics.incompleted_order_cycles')}
+    = t('stadistics.incompleted_order_cycles')
