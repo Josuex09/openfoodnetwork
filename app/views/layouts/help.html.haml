@@ -12,10 +12,8 @@
       = favicon_link_tag "/favicon-staging.ico"
     %link{href: "https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,300,700,700italic|Oswald:300,400,700", rel: "stylesheet", type: "text/css"}
     = yield :scripts
-    /%script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry"}
-    %script{src: "//maps.googleapis.com/maps/api/js?key=AIzaSyBHZ7DxEbYqHT8kkOM6kKXiXKYKI-MuVX0&libraries=places,geometry"}
-    = split_stylesheet_link_tag "darkswarm/all"
     = split_stylesheet_link_tag "stadistics/bootstrap/bootstrap.css"
+    = split_stylesheet_link_tag "darkswarm/all"
     = split_stylesheet_link_tag "help/help.css"
     = javascript_include_tag "darkswarm/all"
     = javascript_include_tag "stadistics/bootstrap.js"

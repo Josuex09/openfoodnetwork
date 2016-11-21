@@ -69,6 +69,7 @@ es:
   footer_links_md: "Enlaces"
   footer_about_url: "URL acerca de"
   footer_tos_url: "URL de términos y servicios"
+  footer_help: "Ayuda"
   invoice: "Factura"
   name: Nombre
   first_name: Nombre
@@ -351,12 +352,12 @@ es:
   modal_producers: "Productores"
   modal_producers_explained: "Nuestros productores hacen todos los deliciosos alimentos que pueden comprar en la Open Food Network."
   ocs_choice_hub: "Centro de acopio:"
-  ocs_choice_oc: "Ciclo de orden:"
+  ocs_choice_oc: "Ciclo de órdenes:"
   ocs_choice_text: "No ha seleccionado aún el lugar de dónde va a recibir su orden."
   ocs_closed_headline: Las ordenes están cerradas para este centro de acopio
   ocs_closed_time: "El último ciclo cerró hace %{time}."
   ocs_closed_contact: "Contacte su centro de acopio directamente para ver si aceptan ordenes tardías, o espere hasta que el próximo ciclo abra."
-  ocs_closed_opens: "El próximo ciclo de ordenes abre en %{time}"
+  ocs_closed_opens: "El próximo ciclo de órdenes abre en %{time}"
   ocs_closed_email: "Correo electrónico: %{email}"
   ocs_closed_phone: "Teléfono: %{phone}"
   ocs_pickup_time: "Su orden estará lista en %{pickup_time}"
@@ -366,7 +367,7 @@ es:
   ocs_when_headline: ¿Cuándo quiere su orden?
   ocs_when_text: Ningún producto se mostrará hasta que seleccione una fecha.
   ocs_when_closing: "Cerrando en"
-  ocs_when_choose: "Seleccione el ciclo de orden"
+  ocs_when_choose: "Seleccione el ciclo de órdenes"
   ocs_list: "Vista de lista"
   producers_about: Acerca de nosotros
   producers_buy: Comprar
@@ -428,11 +429,11 @@ es:
   products_cart_distributor_change: "Su distribuidor para esta orden se cambiará a %{name} si agrega este producto al carrito."
   products_cart_distributor_is: "Su distribuidor para esta orden es %{name}."
   products_distributor_error: "Complete su orden en %{link} antes de comprar con otro distribuidor."
-  products_oc: "Ciclo de orden para su orden:"
-  products_oc_change: "Su ciclo de orden para esta orden será cambiado a %{name} si agrega este producto al carrito."
+  products_oc: "Ciclo de órdenes para su orden:"
+  products_oc_change: "Su ciclo de órdenes para esta orden será cambiado a %{name} si agrega este producto al carrito."
   products_oc_is: "Su ciclo de orden para esta orden es %{name}."
   products_oc_error: "Complete esta orden de %{link} antes de comprar en un ciclo de orden diferente."
-  products_oc_current: "su ciclo de orden actual"
+  products_oc_current: "su ciclo de ´ordenes actual"
   products_quantity: Cantidad
   products_max_quantity: Cantidad máxima
   products_distributor: Distribuidor
@@ -440,7 +441,7 @@ es:
   password: Contraseña
   remember_me: Recordarme
   are_you_sure: "¿Está seguro?"
-  orders_open: Ordenes abiertas
+  orders_open: Órdenes abiertas
   closing: "Cerrando "
   going_back_to_home_page: "Le estamos llevando de vuelta a la página de inicio"
   creating: Creando
@@ -612,23 +613,6 @@ es:
   included_tax: "Impuesto incluido"
   remove_tax: "Eliminar impuesto"
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   stadistics:
     title: Open Food Network
     stadistics: Estadísticas
@@ -687,3 +671,19 @@ es:
     
     new_users: Cantidad de usuarios nuevos
     users_connected: Cantidad de usuarios conectados
+    
+    most_shipping: Métodos de envío más utilizados
+    most_payment: Métodos de pago más utilizados
+    
+    
+    select_stat: Seleccione un dato
+    
+    total_users: Usuarios
+    total_producers: Productores
+    total_products: Productos
+    total_orders: Órdenes
+    total_hubs: Centros de acopio
+    total_completed_orders: Órdenes completas
+    total_incompleted_orders: Órdenes incompletas
+    completed_order_cycles: Ciclos de órdenes completos
+    incompleted_order_cycles: Ciclos de órdenes incompletos

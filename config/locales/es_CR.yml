@@ -312,6 +312,7 @@ es:
   footer_global_news: "Noticias"
   footer_global_about: "Acerca de"
   footer_global_contact: "Contactar"
+  footer_help: "Ayuda"
 
   footer_sites_headline: "OFN Sites"
   footer_sites_developer: "Desarrollador"
@@ -1162,17 +1163,17 @@ Por favor, siga las instrucciones para hacer visible su empresa en Open Food Net
     most_payment: Métodos de pago más utilizados
     
     
-    select_stat: Seleccione una estadística
+    select_stat: Seleccione un dato
     
     total_users: Usuarios
     total_producers: Productores
     total_products: Productos
     total_orders: Órdenes
-    total_hubs: Centros de Acopio
+    total_hubs: Centros de acopio
     total_completed_orders: Órdenes completas
     total_incompleted_orders: Órdenes incompletas
-    completed_order_cycles: Ciclos de Órdenes completos
-    incompleted_order_cycles: Ciclos de Órdenes incompletos
+    completed_order_cycles: Ciclos de órdenes completos
+    incompleted_order_cycles: Ciclos de órdenes incompletos
     update : Actualizar
     
 
